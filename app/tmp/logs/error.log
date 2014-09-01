@@ -1,0 +1,1591 @@
+2014-08-16 09:58:46 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 61]
+2014-08-16 09:58:46 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 61, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 61, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-16 09:58:53 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 61]
+2014-08-16 09:58:53 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 61, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 61, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-16 09:59:00 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 61]
+2014-08-16 09:59:00 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 61, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 61, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-16 09:59:24 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 69]
+2014-08-16 09:59:24 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 69)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 69, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 69, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-16 09:59:25 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 69]
+2014-08-16 09:59:25 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 69)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 69, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 69, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-16 09:59:26 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 69]
+2014-08-16 09:59:26 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 69)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 69, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 69, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-16 10:42:16 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [/var/www/html/mywallet/web/app/Controller/AppController.php, line 37]
+2014-08-16 10:42:16 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 37, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 37, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-16 10:43:19 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:43:24 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:43:29 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:43:54 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:43:58 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:44:34 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:44:47 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:44:48 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:44:49 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:45:03 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:45:03 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:45:04 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:45:04 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:45:04 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:45:07 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 10:46:40 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-16 10:46:44 Error: [UnauthorizedException] Unauthorized
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(348): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_unauthenticated(Object(UsersController))
+#2 [internal function]: AuthComponent->startup(Object(UsersController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-16 10:46:44 Error: [UnauthorizedException] Unauthorized
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(348): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_unauthenticated(Object(UsersController))
+#2 [internal function]: AuthComponent->startup(Object(UsersController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-16 13:33:44 Error: [MissingControllerException] Controller class LogoutController could not be found.
+Exception Attributes: array (
+  'class' => 'LogoutController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/logout.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-16 13:33:51 Error: [UnauthorizedException] Unauthorized
+Request URL: /mywallet/web/users/logout.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(348): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_unauthenticated(Object(UsersController))
+#2 [internal function]: AuthComponent->startup(Object(UsersController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-16 13:35:27 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-16 13:35:36 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/login.ctp',
+)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 13:39:08 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/login.ctp',
+)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 13:39:57 Error: [UnauthorizedException] Unauthorized
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(348): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_unauthenticated(Object(UsersController))
+#2 [internal function]: AuthComponent->startup(Object(UsersController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-16 13:52:15 Error: [UnauthorizedException] Unauthorized
+Request URL: /mywallet/web/users/logout.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(348): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_unauthenticated(Object(UsersController))
+#2 [internal function]: AuthComponent->startup(Object(UsersController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-16 14:27:37 Error: [UnauthorizedException] Unauthorized
+Request URL: /mywallet/web/users/logout.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(348): BasicAuthenticate->unauthenticated(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(304): AuthComponent->_unauthenticated(Object(UsersController))
+#2 [internal function]: AuthComponent->startup(Object(UsersController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-16 14:35:57 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/login.ctp',
+)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 14:36:56 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/login.ctp',
+)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 14:40:53 Error: Fatal Error (4): syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 64]
+2014-08-16 14:40:53 Error: [FatalErrorException] syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 64, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 64, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-16 14:41:20 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 15:02:27 Error: [CakeException] $controller does not implement an isAuthorized() method.
+Request URL: /mywallet/web/users/logout.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/Auth/BaseAuthorize.php(72): ControllerAuthorize->controller(Object(UsersController))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(501): BaseAuthorize->__construct(Object(ComponentCollection), Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#3 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#4 [internal function]: AuthComponent->startup(Object(UsersController))
+#5 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-16 15:02:29 Error: [CakeException] $controller does not implement an isAuthorized() method.
+Request URL: /mywallet/web/users/logout.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/Auth/BaseAuthorize.php(72): ControllerAuthorize->controller(Object(UsersController))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(501): BaseAuthorize->__construct(Object(ComponentCollection), Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#3 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#4 [internal function]: AuthComponent->startup(Object(UsersController))
+#5 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-16 16:44:01 Error: [CakeException] $controller does not implement an isAuthorized() method.
+Request URL: /mywallet/web/users/12.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/Auth/BaseAuthorize.php(72): ControllerAuthorize->controller(Object(UsersController))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(501): BaseAuthorize->__construct(Object(ComponentCollection), Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#3 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#4 [internal function]: AuthComponent->startup(Object(UsersController))
+#5 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-16 16:44:06 Error: [CakeException] $controller does not implement an isAuthorized() method.
+Request URL: /mywallet/web/users/12.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/Auth/BaseAuthorize.php(72): ControllerAuthorize->controller(Object(UsersController))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(501): BaseAuthorize->__construct(Object(ComponentCollection), Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#3 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#4 [internal function]: AuthComponent->startup(Object(UsersController))
+#5 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-16 17:00:03 Error: [CakeException] $controller does not implement an isAuthorized() method.
+Request URL: /mywallet/web/users/12.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/Auth/BaseAuthorize.php(72): ControllerAuthorize->controller(Object(UsersController))
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(501): BaseAuthorize->__construct(Object(ComponentCollection), Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#3 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#4 [internal function]: AuthComponent->startup(Object(UsersController))
+#5 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-16 17:03:31 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-16 19:06:51 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-18 09:23:47 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-18 10:18:02 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-18 10:24:09 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-18 10:31:47 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/view.ctp',
+)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-18 10:31:56 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/view.ctp',
+)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-18 10:32:02 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/view.ctp',
+)
+Request URL: /mywallet/web/users/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-18 10:33:55 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 111]
+2014-08-18 10:33:55 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 111)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 111, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 111, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-18 10:33:59 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 111]
+2014-08-18 10:33:59 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 111)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 111, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 111, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-18 10:34:13 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 113]
+2014-08-18 10:34:13 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 113)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-18 10:34:14 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 113]
+2014-08-18 10:34:14 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 113)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-18 10:34:15 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 113]
+2014-08-18 10:34:15 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 113)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-18 10:34:26 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 113]
+2014-08-18 10:34:26 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 113)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-18 10:34:31 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 113]
+2014-08-18 10:34:31 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 113)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 113, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-18 10:52:33 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting ';' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 122]
+2014-08-18 10:52:33 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting ';'
+Request URL: /mywallet/web/users/view.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 122)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 122, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 122, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-19 10:18:42 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-19 15:46:44 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/html/mywallet/web/app/Model/User.php, line 25]
+2014-08-19 15:46:44 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 25, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 25, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-21 09:53:07 Error: Fatal Error (4): syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 127]
+2014-08-21 09:53:07 Error: [FatalErrorException] syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 127)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 127, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 127, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-21 09:53:49 Error: Fatal Error (4): syntax error, unexpected '}', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/mywallet/web/app/Model/User.php, line 80]
+2014-08-21 09:53:49 Error: [FatalErrorException] syntax error, unexpected '}', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 80)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 80, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 80, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-21 09:56:29 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-21 10:08:15 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-21 10:08:25 Error: [MissingActionException] Action UsersController::pages() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'pages',
+)
+Request URL: /mywallet/web/users/pages
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-21 10:08:30 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-22 20:32:40 Error: Fatal Error (4): syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 127]
+2014-08-22 20:32:40 Error: [FatalErrorException] syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 127)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 127, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 127, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-22 22:18:32 Error: Fatal Error (1): Call to a member function from() on a non-object in [/var/www/html/mywallet/web/app/Model/User.php, line 89]
+2014-08-22 22:18:32 Error: [FatalErrorException] Call to a member function from() on a non-object
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/m...', 89)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/m...', 89, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/m...', 89, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-22 22:21:09 Error: Fatal Error (1): Call to a member function from() on a non-object in [/var/www/html/mywallet/web/app/Model/User.php, line 89]
+2014-08-22 22:21:09 Error: [FatalErrorException] Call to a member function from() on a non-object
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/m...', 89)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/m...', 89, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/m...', 89, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-22 22:48:53 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Emails/html/activation_link.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Emails/html/activation_link.ctp',
+)
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName('ActivationLink')
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1684): View->render('ActivationLink', 'default')
+#2 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1537): CakeEmail->_renderTemplates('')
+#3 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1148): CakeEmail->_render(Array)
+#4 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send()
+#5 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#6 [internal function]: UsersController->add()
+#7 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-08-22 22:50:18 Error: [SocketException] 
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/MailTransport.php(51): MailTransport->_mail('appmywallet@gma...', '', '<!DOCTYPE html ...', 'From: appmywall...', NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): MailTransport->send(Object(CakeEmail))
+#2 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send()
+#3 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#4 [internal function]: UsersController->add()
+#5 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-08-22 22:52:07 Error: [SocketException] 
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/MailTransport.php(51): MailTransport->_mail('appmywallet@gma...', '', '<!DOCTYPE html ...', 'From: appmywall...', NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): MailTransport->send(Object(CakeEmail))
+#2 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send()
+#3 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#4 [internal function]: UsersController->add()
+#5 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-08-22 22:56:31 Error: Fatal Error (4): syntax error, unexpected ''charset'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/var/www/html/mywallet/web/app/Config/email.php, line 48]
+2014-08-22 22:56:31 Error: [FatalErrorException] syntax error, unexpected ''charset'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 48, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 48, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-22 22:57:31 Error: [SocketException] SMTP timeout.
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(157): SmtpTransport->_smtpSend(NULL, '220')
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(95): SmtpTransport->_connect()
+#2 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send()
+#4 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#5 [internal function]: UsersController->add()
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-22 22:58:14 Error: [SocketException] SMTP timeout.
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(157): SmtpTransport->_smtpSend(NULL, '220')
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(95): SmtpTransport->_connect()
+#2 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send()
+#4 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#5 [internal function]: UsersController->add()
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-22 23:00:09 Error: [SocketException] SMTP timeout.
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(157): SmtpTransport->_smtpSend(NULL, '220')
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(95): SmtpTransport->_connect()
+#2 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send()
+#4 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#5 [internal function]: UsersController->add()
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-22 23:00:20 Error: [SocketException] SMTP timeout.
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(157): SmtpTransport->_smtpSend(NULL, '220')
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(95): SmtpTransport->_connect()
+#2 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send()
+#4 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#5 [internal function]: UsersController->add()
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-22 23:00:37 Error: [SocketException] SMTP timeout.
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(157): SmtpTransport->_smtpSend(NULL, '220')
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(95): SmtpTransport->_connect()
+#2 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send()
+#4 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#5 [internal function]: UsersController->add()
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-22 23:02:09 Error: [SocketException] SMTP timeout.
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(157): SmtpTransport->_smtpSend(NULL, '220')
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(95): SmtpTransport->_connect()
+#2 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/mywallet/web/app/Model/User.php(96): CakeEmail->send('funfou')
+#4 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#5 [internal function]: UsersController->add()
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-22 23:03:33 Error: [SocketException] SMTP timeout.
+Request URL: /mywallet/web/users.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(157): SmtpTransport->_smtpSend(NULL, '220')
+#1 /var/www/html/mywallet/web/lib/Cake/Network/Email/SmtpTransport.php(95): SmtpTransport->_connect()
+#2 /var/www/html/mywallet/web/lib/Cake/Network/Email/CakeEmail.php(1150): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/mywallet/web/app/Model/User.php(97): CakeEmail->send('funfou')
+#4 /var/www/html/mywallet/web/app/Controller/UsersController.php(129): User->sendActivationLink(NULL)
+#5 [internal function]: UsersController->add()
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-23 12:59:18 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 13:07:58 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY) in [/var/www/html/mywallet/web/app/Controller/UsersController.php, line 214]
+2014-08-23 13:07:58 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY)
+Request URL: /mywallet/web/users/activate/e81d2a016eded5d08a841f88f72d3281e81d2a016eded5d08a841f88f72d3281
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 214)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 214, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 214, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-23 14:40:30 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/activate.ctp',
+)
+Request URL: /mywallet/web/users/activate/696653301f6d7f1507ca3b99eae4f1e3
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 14:53:20 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/activate.ctp',
+)
+Request URL: /mywallet/web/users/activate/696653301f6d7f1507ca3b99eae4f1e0
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 14:53:30 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/activate.ctp',
+)
+Request URL: /mywallet/web/users/activate/696653301f6d7f1507ca3b99eae4f1e0
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 14:53:40 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/activate.ctp',
+)
+Request URL: /mywallet/web/users/activate/696653301f6d7f1507ca3b99eae4f1e0
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 14:53:42 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/activate.ctp',
+)
+Request URL: /mywallet/web/users/activate/696653301f6d7f1507ca3b99eae4f1e0
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 14:54:15 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/activate.ctp',
+)
+Request URL: /mywallet/web/users/activate/696653301f6d7f1507ca3b99eae4f1e0
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 14:54:16 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/activate.ctp',
+)
+Request URL: /mywallet/web/users/activate/696653301f6d7f1507ca3b99eae4f1e0
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 14:54:30 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/activate.ctp',
+)
+Request URL: /mywallet/web/users/activate/696653301f6d7f1507ca3b99eae4f1e0
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 15:01:29 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/login.ctp',
+)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 15:02:35 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/login.ctp',
+)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 15:03:19 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/json/login.ctp',
+)
+Request URL: /mywallet/web/users/login.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): JsonView->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 18:25:25 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 18:25:35 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 18:25:43 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 18:32:04 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 18:32:52 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 18:50:20 Error: Fatal Error (4): syntax error, unexpected ''_serialize'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/var/www/html/mywallet/web/app/Controller/CategoriesController.php, line 54]
+2014-08-23 18:50:20 Error: [FatalErrorException] syntax error, unexpected ''_serialize'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /mywallet/web/categories/add.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 54, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 54, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-23 18:51:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user.category_id' in 'on clause'
+Request URL: /mywallet/web/categories.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Categor...', Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Categor...', false)
+#4 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2943): DboSource->read(Object(Category), Array)
+#5 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2915): Model->_readDataSource('all', Array)
+#6 /var/www/html/mywallet/web/app/Controller/CategoriesController.php(17): Model->find('all')
+#7 [internal function]: CategoriesController->index()
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriesController), Array)
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-23 20:29:33 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 22:54:42 Error: [MissingControllerException] Controller class 1Controller could not be found.
+Exception Attributes: array (
+  'class' => '1Controller',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-23 22:54:51 Error: [MissingActionException] Action CategoriesController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'CategoriesController',
+  'action' => '1',
+)
+Request URL: /mywallet/web/categories/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#2 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-23 22:55:40 Error: [MissingActionException] Action CategoriesController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'CategoriesController',
+  'action' => '1',
+)
+Request URL: /mywallet/web/categories/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#2 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-23 22:56:04 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Categories/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Categories/index.ctp',
+)
+Request URL: /mywallet/web/categories
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-23 23:44:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'where clause'
+Request URL: /mywallet/web/categories.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Categor...', Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Categor...', false)
+#4 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2943): DboSource->read(Object(Category), Array)
+#5 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2915): Model->_readDataSource('list', Array)
+#6 /var/www/html/mywallet/web/app/Controller/CategoriesController.php(24): Model->find('list', Array)
+#7 [internal function]: CategoriesController->index()
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriesController), Array)
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-23 23:44:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'where clause'
+Request URL: /mywallet/web/categories.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Categor...', Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Categor...', false)
+#4 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2943): DboSource->read(Object(Category), Array)
+#5 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2915): Model->_readDataSource('list', Array)
+#6 /var/www/html/mywallet/web/app/Controller/CategoriesController.php(24): Model->find('list', Array)
+#7 [internal function]: CategoriesController->index()
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriesController), Array)
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-23 23:46:04 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'where clause'
+Request URL: /mywallet/web/categories.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Categor...', Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Categor...', false)
+#4 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2943): DboSource->read(Object(Category), Array)
+#5 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2915): Model->_readDataSource('all', Array)
+#6 /var/www/html/mywallet/web/app/Controller/CategoriesController.php(25): Model->find('all', Array)
+#7 [internal function]: CategoriesController->index()
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriesController), Array)
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-23 23:47:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'where clause'
+Request URL: /mywallet/web/categories.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Categor...', Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Categor...', false)
+#4 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2943): DboSource->read(Object(Category), Array)
+#5 /var/www/html/mywallet/web/lib/Cake/Model/Model.php(2915): Model->_readDataSource('all', Array)
+#6 /var/www/html/mywallet/web/app/Controller/CategoriesController.php(25): Model->find('all', Array)
+#7 [internal function]: CategoriesController->index()
+#8 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriesController), Array)
+#9 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#11 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-08-24 00:16:03 Error: [MissingActionException] Action CategoriesController::1() could not be found.
+Exception Attributes: array (
+  'controller' => 'CategoriesController',
+  'action' => '1',
+)
+Request URL: /mywallet/web/categories/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#2 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-24 00:17:47 Error: Fatal Error (1): Unsupported operand types in [/var/www/html/mywallet/web/lib/Cake/Routing/Router.php, line 539]
+2014-08-24 00:17:47 Error: [FatalErrorException] Unsupported operand types
+Request URL: /mywallet/web/categories/edit/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Unsupported ope...', '/var/www/html/m...', 539)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', '/var/www/html/m...', 539, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', '/var/www/html/m...', 539, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-24 00:17:51 Error: Fatal Error (1): Unsupported operand types in [/var/www/html/mywallet/web/lib/Cake/Routing/Router.php, line 539]
+2014-08-24 00:17:51 Error: [FatalErrorException] Unsupported operand types
+Request URL: /mywallet/web/categories/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Unsupported ope...', '/var/www/html/m...', 539)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', '/var/www/html/m...', 539, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', '/var/www/html/m...', 539, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-24 11:16:29 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-24 11:18:21 Error: [CakeException] Authorization adapter "controller" was not found.
+Request URL: /mywallet/web/categories/add.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#2 [internal function]: AuthComponent->startup(Object(CategoriesController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-24 11:20:55 Error: [CakeException] Authorization adapter "controller" was not found.
+Request URL: /mywallet/web/categories/add.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#2 [internal function]: AuthComponent->startup(Object(CategoriesController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-24 11:20:57 Error: [CakeException] Authorization adapter "controller" was not found.
+Request URL: /mywallet/web/categories/add.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#2 [internal function]: AuthComponent->startup(Object(CategoriesController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-24 11:21:01 Error: [CakeException] Authorization adapter "controller" was not found.
+Request URL: /mywallet/web/categories/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#2 [internal function]: AuthComponent->startup(Object(CategoriesController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-24 11:21:06 Error: [CakeException] Authorization adapter "controller" was not found.
+Request URL: /mywallet/web/categories/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(463): AuthComponent->constructAuthorize()
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Component/AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#2 [internal function]: AuthComponent->startup(Object(CategoriesController))
+#3 /var/www/html/mywallet/web/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/html/mywallet/web/lib/Cake/Event/CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(187): Controller->startupProcess()
+#8 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#9 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-08-24 11:23:35 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:23:49 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:24:08 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:24:08 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:24:32 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:26:47 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:27:45 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:31:24 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:32:08 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:33:05 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:36:43 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:40:35 Error: Fatal Error (4): syntax error, unexpected ')' in [/var/www/html/mywallet/web/app/Model/Category.php, line 67]
+2014-08-24 11:40:35 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /mywallet/web/categories/1.json
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/m...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/m...', 67, Array)
+#2 /var/www/html/mywallet/web/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/m...', 67, Array)
+#3 /var/www/html/mywallet/web/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-24 11:45:46 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:54:30 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 11:55:10 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-24 13:12:56 Error: [MissingControllerException] Controller class MywalletController could not be found.
+Exception Attributes: array (
+  'class' => 'MywalletController',
+  'plugin' => NULL,
+)
+Request URL: /mywallet/web/mywallet/web/
+Stack Trace:
+#0 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 10:00:40 Error: [MissingViewException] View file "/var/www/html/mywallet/web/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/mywallet/web/app/View/Users/login.ctp',
+)
+Request URL: /mywallet/web/users/login
+Stack Trace:
+#0 /var/www/html/mywallet/web/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/html/mywallet/web/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /var/www/html/mywallet/web/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/mywallet/web/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
