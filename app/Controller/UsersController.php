@@ -36,32 +36,29 @@ class UsersController extends AppController {
  * @return void
  */
 	public function login() {
+		$this->layout = 'page';	
+
 		if($this->Session->read('Auth.User')) {
-			return $this->set(array(
-				'message' => array(
-					'text' => __('You are logged in!'),
-					'type' => 'error'
-				),
-				'_serialize' => array('message')
+			$this->redirect(array(
+				'controller' => 'pages',
+				'action' => 'display',
+				'home'
 			));
 		}
 
 		if($this->request->is('post')) {
 			if($this->Auth->login()) {
 				if($this->Auth->user('status')) {
-					$this->set(array(
-						'user' => $this->Session->read('Auth.User'),
-						'_serialize' => array('user')
+					$this->set('user', $this->Session->read('Auth.User'));
+					$this->redirect(array(
+						'controller' => 'pages',
+						'action' => 'display',
+						'home'
 					));
 				} else {
 					if($this->Auth->logout()) {
-						$this->set(array(
-							'message' => array(
-								'text' => __('Your account isn\'t activated, please look your e-mail.'),
-								'type' => 'error'
-							),
-							'_serialize' => array('message')
-						));
+						$this->Session->setFlash('Your account isn\'t activated, please look your e-mail.');
+						$this->redirect($this->referer());
 					}
 				}
 			} else {
@@ -72,6 +69,8 @@ class UsersController extends AppController {
 					),
 					'_serialize' => array('message')
 				));
+				$this->Session->setFlash('Ops! Invalid username or password, try again.');
+				$this->redirect($this->referer());
 				$this->response->statusCode(401);
 			}
 		}
