@@ -3,9 +3,10 @@
 /app/Config/database.php
 /app/Config/email.php
 /app/tmp
+/app/Plugin
 /lib/Cake/Console/Templates/skel/tmp/
 /plugins
-/vendors
+/vendor
 /build
 /dist
 /tags
@@ -26,4 +27,8 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+<<<<<<< HEAD
 composer.phar
+=======
+composer.phar
+>>>>>>> 3b3ccbd65c9a3669355a94fc08d63edeb597f8a2
