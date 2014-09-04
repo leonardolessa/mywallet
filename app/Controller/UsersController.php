@@ -57,21 +57,19 @@ class UsersController extends AppController {
 					));
 				} else {
 					if($this->Auth->logout()) {
-						$this->Session->setFlash('Your account isn\'t activated, please look your e-mail.');
+						$this->Session->setFlash(
+							'Sua conta não está ativada, confira seu e-mail.', 
+							'alert_warning'
+						);
 						$this->redirect($this->referer());
 					}
 				}
 			} else {
-				$this->set(array(
-					'message' => array(
-						'text' => __('Invalid username or password, try again'),
-						'type' => 'error'
-					),
-					'_serialize' => array('message')
-				));
-				$this->Session->setFlash('Ops! Invalid username or password, try again.');
+				$this->Session->setFlash(
+					'Ops! Usuário ou senha inválidos, tente novamente.', 
+					'alert_error'
+				);
 				$this->redirect($this->referer());
-				$this->response->statusCode(401);
 			}
 		}
 	}
@@ -83,12 +81,13 @@ class UsersController extends AppController {
  */
 	public function logout() {
 		if($this->Auth->logout()) {
-			$this->set(array(
-				'message' => array(
-					'text' => __('Logout successfully'),
-					'type' => 'info'
-				),
-				'_serialize' => array('message')
+			$this->Session->setFlash(
+				'Você deslogou com sucesso!', 
+				'alert_success'
+			);
+			$this->redirect(array(
+				'controller' => 'users',
+				'action' => 'login'
 			));
 		}
 	}
@@ -128,22 +127,17 @@ class UsersController extends AppController {
 			$this->User->data['User']['status'] = 0;
 			if ($this->User->save($this->request->data)) {
 				$this->User->sendActivationLink($token);
-				$this->set(array(
-					'message' => array(
-						'text' => __('Registred successfully'),
-						'type' => 'info'
-					),
-					'_serialize' => array('message')
-				));
+				$this->Session->setFlash(
+					'Usuário cadastrado com sucesso, um e-mail foi enviado para ativar sua conta!', 
+					'alert_success'
+				);
+				$this->redirect($this->referer());
 			} else {
-				$this->set(array(
-					'message' => array(
-						'text' => __('The user could not be saved. Please, try again'),
-						'type' => 'error'
-					),
-					'_serialize' => array('message')
-				));
-				$this->response->statusCode(400);
+				$this->Session->setFlash(
+					'Usuário não pode ser cadastrado, tente novamente mais tarde.', 
+					'alert_error'
+				);
+				$this->redirect($this->referer());
 			}
 		}
 	}

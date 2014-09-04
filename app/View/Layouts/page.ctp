@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>mywallet - <?php echo $title; ?></title>
+	<title>mywallet</title>
 
 	<?php 
-		echo $this->Html->css('bootstrap.min');
-		echo $this->Html->css('styles.css');
+		echo $this->Html->css('bootstrap-sass/bootstrap/bootstrap');
+		echo $this->Html->css('main.css');
 	?>
 </head>
 <body>
-	<div class="container">
+	<div class="content-container">
 		
 		<?php echo $this->fetch('content'); ?>		
 
