@@ -1,4 +1,4 @@
-<div class="page-signin">
+<div class="page-signup">
 	<div class="signin-header">
 		<section class="logo text-center">
 			<a href="javascript:;">MYWALLET</a>
@@ -12,7 +12,7 @@
 					echo $this->Form->create(
 						'User', 
 						array(
-							'action' => 'login',
+							'action' => 'add',
 							'class' => 'form-horizontal',
 							'autocomplete' => 'off'
 						)
@@ -21,6 +21,21 @@
 
 				<div class="form-group">
 					<?php echo $this->Session->flash(); ?>
+				</div>
+
+				<div class="form-group">
+					<span class="glyphicon glyphicon-envelope"></span>
+					<?php  
+						echo $this->Form->input(
+							'name',
+							array(
+								'type' => 'text',
+								'class' => 'form-control input-lg text-center',
+								'placeholder' => 'Nome',
+								'label' => false
+							)
+						);
+					?>
 				</div>
 
 				<div class="form-group">
@@ -58,23 +73,20 @@
 								'class' => 'form-group'
 							),
 							'class' => 'btn btn-lg btn-primary text-center btn-block',
-							'label' => 'Entrar'
+							'label' => 'Cadastrar'
 						)
 					);
 				?>
 
 				<section>
-					<p class="text-center">
-						<a href="#">Esqueceu sua senha?</a>
-					</p>
 					<p class="text-center text-muted text-small">
-						Não tem uma conta ainda? 
+						Já tem uma conta?
 						<?php 
 							echo $this->Html->link(
-								'Inscreva-se',
+								'Logar-se',
 								array(
 									'controller' => 'users',
-									'action' => 'add'
+									'action' => 'login'
 								)
 							); 
 						?>

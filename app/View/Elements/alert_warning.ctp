@@ -1,4 +1,4 @@
-<div class="alert alert-warning alert-dismissable" role="alert" type="danger">
+<div class="alert alert-warning alert-dismissable text-center" role="alert" type="danger">
 	<button type="button" class="close" data-dismiss="alert">
 		<span aria-hidden="true">×</span>
 		<span class="sr-only">Close</span>

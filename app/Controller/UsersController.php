@@ -58,7 +58,7 @@ class UsersController extends AppController {
 				} else {
 					if($this->Auth->logout()) {
 						$this->Session->setFlash(
-							'Sua conta não está ativada, confira seu e-mail.', 
+							'Sua conta não está ativada, cheque seu e-mail.', 
 							'alert_warning'
 						);
 						$this->redirect($this->referer());
@@ -119,6 +119,8 @@ class UsersController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->layout = 'page';
+
 		if ($this->request->is('post')) {
 			$token = $this->User->generateToken();
 
@@ -128,7 +130,7 @@ class UsersController extends AppController {
 			if ($this->User->save($this->request->data)) {
 				$this->User->sendActivationLink($token);
 				$this->Session->setFlash(
-					'Usuário cadastrado com sucesso, um e-mail foi enviado para ativar sua conta!', 
+					'Sua conta foi cadastrada com sucesso, cheque seu e-mail para ativá-la!', 
 					'alert_success'
 				);
 				$this->redirect($this->referer());
