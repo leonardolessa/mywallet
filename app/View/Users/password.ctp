@@ -1,4 +1,4 @@
-<div class="page-signin">
+<div class="page-forgot">
 	<div class="signin-header">
 		<section class="logo text-center">
 			<a href="javascript:;">MYWALLET</a>
@@ -12,9 +12,19 @@
 					echo $this->Form->create(
 						'User', 
 						array(
-							'action' => 'login',
+							'action' => 'password',
 							'class' => 'form-horizontal',
 							'autocomplete' => 'off'
+						)
+					);
+				?>
+				
+				<?php 
+					echo $this->Form->input(
+						'token',
+						array(
+							'type' => 'hidden',
+							'value' => $token
 						)
 					);
 				?>
@@ -22,21 +32,7 @@
 				<div class="form-group">
 					<?php echo $this->Session->flash(); ?>
 				</div>
-
-				<div class="form-group">
-					<span class="glyphicon glyphicon-envelope"></span>
-					<?php  
-						echo $this->Form->input(
-							'email',
-							array(
-								'type' => 'email',
-								'class' => 'form-control input-lg text-center',
-								'placeholder' => 'Endereço de e-mail',
-								'label' => false
-							)
-						);
-					?>
-				</div>
+				
 				<div class="form-group">
 					<span class="glyphicon glyphicon-lock"></span>
 					<?php 
@@ -45,7 +41,7 @@
 							array(
 								'type' => 'password',
 								'class' => 'form-control input-lg text-center',
-								'placeholder' => 'Senha',
+								'placeholder' => 'Nova senha',
 								'label' => false
 							)
 						);
@@ -62,32 +58,6 @@
 						)
 					);
 				?>
-
-				<section>
-					<p class="text-center">
-						<?php 
-							echo $this->Html->link(
-								'Esqueceu sua senha?',
-								array(
-									'controller' => 'users',
-									'action' => 'reset'
-								)
-							);
-						?>
-					</p>
-					<p class="text-center text-muted text-small">
-						Não tem uma conta ainda? 
-						<?php 
-							echo $this->Html->link(
-								'Inscreva-se',
-								array(
-									'controller' => 'users',
-									'action' => 'add'
-								)
-							); 
-						?>
-					</p>
-				</section>
 			</div>
 		</div>
 	</div>
