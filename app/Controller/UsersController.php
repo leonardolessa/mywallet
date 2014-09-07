@@ -8,16 +8,16 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 
 /**
- * beforeFilter method
+ * beforeFilter action
  *
  */
 	public function beforeFilter() {
-		$this->Auth->allow('add', 'login', 'activate');
+		$this->Auth->allow('add', 'login', 'activate', 'reset', 'password');
 	}
 
 
 /**
- * index method
+ * index action
  *
  * @return void
  */
@@ -31,7 +31,7 @@ class UsersController extends AppController {
 
 
 /**
- * login method
+ * login action
  *
  * @return void
  */
@@ -75,7 +75,7 @@ class UsersController extends AppController {
 	}
 
 /**
- * logout method
+ * logout action
  *
  * @return void
  */
@@ -95,7 +95,7 @@ class UsersController extends AppController {
 
 
 /**
- * view method
+ * view action
  *
  * @throws NotFoundException
  * @param string $id
@@ -114,7 +114,7 @@ class UsersController extends AppController {
 	}
 
 /**
- * add method
+ * add action
  *
  * @return void
  */
@@ -145,7 +145,7 @@ class UsersController extends AppController {
 	}
 
 /**
- * edit method
+ * edit action
  *
  * @return void
  */
@@ -169,7 +169,7 @@ class UsersController extends AppController {
 	}
 
 /**
- * delete method
+ * delete action
  *
  * @return void
  */
@@ -190,7 +190,7 @@ class UsersController extends AppController {
 	}
 
 /**
- * activate method
+ * activate action
  * activate the user account using the token
  * @return void
  */
@@ -216,5 +216,104 @@ class UsersController extends AppController {
 			'controller' => 'users',
 			'action' => 'login'
 		));
+	}
+
+
+/**
+ * reset action
+ * send a link to the user to change the password
+ * @return void
+ */
+	public function reset() {
+		$this->layout = 'page';
+
+		if($this->request->is('post')) {
+			$user = $this->User->findByEmail($this->request->data['User']['email']);
+			if($user) {
+				$this->User->id = $user['User']['id'];
+
+				$this->User->data['User']['token'] = $this->User->generateToken();
+				$this->User->data['User']['status'] = 2;
+
+				if($this->User->save()) {
+					$this->User->sendResetLink();
+					$this->Session->setFlash(
+						'Um link foi enviado ao seu e-mail.',
+						'alert_success'
+					);	
+				} else {
+					pr($this->User->invalidFields());
+					die;
+					$this->Session->setFlash(
+						'Não foi possível resetar sua senha, tente novamente.',
+						'alert_error'
+					);
+				}
+			} else {
+				$this->Session->setFlash(
+					'Este e-mail não está cadastrado no sistema.',
+					'alert_error'
+				);
+			}
+			$this->redirect($this->referer());
+		}
+	}
+
+/**
+ * password action
+ * @param  [string] $token [token sent by e-mail]
+ * @return void
+ */
+	public function password($token = null) {
+		$this->layout = 'page';
+
+		if($this->request->is('post')) {
+			$user = $this->User->findByToken($this->request->data['User']['token']);
+
+			if($user['User']['status'] == 2) {
+				$this->User->id = $user['User']['id'];
+				if($this->User->saveField('password', $this->request->data['User']['password'])) {
+					$this->User->saveField('status', 1);
+					$this->Session->setFlash(
+						'Sua senha foi atualizada com sucesso',
+						'alert_success'
+					);
+					$this->redirect(array(
+						'controller' => 'users',
+						'action' => 'login'
+					));
+				}
+
+				$this->setFlash(
+					'Ocorreu um erro, tente novamente',
+					'alert_error'
+				);
+				$this->redirect($this->referer());
+			}
+
+			$this->setFlash(
+				'O pedido de troca de senha já foi utilizado.',
+				'alert_warning'
+			);
+			$this->redirect(array(
+				'controller' => 'users',
+				'action' => 'login'
+			));
+		}
+
+		$user = $this->User->findByToken($token);
+
+		if($user['User']['status'] != 2) {
+			$this->Session->setFlash(
+				'O link recebido não é válido ou já foi usado.',
+				'alert_error'
+			);
+			$this->redirect(array(
+				'controller' => 'users',
+				'action' => 'login'
+			));
+		}
+
+		$this->set(compact('token'));
 	}
 }
