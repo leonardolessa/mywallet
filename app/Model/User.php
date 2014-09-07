@@ -38,19 +38,19 @@ class User extends AppModel {
 			'email' => array(
 				'rule' => array('email'),
 				'message' => 'This is not a valid e-mail',
-				'required' => true,
+				'required' => 'create',
 			),
 			'unique' => array(
 				'rule' => 'isUnique',
 				'message' => 'This e-mail is already being used',
-				'required' => true,
+				'required' => 'create',
 			)
 		),
 		'password' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				'message' => 'Password cannot be blank',
-				'required' => true,
+				'required' => 'create',
 			),
 		)
 	);
@@ -93,14 +93,34 @@ class User extends AppModel {
 		$Email->template('activation')
 			->emailFormat('html')
 			->to($this->field('email'))
-			->from('appmywallet@gmail.com');
-
-		$Email->viewVars(
-			array(
-				'token' => $token
+			->from('appmywallet@gmail.com')
+			->viewVars(
+				array(
+					'token' => $token
+				)
 			)
-		);
+			->send();
+	}
 
-		$Email->send();
+/**
+ * sendResetLink method
+ * send a link to the user to a action to reset the password
+ * @return [boolean] [sent or not]
+ */
+	public function sendResetLink() {
+		$Email = new CakeEmail('default');
+		$Email->template('reset')
+			->emailFormat('html')
+			->to($this->field('email'))
+			->from('appmywallet@gmail.com')
+			->viewVars(
+				array(
+					'token' => $this->field('token')
+				)
+			)
+			->send();
+
+		return true;
+
 	}
 }
