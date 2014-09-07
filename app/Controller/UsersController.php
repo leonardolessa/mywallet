@@ -136,7 +136,7 @@ class UsersController extends AppController {
 				$this->redirect($this->referer());
 			} else {
 				$this->Session->setFlash(
-					'Usuário não pode ser cadastrado, tente novamente mais tarde.', 
+					'O Usuário não pode ser cadastrado, tente novamente mais tarde.', 
 					'alert_error'
 				);
 				$this->redirect($this->referer());
@@ -200,14 +200,21 @@ class UsersController extends AppController {
 
 		if($this->User->field('status') == 0) {
 			if($this->User->saveField('status', 1)) {
-				pr('activated');
-				die;
-			} else {
-				pr('iuahsue');
+				$this->Session->setFlash(
+					'Sua conta foi ativada.',
+					'alert_success'
+				);
 			}
 		} else {
-			pr('the user is already active');
-			die;
+			$this->Session->setFlash(
+				'Sua conta já está ativada',
+				'alert_error'
+			);
 		}
+
+		$this->redirect(array(
+			'controller' => 'users',
+			'action' => 'login'
+		));
 	}
 }
