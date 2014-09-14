@@ -23,6 +23,22 @@
 				<li>
 					<?php 
 						echo $this->Html->link(
+							'<span class="glyphicon glyphicon-list-alt"></span>
+							Movimentações',
+							array(
+								'controller' => 'movements',
+								'action' => 'index',
+							),
+							array(
+								'escape' => false
+							)
+						);
+					?>
+				</li>
+
+				<li>
+					<?php 
+						echo $this->Html->link(
 							'<span class="glyphicon glyphicon-tags"></span>
 							Categorias',
 							array(

@@ -38,7 +38,7 @@ class Category extends AppModel {
 			'foreignKey' => 'category_id',
 			'dependent' => true
 		)
-	)
+	);
 
 
 /**
