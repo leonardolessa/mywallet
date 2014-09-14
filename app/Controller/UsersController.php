@@ -36,7 +36,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function login() {
-		$this->layout = 'page';	
+		$this->layout = 'external';	
 
 		if($this->Session->read('Auth.User')) {
 			$this->redirect(array(
@@ -59,7 +59,7 @@ class UsersController extends AppController {
 					if($this->Auth->logout()) {
 						$this->Session->setFlash(
 							'Sua conta não está ativada, cheque seu e-mail.', 
-							'alert_warning'
+							'alerts/alert_warning'
 						);
 						$this->redirect($this->referer());
 					}
@@ -67,7 +67,7 @@ class UsersController extends AppController {
 			} else {
 				$this->Session->setFlash(
 					'Ops! Usuário ou senha inválidos, tente novamente.', 
-					'alert_error'
+					'alerts/alert_error'
 				);
 				$this->redirect($this->referer());
 			}
@@ -83,7 +83,7 @@ class UsersController extends AppController {
 		if($this->Auth->logout()) {
 			$this->Session->setFlash(
 				'Você deslogou com sucesso!', 
-				'alert_success'
+				'alerts/alert_success'
 			);
 			$this->redirect(array(
 				'controller' => 'users',
@@ -119,7 +119,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function add() {
-		$this->layout = 'page';
+		$this->layout = 'external';
 
 		if ($this->request->is('post')) {
 			$token = $this->User->generateToken();
@@ -131,13 +131,13 @@ class UsersController extends AppController {
 				$this->User->sendActivationLink($token);
 				$this->Session->setFlash(
 					'Sua conta foi cadastrada com sucesso, cheque seu e-mail para ativá-la!', 
-					'alert_success'
+					'alerts/alert_success'
 				);
 				$this->redirect($this->referer());
 			} else {
 				$this->Session->setFlash(
 					'O Usuário não pode ser cadastrado, tente novamente mais tarde.', 
-					'alert_error'
+					'alerts/alert_error'
 				);
 				$this->redirect($this->referer());
 			}
@@ -202,13 +202,13 @@ class UsersController extends AppController {
 			if($this->User->saveField('status', 1)) {
 				$this->Session->setFlash(
 					'Sua conta foi ativada.',
-					'alert_success'
+					'alerts/alert_success'
 				);
 			}
 		} else {
 			$this->Session->setFlash(
 				'Sua conta já está ativada',
-				'alert_error'
+				'alerts/alert_error'
 			);
 		}
 
@@ -225,7 +225,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function reset() {
-		$this->layout = 'page';
+		$this->layout = 'external';
 
 		if($this->request->is('post')) {
 			$user = $this->User->findByEmail($this->request->data['User']['email']);
@@ -239,20 +239,18 @@ class UsersController extends AppController {
 					$this->User->sendResetLink();
 					$this->Session->setFlash(
 						'Um link foi enviado ao seu e-mail.',
-						'alert_success'
+						'alerts/alert_success'
 					);	
 				} else {
-					pr($this->User->invalidFields());
-					die;
 					$this->Session->setFlash(
 						'Não foi possível resetar sua senha, tente novamente.',
-						'alert_error'
+						'alerts/alert_error'
 					);
 				}
 			} else {
 				$this->Session->setFlash(
 					'Este e-mail não está cadastrado no sistema.',
-					'alert_error'
+					'alerts/alert_error'
 				);
 			}
 			$this->redirect($this->referer());
@@ -265,7 +263,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function password($token = null) {
-		$this->layout = 'page';
+		$this->layout = 'external';
 
 		if($this->request->is('post')) {
 			$user = $this->User->findByToken($this->request->data['User']['token']);
@@ -276,7 +274,7 @@ class UsersController extends AppController {
 					$this->User->saveField('status', 1);
 					$this->Session->setFlash(
 						'Sua senha foi atualizada com sucesso',
-						'alert_success'
+						'alerts/alert_success'
 					);
 					$this->redirect(array(
 						'controller' => 'users',
@@ -286,14 +284,14 @@ class UsersController extends AppController {
 
 				$this->setFlash(
 					'Ocorreu um erro, tente novamente',
-					'alert_error'
+					'alerts/alert_error'
 				);
 				$this->redirect($this->referer());
 			}
 
 			$this->setFlash(
 				'O pedido de troca de senha já foi utilizado.',
-				'alert_warning'
+				'alerts/alert_warning'
 			);
 			$this->redirect(array(
 				'controller' => 'users',
@@ -306,7 +304,7 @@ class UsersController extends AppController {
 		if($user['User']['status'] != 2) {
 			$this->Session->setFlash(
 				'O link recebido não é válido ou já foi usado.',
-				'alert_error'
+				'alerts/alert_error'
 			);
 			$this->redirect(array(
 				'controller' => 'users',
