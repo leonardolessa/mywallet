@@ -1,4 +1,60 @@
-.form-signin {
-	max-width: 350px;
-	margin: 100px auto;
+.external-header {
+  margin-top: 5%;
+}
+.external-header .logo {
+  font-size: 40px;
+}
+.external-header .logo a:hover {
+  text-decoration: none;
+}
+.external-body {
+  margin: 10px auto;
+  max-width: 500px;
+}
+.form-group {
+  position: relative;
+}
+.form-group .glyphicon {
+  position: absolute;
+  top: 26px;
+  left: 15px;
+  color: #555;
+}
+.app {
+  padding-top: 60px;
+}
+.navbar-wrapper {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #e9e9e9;
+}
+.navbar-app {
+  float: none;
+  margin: 0 auto;
+  display: table !important;
+  table-layout: fixed;
+}
+.navbar-app .navbar-nav a {
+  text-align: center;
+  color: #555;
+  font-size: 13px;
+}
+.navbar-app .navbar-nav a:hover {
+  color: #18bc9c;
+}
+.navbar-app .navbar-nav .glyphicon {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 2px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  -ms-transition: 1s;
+  transition: 1s;
+}
+.navbar-app .navbar-nav li.active {
+  background-color: #18bc9c;
+}
+.navbar-app .navbar-nav li.active a {
+  color: #f6f6f6;
+  background-color: #18bc9c;
 }
