@@ -28,3 +28,8 @@ Icon?
 ehthumbs.db
 Thumbs.db
 composer.phar
+
+# FRONT-END FILES #
+
+node_modules
+
