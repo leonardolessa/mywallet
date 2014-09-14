@@ -16,9 +16,9 @@ class Category extends AppModel {
 	public $displayField = 'name';
 
 /**
- * hasOne association
+ * belongsTo association
  * 
- * @var string
+ * @var array
  */
 	public $belongsTo = array(
 		'User' => array(
@@ -26,6 +26,19 @@ class Category extends AppModel {
 			'foreignKey' => 'user_id'
 		)
 	);
+
+/**
+ * hasMany association
+ * 
+ * @var array
+ */
+	public $hasMany = array(
+		'Movement' => array(
+			'className' => 'Movement',
+			'foreignKey' => 'category_id',
+			'dependent' => true
+		)
+	)
 
 
 /**
