@@ -12,7 +12,13 @@ class UsersController extends AppController {
  *
  */
 	public function beforeFilter() {
-		$this->Auth->allow('add', 'login', 'activate', 'reset', 'password');
+		$this->Auth->allow(
+			'add', 
+			'login', 
+			'activate', 
+			'reset', 
+			'password'
+		);
 	}
 
 
@@ -151,21 +157,29 @@ class UsersController extends AppController {
  */
 	public function edit() {
 		$this->User->id = $this->Auth->user('id');
-		if($this->User->save($this->request->data)) {
-			$message = array(
-				'text' => __('The user has been edited'),
-				'type' => 'info'
-			);
-		} else {
-			$message = array(
-				'text' => __('The user could not been saved'),
-				'type' => 'error'
-			);
+
+		if($this->request->is(array('post', 'put'))) {
+			if($this->request->data['User']['id'] == $this->Auth->user('id')) {
+				if($this->User->save($this->request->data)) {
+					$this->Session->setFlash(
+						'Seu perfil foi editado com sucesso.',
+						'alerts/alert_success'
+					);
+				} else {
+					$this->Session->setFlash(
+						'Ocorreu um erro, tente novamente',
+						'alerts/alert_error'
+					);
+				}
+				$this->redirect($this->referer());
+			} else {
+				$this->Session->setFlash(
+					'Você não está autorizado a realizar esta operação',
+					'alerts/alert_warning'
+				);
+			}
+			$this->redirect($this->referer());
 		}
-		$this->set(array(
-			'message' => $message,
-			'_serialize' => array('message')
-		));
 	}
 
 /**
