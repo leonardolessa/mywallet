@@ -33,11 +33,36 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
-							User
+							<?php 
+								echo $this->Gravatar->getGravatar(
+									$userData['email'],
+									25,
+									'mm',
+									'g',
+									true,
+									array(
+										'class' => 'img-rounded profile-image'
+									)
+								);
+								echo $userData['name'];
+							?>
 							<span class="caret"></span>
 						</a>
 
 						<ul class="dropdown-menu">
+							<li>
+								<a href="<?php 
+											echo $this->Html->url(array(
+												'controller' => 'users',
+												'action' => 'edit'
+											)); 
+										?>"
+									data-toggle="modal"
+									data-target=".modal-edit"
+								>
+								Editar perfil	
+								</a>
+							</li>
 							<li>
 								<?php 
 									echo $this->Html->link(
@@ -57,6 +82,15 @@
 	</header>
 
 	<?php echo $this->fetch('content'); ?>
+
+
+	<div class="modal modal-edit fade" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      
+	    </div>
+	  </div>
+	</div>
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<?php 
