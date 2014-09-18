@@ -17,7 +17,15 @@ class CategoriesController extends AppController {
 		if (in_array($this->action, array('edit', 'delete'))) {
 			$categoryId = (int) $this->request->params['pass'][0];
 			if(!$this->Category->isOwnedBy($categoryId, $user['id'])) {
-				die;
+				$this->Session->setFlash(
+					'Você não está autorizado a realizar esta ação.',
+					'alert/alert_warning'
+				);
+				$this->redirect(array(
+					'controller' => 'pages',
+					'action' => 'display',
+					'home'
+				));
 			}
 		}
 		return parent::isAuthorized($user);
