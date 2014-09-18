@@ -32,10 +32,10 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	/**
-	 * app components
-	 * @var array
-	 */
+/**
+ * app components
+ * @var array
+ */
 	public $components = array(
 		'Auth' => array(
 			'authenticate' => array(
@@ -50,12 +50,28 @@ class AppController extends Controller {
 	);
 
 /**
+ * helpers handler
+ * @var array
+ */
+	public $helpers = array(
+		'Gravatar'
+	);
+
+/**
  * isAuthorized callback method
  * @param array $user user info to authorize
  * @return boolean [if it's authorized or not]
  */
 	public function isAuthorized($user) {
 		return true;
+	}
+
+/**
+ * beforeRender callback
+ * @return void
+ */
+	public function beforeRender() {
+		$this->set('userData', $this->Auth->user());
 	}
 
 }
