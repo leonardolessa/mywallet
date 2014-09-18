@@ -30,6 +30,9 @@
   border-right: 1px solid #e9e9e9;
   padding-top: 40px;
 }
+.profile-image {
+  margin-right: 5px;
+}
 .navbar-wrapper {
   background-color: #f6f6f6;
   border-bottom: 1px solid #e9e9e9;
@@ -70,4 +73,13 @@
 }
 .outgoing {
   color: #ff1919;
+}
+.btn-income {
+  background-color: #0c0;
+}
+.btn-outgoing {
+  background-color: #ff1919;
+}
+.add-btns {
+  margin-top: 10px;
 }
