@@ -4,8 +4,7 @@
 			'User', 
 			array(
 				'action' => 'add',
-				'class' => 'form-horizontal',
-				'autocomplete' => 'off'
+				'class' => 'form-horizontal'
 			)
 		);
 	?>
