@@ -9,15 +9,19 @@
 
 <div class="main-container container">	
 	<div class="panel panel-default">
-		<div class="panel-heading">
-			Movimentações
+		<div class="panel-heading clearfix">
+			<h3 class="pull-left">Movimentações</h3>
+			<div class="add-btns pull-right ">
+				<button type="button" class="btn btn-default btn-income">Receita</button>
+				<button type="button" class="btn btn-default btn-outgoing">Despesa</button>
+			</div>
 		</div>
 
 		<panel class="body">
 			
 		</panel>
 		<div class="table-responsive">
-			<table class="table table-bordered">
+			<table class="table table-bordered table-striped table-hover">
 				<thead>
 					<tr>
 						<td>Tipo</td>
