@@ -7,6 +7,25 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
+	public function isAuthorized($user) {
+		if (in_array($this->action, array('edit', 'delete'))) {
+			$userId = (int) $this->request->params['pass'][0];
+
+			if($userId != $user['id']) {
+				$this->Session->setFlash(
+					'Você não está autorizado a realizar esta ação.',
+					'alert/alert_warning'
+				);
+				$this->redirect(array(
+					'action' => 'login'
+				));
+
+				return false;
+			}
+		}
+		return parent::isAuthorized($user);
+	}
+
 /**
  * beforeFilter action
  *
@@ -133,7 +152,7 @@ class UsersController extends AppController {
 			$this->User->create();
 			$this->User->data['User']['token'] = $token;
 			$this->User->data['User']['status'] = 0;
-			if ($this->User->save($this->request->data)) {
+			if($this->User->save($this->request->data)) {
 				$this->User->sendActivationLink($token);
 				$this->Session->setFlash(
 					'Sua conta foi cadastrada com sucesso, cheque seu e-mail para ativá-la!', 
@@ -145,7 +164,6 @@ class UsersController extends AppController {
 					'O Usuário não pode ser cadastrado, tente novamente mais tarde.', 
 					'alerts/alert_error'
 				);
-				$this->redirect($this->referer());
 			}
 		}
 	}
@@ -155,30 +173,28 @@ class UsersController extends AppController {
  *
  * @return void
  */
-	public function edit() {
-		$this->User->id = $this->Auth->user('id');
+	public function edit($id = null) {
+		$this->User->id = $id;
 
+		if(!$this->User->exists()) {
+			throw new NotFoundException('Usuário inválido'); 
+		}
 		if($this->request->is(array('post', 'put'))) {
-			if($this->request->data['User']['id'] == $this->Auth->user('id')) {
-				if($this->User->save($this->request->data)) {
-					$this->Session->setFlash(
-						'Seu perfil foi editado com sucesso.',
-						'alerts/alert_success'
-					);
-				} else {
-					$this->Session->setFlash(
-						'Ocorreu um erro, tente novamente',
-						'alerts/alert_error'
-					);
-				}
+			if($this->User->save($this->request->data)) {
+				$this->Session->setFlash(
+					'Seu perfil foi editado com sucesso.',
+					'alerts/alert_success'
+				);
+
 				$this->redirect($this->referer());
 			} else {
 				$this->Session->setFlash(
-					'Você não está autorizado a realizar esta operação',
-					'alerts/alert_warning'
+					'O perfil não pode ser editado, tente novamente',
+					'alerts/alert_error'
 				);
 			}
-			$this->redirect($this->referer());
+		} else {
+			$this->request->data = $this->User->read();
 		}
 	}
 
