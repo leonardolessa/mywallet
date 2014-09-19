@@ -40,7 +40,7 @@ class User extends AppModel {
 				'message' => 'Por favor, preencha seu nome.',
 				'required' => true
 			)
-		)
+		),
 		'email' => array(
 			'email' => array(
 				'rule' => array('email'),
