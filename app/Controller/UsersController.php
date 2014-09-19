@@ -199,16 +199,23 @@ class UsersController extends AppController {
 	public function delete() {
 		$id = $this->Auth->user('id');
 
-		if($this->User->delete($id)) {
-			$this->logout();
-		} else {
-			$this->set(array(
-				'message' => array(
-					'text' => __('The user could not been deleted'),
-					'type' => 'error'
-				),
-				'_serialize' => array('message')
-			));
+		if($this->request->is(array('post', 'delete'))) {
+			if($this->User->delete()) {
+				$this->Session->setFlash(
+					'Sua conta foi excluída com sucesso.',
+					'alerts/alert_success'
+				);
+
+				$this->Auth->logout();
+
+				$this->redirect(array(
+					'action' => 'login'
+				));
+			} else {
+				$this->Session->setFlash(
+					'Sua conta não pode ser excluída, tente novamente.',
+				);
+			}
 		}
 	}
 
