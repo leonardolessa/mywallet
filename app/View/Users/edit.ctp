@@ -8,6 +8,7 @@
 ?>
 
 <div class="container main-container">
+	<?php echo $this->Session->flash(); ?>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="well bs-component">

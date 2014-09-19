@@ -14,7 +14,7 @@ class UsersController extends AppController {
 			if($userId != $user['id']) {
 				$this->Session->setFlash(
 					'Você não está autorizado a realizar esta ação.',
-					'alert/alert_warning'
+					'alerts/alert_warning'
 				);
 				$this->redirect(array(
 					'action' => 'login'
@@ -172,13 +172,10 @@ class UsersController extends AppController {
 	public function edit($id = null) {
 		$this->User->id = $id;
 
-		if(!$this->User->exists()) {
-			throw new NotFoundException('Usuário inválido'); 
-		}
 		if($this->request->is(array('post', 'put'))) {
 			if($this->User->save($this->request->data)) {
 				$this->Session->setFlash(
-					'Seu perfil foi editado com sucesso.',
+					'Seu perfil foi editado com sucesso, para suas informações atualizarem você precisa deslogar.',
 					'alerts/alert_success'
 				);
 
@@ -268,6 +265,8 @@ class UsersController extends AppController {
 						'alerts/alert_success'
 					);	
 				} else {
+					pr($this->User->validationErrors);
+					die;
 					$this->Session->setFlash(
 						'Não foi possível resetar sua senha, tente novamente.',
 						'alerts/alert_error'
