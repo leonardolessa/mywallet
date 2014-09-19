@@ -38,7 +38,7 @@ class User extends AppModel {
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				'message' => 'Por favor, preencha seu nome.',
-				'required' => true
+				'required' => 'create'
 			)
 		),
 		'email' => array(
