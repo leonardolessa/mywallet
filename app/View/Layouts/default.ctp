@@ -20,7 +20,19 @@
 	<header class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="javascript:;" class="navbar-brand">mywallet</a>
+				<?php
+					echo $this->Html->link(
+						'mywallet',
+						array(
+							'controller' => 'pages',
+							'action' => 'display',
+							'home'
+						),
+						array(
+							'class' => 'navbar-brand'
+						)
+					);
+				?>
 
 				<button type="button" data-toggle="collapse" data-target="#navbar-menu" class="navbar-toggle">
 					<span class="icon-bar"></span>
@@ -51,17 +63,16 @@
 
 						<ul class="dropdown-menu">
 							<li>
-								<a href="<?php 
-											echo $this->Html->url(array(
-												'controller' => 'users',
-												'action' => 'edit'
-											)); 
-										?>"
-									data-toggle="modal"
-									data-target=".modal-edit"
-								>
-								Editar perfil	
-								</a>
+								<?php 
+									echo $this->Html->link(
+										'Editar perfil',
+										array(
+											'controller' => 'users',
+											'action' => 'edit',
+											$userData['id']
+										)
+									);
+								?>
 							</li>
 							<li>
 								<?php 
@@ -82,15 +93,6 @@
 	</header>
 
 	<?php echo $this->fetch('content'); ?>
-
-
-	<div class="modal modal-edit fade" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      
-	    </div>
-	  </div>
-	</div>
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<?php 

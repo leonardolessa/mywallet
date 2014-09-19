@@ -3,5 +3,5 @@
 		<span aria-hidden="true">×</span>
 		<span class="sr-only">Close</span>
 	</button>
-   <?php echo $message; ?>
+	<?php echo $message; ?>
 </div>
