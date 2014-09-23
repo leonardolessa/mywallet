@@ -27,19 +27,37 @@
 					<fieldset>
 						<div class="form-group">
 							<div class="col-lg-10 col-lg-offset-2">
-								<?php 
-									echo $this->Gravatar->getGravatar(
-										$userData['email'],
-										100,
-										'mm',
-										'g',
-										true,
-										array(
-											'class' => 'img-rounded'
-										)
-									);
-								?>
-								<p>Para alterar sua imagem, você deve acessar o <a href="http://br.gravatar.com/" target="_blank">Gravatar</a>, uma forma fácil de manter sua foto em todos os lugares. </p>
+								<div class="media">
+									<span class="pull-left">
+										<?php 
+											echo $this->Gravatar->getGravatar(
+												$userData['email'],
+												100,
+												'mm',
+												'g',
+												true,
+												array(
+													'class' => 'img-rounded media-object'
+												)
+											);
+										?>
+									</span>
+									<div class="media-body">
+										<h4 class="media-heading"><?php echo $userData['name'] ?></h4>
+										<ul class="list-unstyled">
+											<li>
+												Usuário desde: 
+												<?php 
+													echo $this->Time->format(
+														$userData['created'],
+														'%d/%m/%Y'
+													) 
+												?>
+											</li>
+										</ul>
+										<p>Para alterar sua imagem, você deve acessar o <a href="http://br.gravatar.com/" target="_blank">Gravatar</a>, uma forma fácil de manter sua foto em todos os lugares. </p>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -118,6 +136,49 @@
 						</div>
 					</fieldset>
 				</form>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title">Zona de Perigo</h3>
+				</div>
+				<div class="panel-body">
+					<p>Cuidado, tenha certeza do que está fazendo, todos os dados serão excluídos permanentementes, para sua privacidade e segurança dos seus dados. Esta operação não terá retorno.</p>
+					<button class="btn btn-danger" data-toggle="modal" data-target=".modal-delete">Deletar conta</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-delete">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Confirmação de Exclusão</h4>
+			</div>
+			<div class="modal-body">
+				<p>Você tem certeza que deseja excluir sua conta?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<?php 
+					echo $this->Html->link(
+						'Excluir',
+						array(
+							'controller' => 'users',
+							'action' => 'delete',
+							$userData['id']
+						),
+						array(
+							'class' => 'btn btn-danger'
+						)
+					);
+				?>
 			</div>
 		</div>
 	</div>
