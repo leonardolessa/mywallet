@@ -23,8 +23,8 @@
 
 	</div>
 	
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<?php 
+	<?php
+		echo $this->Html->script('jquery-1.11.1.min'); 
 		echo $this->Html->script('bootstrap.min'); 
 		echo $this->Html->script('script.min')
 	?>
