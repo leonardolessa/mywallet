@@ -1,7 +1,9 @@
 module.exports = function(grunt) {
 
 	var jsFiles = [
-		'js/src/app.js'
+		'js/src/namespace.js',
+		'js/src/Delegator.js',
+		'js/src/Main.js'
 	];
 
 	grunt.initConfig({
