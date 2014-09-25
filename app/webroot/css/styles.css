@@ -86,3 +86,9 @@
 .outgoing {
   color: #ff1919;
 }
+.td-date {
+  width: 40px;
+}
+.td-type {
+  width: 20px;
+}

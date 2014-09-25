@@ -59,11 +59,11 @@
 				</div>
 			</panel>
 			<div class="table-responsive">
-				<table class="table table-bordered table-striped table-hover">
+				<table class="table table-bordered table-striped table-hover table-movements">
 					<thead>
 						<tr>
-							<td>Tipo</td>
-							<td>Data</td>
+							<td class="td-type">Tipo</td>
+							<td class="td-date">Data</td>
 							<td>Descrição</td>
 							<td>Categoria</td>
 							<td>Valor</td>
