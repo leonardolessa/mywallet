@@ -33,6 +33,18 @@
 .profile-image {
   margin: -4px 5px;
 }
+.no-margin-vertical {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.well-add {
+  line-height: 36px;
+  margin-right: 10px;
+}
+.filter-well {
+  margin-left: 10px;
+  line-height: 36px;
+}
 .navbar-wrapper {
   background-color: #f6f6f6;
   border-bottom: 1px solid #e9e9e9;

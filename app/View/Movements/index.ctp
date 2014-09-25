@@ -18,21 +18,44 @@
 				<h3 class="pull-left panel-title">Movimentações</h3>
 			</div>
 		
-			<panel class="body">
-				<div class="dropdown pull-right">
-					<a href="javascript:;" data-toggle="dropdown">
-						<span class="glyphicon glyphicon-plus"><!-- Add movements button --></span>
-						Adicionar
-					</a>
-		
-					<ul class="dropdown-menu">
-						<li role="presentation">
-							<a role="menuitem" tabindex="-1" href="#">Adicionar Despesa</a>
-						</li>
-						<li role="presentation">
-							<a role="menuitem" tabindex="-1" href="#">Adicionar Receita</a>
-						</li>
-					</ul>
+			<panel class="panel-body">
+				<div class="row">
+					<div class="col-md-3 col-sm-3">
+						<div class="dropdown">
+							<a href="javascript:;" data-toggle="dropdown" class="well-sm well filter-well">	
+								Filtrar
+							</a>
+
+							<ul class="dropdown-menu">
+								<li role="presentation" class="active">
+									<a role="menuitem" tabindex="-1" href="#">Todos</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">Despesas</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">Receitas</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-md-6 text-center col-sm-6">
+						<ul class="pagination no-margin-vertical">
+							<li><a href="javascript:;">«</a></li>
+							<li><a href="javascript:;">Setembro</a></li>
+							<li><a href="javascript:;">»</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-3 col-sm-3">
+						<div class="dropdown pull-right">
+							<a href="javascript:;" data-toggle="dropdown" class="well-sm well well-add">	
+								<span class="glyphicon glyphicon-plus"><!-- Add movements button --></span>
+								Adicionar
+							</a>
+						</div>
+					</div>
 				</div>
 			</panel>
 			<div class="table-responsive">
