@@ -74,6 +74,12 @@ class Category extends AppModel {
 		)
 	);
 
+/**
+ * isOwnedBy method
+ * @param  [integer]  $category [category id]
+ * @param  [integer]  $user     [user id]
+ * @return boolean
+ */
 	public function isOwnedBy($category, $user) {
 		return $this->field('id', array('id' => $category, 'user_id' => $user)) == $category;
 	}

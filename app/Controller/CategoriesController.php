@@ -46,10 +46,7 @@ class CategoriesController extends AppController {
 				)
 			)
 		);
-		$this->set(array(
-			'categories' => $categories,
-			'_serialize' => array('categories')
-		));
+		$this->set(compact('categories'));
 	}
 
 /**
