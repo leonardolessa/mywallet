@@ -31,7 +31,7 @@
   padding-top: 40px;
 }
 .profile-image {
-  margin-right: -4px 5px;
+  margin: -4px 5px;
 }
 .navbar-wrapper {
   background-color: #f6f6f6;
@@ -73,13 +73,4 @@
 }
 .outgoing {
   color: #ff1919;
-}
-.btn-income {
-  background-color: #0c0;
-}
-.btn-outgoing {
-  background-color: #ff1919;
-}
-.add-btns {
-  margin-top: 10px;
 }
