@@ -50,7 +50,12 @@
 
 					<div class="col-md-3 col-sm-3">
 						<div class="dropdown pull-right">
-							<a href="javascript:;" data-toggle="dropdown" class="well-sm well well-add">	
+							<a 
+								href="<?php echo $this->Html->url(array('action' => 'add')); ?>" 
+								class="well-sm well well-add"
+								data-toggle="modal"
+								data-target=".modal-movements">
+
 								<span class="glyphicon glyphicon-plus"><!-- Add movements button --></span>
 								Adicionar
 							</a>
@@ -62,8 +67,8 @@
 				<table class="table table-bordered table-striped table-hover table-movements">
 					<thead>
 						<tr>
-							<td class="td-type">Tipo</td>
-							<td class="td-date">Data</td>
+							<td class="td-head-type">Tipo</td>
+							<td class="td-head-date">Data</td>
 							<td>Descrição</td>
 							<td>Categoria</td>
 							<td>Valor</td>
@@ -72,7 +77,9 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><span class="glyphicon glyphicon-plus-sign income"></span></td>
+							<td class="td-type">
+								<span class="glyphicon glyphicon-upload income"></span>
+							</td>
 							<td>03/10/2014</td>
 							<td>descrição da receita</td>
 							<td><span class="glyphicon glyphicon-stop" style="color: #ccc;"></span>Categoria</td>
@@ -80,7 +87,7 @@
 							<td></td>
 						</tr>
 						<tr>
-							<td><span class="glyphicon glyphicon-minus-sign outgoing"></span></td>
+							<td><span class="glyphicon glyphicon-download outgoing"></span></td>
 							<td>03/10/2014</td>
 							<td>descrição da despesa</td>
 							<td><span class="glyphicon glyphicon-stop" style="color: #C00;"></span>Categoria</td>
@@ -90,6 +97,14 @@
 					</tbody>	
 				</table>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade modal-movements">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			
 		</div>
 	</div>
 </div>

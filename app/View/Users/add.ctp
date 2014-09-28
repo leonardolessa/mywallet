@@ -3,14 +3,6 @@
 		echo $this->Form->create(
 			'User', 
 			array(
-				// 'inputDefaults' => array(
-				// 	'error' => array(
-				// 		'attributes' => array(
-				// 			'wrap' => 'div',
-				// 			'class' => 'alert alert-danger alert-dismissable text-center'
-				// 		)
-				// 	)
-				// ),
 				'action' => 'add',
 				'class' => 'form-horizontal'
 			)
