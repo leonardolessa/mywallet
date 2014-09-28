@@ -15,13 +15,14 @@ MW.services.Delegator = function() {
 
 		$.each(components, function(index, value) {
 			var component = $(this).data('component');
-
 			/**
 			 * Define the components inside the case
 			 */
 			switch(component) {
 				case 'movements':
-					console.log('movements');
+					MW.i.movements = new MW.components.Movements({
+						wrapper: $(this)
+					});
 					break;
 
 				default:

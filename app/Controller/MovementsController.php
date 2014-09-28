@@ -46,20 +46,31 @@ class MovementsController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
+		if ($this->request->is('post') && $this->request->isAjax()) {
 			$this->Movement->create();
 			if ($this->Movement->save($this->request->data)) {
-				$this->Session->setFlash(__('The movement has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$message = array(
+					'text' => 'A movimentação foi adicionada com sucesso.',
+					'type' => 'success'
+				);
 			} else {
-				$this->Session->setFlash(__('The movement could not be saved. Please, try again.'));
+				$message = array(
+					'text' => 'Não foi possível adicionar a movimentação.',
+					'type' => 'error',
+					'errors' => $this->Movement->validationErrors
+				);
 			}
+
+			return $this->set(array(
+				'message' => $message,
+				'_serialize' => array('message')
+			));
 		}
 		$users = $this->Movement->User->find('list');
 		$categories = $this->Movement->Category->find('list');
-		$savings = $this->Movement->Saving->find('list');
-		$goals = $this->Movement->Goal->find('list');
-		$this->set(compact('users', 'categories', 'savings', 'goals'));
+		// $savings = $this->Movement->Saving->find('list');
+		// $goals = $this->Movement->Goal->find('list');
+		$this->set(compact('users', 'categories'));
 	}
 
 /**

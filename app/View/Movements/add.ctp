@@ -16,7 +16,8 @@
 					),
 					'class' => 'form-control'
 				),
-				'action' => 'add'
+				'action' => 'add',
+				'class' => 'form-movement-add',
 			)
 		);
 	?>
@@ -64,5 +65,7 @@
 </div>
 
 <script>
-	$('.switch').bootstrapSwitch();
+	MW.i.formMovement = new MW.components.FormMovement({
+		form: $('.form-movement-add')
+	});
 </script>
