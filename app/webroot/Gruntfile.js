@@ -3,11 +3,22 @@ module.exports = function(grunt) {
 	var jsFiles = [
 		'js/src/namespace.js',
 		'js/src/Delegator.js',
+		'js/src/Movements.js',
 		'js/src/Main.js'
 	];
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		concat: {
+			options: {
+				stripBanners: true,
+				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */'
+			},
+			dist: {
+				src: jsFiles,
+				dest: 'js/script.min.js'
+			}
+		},
 		uglify: {
 			dev: {
 				options: {
@@ -40,7 +51,7 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: ['js/src/**/*.js'],
-				tasks: ['uglify'],
+				tasks: ['concat'],
 				options: {
 					livereload: true
 				}
@@ -48,9 +59,10 @@ module.exports = function(grunt) {
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-stylus');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default', ['uglify', 'stylus', 'watch']);
+	grunt.registerTask('default', ['concat', 'stylus', 'watch']);
 
 }
