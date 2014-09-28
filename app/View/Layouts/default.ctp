@@ -9,6 +9,7 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css('bootstrap-switch.min');
 		echo $this->Html->css('styles');
 
 		echo $this->fetch('meta');
@@ -97,7 +98,8 @@
 	
 	<?php 
 		echo $this->Html->script('jquery.min');
-		echo $this->Html->script('bootstrap.min'); 
+		echo $this->Html->script('bootstrap.min');
+		echo $this->Html->script('bootstrap-switch.min');
 		echo $this->Html->script('script.min');
 	?>
 	<script src="//localhost:35729/livereload.js"></script>
