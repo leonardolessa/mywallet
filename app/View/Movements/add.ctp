@@ -22,8 +22,24 @@
 		);
 	?>
 
-		<div class="mb-15">
-			<input type="checkbox" class="switch" value="1" name="data[Movement][type]" data-size="large" data-on-text="Receita" data-off-text="Despesa" data-on-color="success" data-off-color="danger" checked>
+		<div class="mb-15 text-center">
+			<?php
+				echo $this->Form->input(
+					'type',
+					array(
+						'type' => 'checkbox',
+						'div' => false,
+						'label' => false,
+						'class' => 'switch',
+						'data-size' => 'large',
+						'data-on-text' => 'Receita',
+						'data-off-text' => 'Despesa',
+						'data-on-color' => 'success',
+						'data-off-color' => 'danger',
+						'checked' => true
+					)
+				)
+			?>
 		</div>
 
 		<?php 
@@ -39,20 +55,51 @@
 				'amount',
 				array(
 					'type' => 'text',
-					'label' => 'Valor'
+					'label' => 'Valor',
+					'class' => 'money form-control',
+					'data-prefix' => 'R$ ',
+					'data-thousands' => '.',
+					'data-decimal' => ','
+				)
+			);
+
+			echo $this->Form->input(
+				'date',
+				array(
+					'type' => 'text',
+					'label' => 'Data',
+					'class' => 'datepicker form-control'
 				)
 			);
 		?>
 
 		<div class="mb-15">
-			<label class="control-label">Efetivado</label>
+			<label class="control-label">Pago</label>
 			<div class="break"></div>
-			<input type="checkbox" class="switch" value="1" name="data[Movement][paid]" data-size="large" data-on-text="<span class='glyphicon glyphicon-thumbs-up'></span>" data-off-text="<span class='glyphicon glyphicon-thumbs-down'></span>">
+			<?php
+				echo $this->Form->input(
+					'paid',
+					array(
+						'class' => 'switch',
+						'type' => 'checkbox',
+						'div' => false,
+						'label' => false,
+						'value' => '1',
+						'data-size' => 'large',
+						'data-on-text' => '<span class=\'glyphicon glyphicon-thumbs-up\'></span>',
+						'data-off-text' => '<span class=\'glyphicon glyphicon-thumbs-down\'></span>',
+						'escape' => false
+					)
+				)
+			?>
 		</div>
 
 		<?php
 			echo $this->Form->input(
-				'category_id'
+				'category_id',
+				array(
+					'label' => 'Categoria'
+				)
 			);
 		?>
 

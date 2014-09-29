@@ -11,7 +11,20 @@ MW.components.FormMovement.prototype = {
 	},
 
 	setup: function() {
+		var dateElements = this.settings.form.find('.datepicker');
+
 		this.settings.form.find('.switch').bootstrapSwitch();
+
+		this.settings.form.find('.money').maskMoney();
+
+		dateElements.datepicker({
+		    format: "dd/mm/yyyy",
+		    language: "pt-BR",
+		    autoclose: true,
+		    todayHighlight: true
+		});
+
+		dateElements.datepicker('setDate', new Date());
 	},
 
 	bind: function() {
@@ -28,13 +41,13 @@ MW.components.FormMovement.prototype = {
 			data = $(form).serialize(),	
 			url = $(form).attr('action') + '.json';
 
-			$.ajax({
-				data: data,
-				url: url,
-				type: 'POST'
-			}).done(function(data) {
-				self.setMessage(data);
-			});
+		$.ajax({
+			data: data,
+			url: url,
+			type: 'POST'
+		}).done(function(data) {
+			self.setMessage(data);
+		});
 	},
 
 	setMessage: function(data) {
@@ -43,6 +56,8 @@ MW.components.FormMovement.prototype = {
 		} else if (data.type == 'success') {
 			this.showMessage(data.message);
 		}
+
+		this.closeModal();
 	},
 
 	showErrors: function(errors) {
@@ -53,5 +68,9 @@ MW.components.FormMovement.prototype = {
 
 	showMessage: function(message) {
 		console.log(message);
+	},
+
+	closeModal: function() {
+		
 	}
 }
