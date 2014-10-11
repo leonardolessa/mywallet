@@ -15,7 +15,14 @@ MW.components.FormMovement.prototype = {
 
 		this.settings.form.find('.switch').bootstrapSwitch();
 
-		this.settings.form.find('.money').maskMoney();
+		this.settings.form.find('.money').mask(
+			'#.##0,00',
+			{
+				reverse: true
+			}
+		);
+
+		this.settings.form.validate();
 
 		dateElements.datepicker({
 		    format: "dd/mm/yyyy",
@@ -32,21 +39,24 @@ MW.components.FormMovement.prototype = {
 
 		this.settings.form.on('submit', function(ev) {
 			ev.preventDefault();
-			self.submitForm(ev.target);
+
+			if($(this).valid()) {
+				self.submitForm(ev.target);
+			}
 		});
 	},
 
 	submitForm: function(form) {
 		var self = this,
 			data = $(form).serialize(),	
-			url = $(form).attr('action') + '.json';
+			url = $(form).attr('action');
 
 		$.ajax({
 			data: data,
 			url: url,
 			type: 'POST'
 		}).done(function(data) {
-			self.setMessage(data);
+			self.setMessage(data.message);
 		});
 	},
 
@@ -54,10 +64,9 @@ MW.components.FormMovement.prototype = {
 		if(data.type == 'error') {
 			this.showErrors(data.errors);
 		} else if (data.type == 'success') {
-			this.showMessage(data.message);
+			this.showMessage(data.text);
+			this.closeModal();
 		}
-
-		this.closeModal();
 	},
 
 	showErrors: function(errors) {
@@ -67,10 +76,21 @@ MW.components.FormMovement.prototype = {
 	},
 
 	showMessage: function(message) {
-		console.log(message);
+		var messageBox = $('.alert-on');
+
+		messageBox.addClass('alert-success').append('<p>'+ message + '</p>').slideDown();
+		
+		setTimeout(function() {
+			messageBox.slideUp();
+		}, 3000);
 	},
 
 	closeModal: function() {
-		
+		this.settings.form.closest('.modal').modal('hide');
+		this.refreshMovements();
+	},
+
+	refreshMovements: function() {
+		MW.i.movements.getMovements();
 	}
 }
