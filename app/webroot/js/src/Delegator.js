@@ -21,7 +21,9 @@ MW.services.Delegator = function() {
 			switch(component) {
 				case 'movements':
 					MW.i.movements = new MW.components.Movements({
-						wrapper: $(this)
+						wrapper: $(this),
+						loader: $('.loader-wrapper'),
+						output: $(this).find('tbody')
 					});
 					break;
 
