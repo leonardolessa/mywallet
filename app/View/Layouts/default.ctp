@@ -96,8 +96,10 @@
 
 	<?php echo $this->fetch('content'); ?>
 	
+	<div class="alert alert-on alert-dismissable"></div>	
 	<?php 
 		echo $this->Html->script('jquery.min');
+		echo $this->Html->script('jquery.validate.min');
 		echo $this->Html->script('bootstrap.min');
 		echo $this->Html->script('bootstrap-switch.min');
 		echo $this->Html->script('script.min');
