@@ -832,6 +832,13 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .mb-15 {
   margin-bottom: 15px;
 }
+.alert-on {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 250px;
+  display: none;
+}
 .navbar-wrapper {
   background-color: #f6f6f6;
   border-bottom: 1px solid #e9e9e9;
@@ -867,12 +874,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   color: #f6f6f6;
   background-color: #18bc9c;
 }
-.income {
-  color: #0c0;
-}
-.outgoing {
-  color: #ff1919;
-}
 .td-head-date {
   width: 40px;
 }
@@ -880,5 +881,14 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   width: 20px;
 }
 .td-type {
+  text-align: center;
+}
+.td-type .glyphicon-upload {
+  color: #0c0;
+}
+.td-type .glyphicon-download {
+  color: #ff1919;
+}
+.loader-wrapper {
   text-align: center;
 }
