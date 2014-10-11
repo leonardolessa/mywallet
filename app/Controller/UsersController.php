@@ -27,7 +27,7 @@ class UsersController extends AppController {
 	}
 
 /**
- * beforeFilter action
+ * beforeFilter callback
  *
  */
 	public function beforeFilter() {

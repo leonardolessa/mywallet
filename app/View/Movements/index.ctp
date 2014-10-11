@@ -11,7 +11,7 @@
 	<div 
 		class="movements" 
 		data-component="movements" 
-		data-url="<?php echo $this->Html->url(array('controller' => 'movements', 'action' => 'index')) ?>"
+		data-url="<?php echo $this->Html->url(array('controller' => 'movements', 'action' => 'index', 'ext' => 'json')) ?>"
 	>
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
@@ -42,9 +42,13 @@
 					
 					<div class="col-md-6 text-center col-sm-6">
 						<ul class="pagination no-margin-vertical">
-							<li><a href="javascript:;">«</a></li>
-							<li><a href="javascript:;">Setembro</a></li>
-							<li><a href="javascript:;">»</a></li>
+							<li><a href="javascript:;" class="back">«</a></li>
+							<li>
+								<a href="javascript:;" class="current">
+									<span class="month">Setembro</span> de <span class="year">2014</span>
+								</a>
+							</li>
+							<li><a href="javascript:;" class="next">»</a></li>
 						</ul>
 					</div>
 
@@ -76,28 +80,15 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td class="td-type">
-								<span class="glyphicon glyphicon-upload income"></span>
-							</td>
-							<td>03/10/2014</td>
-							<td>descrição da receita</td>
-							<td><span class="glyphicon glyphicon-stop" style="color: #ccc;"></span>Categoria</td>
-							<td>R$ 200,00</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><span class="glyphicon glyphicon-download outgoing"></span></td>
-							<td>03/10/2014</td>
-							<td>descrição da despesa</td>
-							<td><span class="glyphicon glyphicon-stop" style="color: #C00;"></span>Categoria</td>
-							<td>R$ 200,00</td>
-							<td></td>
-						</tr>
+						
 					</tbody>	
 				</table>
 			</div>
 		</div>
+	</div>
+
+	<div class="loader-wrapper">
+		<img src="img/loader.gif" alt="">
 	</div>
 </div>
 

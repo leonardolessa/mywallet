@@ -14,21 +14,21 @@
 					'label' => array(
 						'class' => 'control-label'
 					),
-					'class' => 'form-control'
+					'class' => 'form-control input-sm'
 				),
-				'action' => 'add',
-				'class' => 'form-movement-add',
+				'action' => 'add.json',
+				'class' => 'form-movement-add'
 			)
 		);
 	?>
 
-		<div class="mb-15 text-center">
+		<div class="mb-15">
 			<?php
 				echo $this->Form->input(
 					'type',
 					array(
 						'type' => 'checkbox',
-						'div' => false,
+						'div' => false,	
 						'label' => false,
 						'class' => 'switch',
 						'data-size' => 'large',
@@ -56,10 +56,8 @@
 				array(
 					'type' => 'text',
 					'label' => 'Valor',
-					'class' => 'money form-control',
-					'data-prefix' => 'R$ ',
-					'data-thousands' => '.',
-					'data-decimal' => ','
+					'class' => 'money form-control input-sm',
+					'required' => true
 				)
 			);
 
@@ -68,7 +66,7 @@
 				array(
 					'type' => 'text',
 					'label' => 'Data',
-					'class' => 'datepicker form-control'
+					'class' => 'datepicker form-control input-sm'
 				)
 			);
 		?>
@@ -98,9 +96,19 @@
 			echo $this->Form->input(
 				'category_id',
 				array(
-					'label' => 'Categoria'
+					'label' => 'Categoria',
+					'empty' => 'Selecione uma categoria',
+					'required' => true
 				)
 			);
+
+			echo $this->Form->input(
+				'user_id',
+				array(
+					'type' => 'hidden',
+					'value' => $userData['id']
+				)
+			)
 		?>
 
 		<div class="form-group text-right">
