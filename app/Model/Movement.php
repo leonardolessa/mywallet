@@ -43,8 +43,8 @@ class Movement extends AppModel {
 			)
 		),
 		'date' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
+			'date' => array(
+				'rule' => array('date'),
 				'message' => 'A data está no formato errado.',
 				'required' => true
 			),
@@ -62,11 +62,6 @@ class Movement extends AppModel {
 			),
 		),
 		'user_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				'message' => 'O campo de relacionamento deverá ser numérico.',
-				'required' => true
-			),
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				'message' => 'A movimentação deve ter um usuário.',
@@ -74,11 +69,6 @@ class Movement extends AppModel {
 			),
 		),
 		'category_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				'message' => 'O formato da categoria da movimentação está errado.',
-				'required' => true
-			),
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				'message' => 'Toda movimentação deverá ter uma categoria',
@@ -138,5 +128,47 @@ class Movement extends AppModel {
 			'finderQuery' => '',
 		)
 	);
+
+/**
+ * beforeSave callback
+ * CakePHP callback function
+ * @param  array  $options []
+ * @return void
+ */
+	public function beforeValidate($options = array()) {
+		$this->fixDataToSave();
+	}
+
+
+	public function changeDateToShow($date) {
+		return date("d/m/Y", strtotime($date));
+	}
+
+	public function afterFind($results, $primary = false) {
+		foreach ($results as $key => $value) {
+			if(isset($value[$this->alias]['date'])) {
+				$results[$key][$this->alias]['date'] = $this->changeDateToShow($results[$key][$this->alias]['date']);
+			}
+		}
+		return $results;
+	}
+
+/**
+ * fixDataToSave method
+ * fix BRL date to insert in the database
+ * @return [boolean]
+ */
+	private function fixDataToSave() {
+		if(isset($this->data[$this->alias]['date'])) {
+			$originalDate = $this->data[$this->alias]['date'];
+
+			list($d, $m, $y) = preg_split('/\//', $originalDate);
+			$newDate = sprintf('%4d/%02d/%02d', $y, $m, $d);
+			
+			$this->data[$this->alias]['date'] = $newDate;
+
+			return true;
+		}
+	}
 
 }
