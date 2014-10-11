@@ -34,7 +34,7 @@
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
  */
-	Router::mapResources(array('users', 'categories'));
+	Router::mapResources(array('users', 'categories', 'movements'));
 	Router::parseExtensions();
 	CakePlugin::routes();
 
