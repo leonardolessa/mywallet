@@ -21,8 +21,24 @@ class MovementsController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Movement->recursive = 0;
-		$this->set('movements', $this->Paginator->paginate());
+		$movements = $this->Movement->find(
+			'all',
+			array(
+				'recursive' => 0,
+				'conditions' => array(
+					'Movement.user_id' => $this->Auth->user('id')
+				),
+				'fields' => array(
+					'Movement.*',
+					'Category.*'
+				)
+			)
+		);
+
+		$this->set(array(
+			'movements' => $movements,
+			'_serialize' => array('movements')
+		));
 	}
 
 /**
@@ -66,10 +82,17 @@ class MovementsController extends AppController {
 				'_serialize' => array('message')
 			));
 		}
+		
 		$users = $this->Movement->User->find('list');
-		$categories = $this->Movement->Category->find('list');
-		// $savings = $this->Movement->Saving->find('list');
-		// $goals = $this->Movement->Goal->find('list');
+
+		$categories = $this->Movement->Category->find(
+			'list',
+			array(
+				'conditions' => array(
+					'user_id' => $this->Auth->user('id')
+				)
+			)
+		);
 		$this->set(compact('users', 'categories'));
 	}
 
