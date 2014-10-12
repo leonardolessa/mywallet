@@ -41,11 +41,11 @@
 					</div>
 					
 					<div class="col-md-6 text-center col-sm-6">
-						<ul class="pagination no-margin-vertical">
-							<li><a href="javascript:;" class="back">«</a></li>
+						<ul class="pagination no-margin-vertical" data-url="<?php echo $this->Html->url(array('controller' => 'movements', 'action' => 'date', 'ext' => 'json')) ?>">
+							<li><a href="javascript:;" class="previous">«</a></li>
 							<li>
 								<a href="javascript:;" class="current">
-									<span class="month">Setembro</span> de <span class="year">2014</span>
+									<span class="month"></span> de <span class="year"></span>
 								</a>
 							</li>
 							<li><a href="javascript:;" class="next">»</a></li>
@@ -68,15 +68,16 @@
 				</div>
 			</panel>
 			<div class="table-responsive">
-				<table class="table table-bordered table-striped table-hover table-movements">
+				<table class="table table-striped table-hover table-movements">
 					<thead>
 						<tr>
-							<td class="td-head-type">Tipo</td>
-							<td class="td-head-date">Data</td>
-							<td>Descrição</td>
-							<td>Categoria</td>
-							<td>Valor</td>
-							<td>#</td>
+							<th class="th-head-type">tipo</th>
+							<th class="th-head-date">data</th>
+							<th>descrição</th>
+							<th>categoria</th>
+							<th>valor</th>
+							<th class="th-head-paid">&nbsp;</th>
+							<th class="th-head-actions">&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
