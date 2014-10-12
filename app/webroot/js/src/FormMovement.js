@@ -31,7 +31,7 @@ MW.components.FormMovement.prototype = {
 		    todayHighlight: true
 		});
 
-		dateElements.datepicker('setDate', new Date());
+		dateElements.datepicker('setDate', MW.i.movements.getDate());
 	},
 
 	bind: function() {
@@ -91,6 +91,6 @@ MW.components.FormMovement.prototype = {
 	},
 
 	refreshMovements: function() {
-		MW.i.movements.getMovements();
+		MW.i.movements.getByMonth();
 	}
 }

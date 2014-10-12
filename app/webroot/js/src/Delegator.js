@@ -26,11 +26,6 @@ MW.services.Delegator = function() {
 						output: $(this).find('tbody')
 					});
 					break;
-
-				default:
-					console.log('default')
-					break;
-
 			}
 		});
 	}
