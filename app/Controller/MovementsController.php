@@ -26,7 +26,9 @@ class MovementsController extends AppController {
 			array(
 				'recursive' => 0,
 				'conditions' => array(
-					'Movement.user_id' => $this->Auth->user('id')
+					'Movement.user_id' => $this->Auth->user('id'),
+					'MONTH(Movement.date)' => date('m'),
+					'YEAR(Movement.date)' => date('Y')
 				),
 				'fields' => array(
 					'Movement.*',
@@ -37,8 +39,37 @@ class MovementsController extends AppController {
 
 		$this->set(array(
 			'movements' => $movements,
-			'_serialize' => array('movements')
+			'date' => date('m/d/Y'),
+			'_serialize' => array('movements', 'date')
 		));
+	}
+
+
+	public function date() {
+		if($this->request->is('post')) {
+			$date = $this->Movement->getDate($this->request->data);
+
+			$movements = $this->Movement->find(
+				'all',
+				array(
+					'recursive' => 0,
+					'conditions' => array(
+						'Movement.user_id' => $this->Auth->user('id'),
+						'MONTH(Movement.date)' => $date['month'],
+						'YEAR(Movement.date)' => $date['year']
+					),
+					'fields' => array(
+						'Movement.*',
+						'Category.*'
+					)
+				)
+			);
+
+			$this->set(array(
+				'movements' => $movements,
+				'_serialize' => array('movements')
+			));
+		}
 	}
 
 /**

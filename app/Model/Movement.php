@@ -171,4 +171,19 @@ class Movement extends AppModel {
 		}
 	}
 
+
+	public function getDate($request) {
+		if(!empty($request)){
+			return array(
+				'month' => $request['Movement']['month'],
+				'year' => $request['Movement']['year'],
+			);
+		}
+
+		return array(
+			'month' => date('m'),
+			'year' => date('Y')
+		);
+	}
+
 }
