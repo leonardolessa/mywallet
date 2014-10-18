@@ -6,14 +6,30 @@ App::uses('AppController', 'Controller');
  * @property Movement $Movement
  * @property PaginatorComponent $Paginator
  */
-class MovementsController extends AppController {
-
+class MovementsController extends AppController {	
 /**
- * Components
- *
- * @var array
+ * isAuthorized callback method
+ * @param  object  $user
+ * @return boolean
  */
-	public $components = array('Paginator');
+	public function isAuthorized($user) {
+		if (in_array($this->action, array('edit', 'delete'))) {
+			$movementId = (int) $this->request->params['pass'][0];
+			if(!$this->Movement->isOwnedBy($movementId, $user['id'])) {
+				$this->Session->setFlash(
+					'Você não está autorizado a realizar esta ação.',
+					'alert/alert_warning'
+				);
+				$this->redirect(array(
+					'controller' => 'pages',
+					'action' => 'display',
+					'home'
+				));
+			}
+		}
+		return parent::isAuthorized($user);
+	}
+
 
 /**
  * index method
@@ -44,7 +60,12 @@ class MovementsController extends AppController {
 		));
 	}
 
-
+/**
+ * date method
+ *
+ * get the movements by date (year and month)
+ * @return void
+ */
 	public function date() {
 		if($this->request->is('post')) {
 			$date = $this->Movement->getDate($this->request->data);
@@ -71,6 +92,36 @@ class MovementsController extends AppController {
 			));
 		}
 	}
+
+/**
+ * pay method
+ *
+ * method that switch the paid field of the movement
+ * @param  integer $id [movement id]
+ * @return void
+ */
+	public function pay($id = null) {
+		$this->Movement->id = $id;
+		$current = $this->Movement->field('paid');
+
+		if($this->Movement->saveField('paid', ($current ? false : true))) {
+			$message = array(
+				'text' => 'A movimentação foi alterada com sucesso',
+				'type' => 'success'
+			);			
+		} else {
+			$message = array(
+				'text' => 'A movimentação não pode ser alterada',
+				'type' => 'error'
+			);
+		}
+	
+		$this->set(array(
+			'message' => $message,
+			'_serialize' => array('message')
+		));
+	}
+
 
 /**
  * view method
@@ -159,21 +210,30 @@ class MovementsController extends AppController {
 /**
  * delete method
  *
- * @throws NotFoundException
  * @param string $id
  * @return void
  */
 	public function delete($id = null) {
 		$this->Movement->id = $id;
-		if (!$this->Movement->exists()) {
-			throw new NotFoundException(__('Invalid movement'));
+
+		if($this->request->is('delete')) {
+			if ($this->Movement->delete()) {
+				$message = array(
+					'text' => 'A movimentação foi excluída com sucesso.',
+					'type' => 'success'
+				);
+			} else {
+				$message = array(
+					'text' => 'A movimentação não pode ser excluída.',
+					'type' => 'error',
+					'errors' => $this->Movement->validationErrors
+				);
+			}
+
+			return $this->set(array(
+				'message' => $message,
+				'_serialize' => array('message')
+			));
 		}
-		$this->request->allowMethod('post', 'delete');
-		if ($this->Movement->delete()) {
-			$this->Session->setFlash(__('The movement has been deleted.'));
-		} else {
-			$this->Session->setFlash(__('The movement could not be deleted. Please, try again.'));
-		}
-		return $this->redirect(array('action' => 'index'));
 	}
 }

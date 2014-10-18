@@ -186,4 +186,14 @@ class Movement extends AppModel {
 		);
 	}
 
+/**
+ * isOwnedBy method
+ * @param  [integer]  $movement [movement id]
+ * @param  [integer]  $user     [user id]
+ * @return boolean
+ */
+	public function isOwnedBy($movement, $user) {
+		return $this->field('id', array('id' => $movement, 'user_id' => $user)) == $movement;
+	}
+
 }
