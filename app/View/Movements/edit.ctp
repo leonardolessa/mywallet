@@ -16,12 +16,12 @@
 					),
 					'class' => 'form-control input-sm'
 				),
-				'action' => 'add',
-				'class' => 'form-movement-add'
+				'action' => 'edit',
+				'class' => 'form-movement-edit'
 			)
 		);
 	?>
-		
+
 		<div class="row">
 			<div class="col-md-6 col-xs-12">
 				<div class="mb-15">
@@ -37,10 +37,11 @@
 								'data-on-text' => 'Receita',
 								'data-off-text' => 'Despesa',
 								'data-on-color' => 'success',
-								'data-off-color' => 'danger',
-								'checked' => true
+								'data-off-color' => 'danger'
 							)
-						)
+						);
+
+						echo $this->Form->input('id');
 					?>
 				</div>
 			
@@ -127,7 +128,7 @@
 
 <script>
 	MW.i.formMovement = new MW.components.FormMovement({
-		form: $('.form-movement-add'),
-		action: 'add'
+		form: $('.form-movement-edit'),
+		action: 'edit'
 	});
 </script>
