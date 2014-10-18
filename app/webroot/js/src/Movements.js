@@ -160,8 +160,8 @@ MW.components.Movements.prototype = {
 		if(movements.length > 0) {
 			$.each(movements, function(index, value) {
 				self.renderMovement(value, function() {
-					self.settings.wrapper.show();
 					self.settings.loader.hide();
+					self.settings.wrapper.show();
 				});
 			});
 		} else {
