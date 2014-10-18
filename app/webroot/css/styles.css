@@ -883,6 +883,9 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   color: #f6f6f6;
   background-color: #18bc9c;
 }
+.movements {
+  display: none;
+}
 .table-movements thead tr th {
   line-height: 30px;
 }
