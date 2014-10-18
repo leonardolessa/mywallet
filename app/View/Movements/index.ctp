@@ -11,7 +11,7 @@
 	<div 
 		class="movements" 
 		data-component="movements" 
-		data-url="<?php echo $this->Html->url(array('controller' => 'movements', 'action' => 'index', 'ext' => 'json')) ?>"
+		data-url="<?php echo $this->Html->url(array('action' => 'index', 'ext' => 'json')) ?>"
 	>
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
@@ -77,7 +77,7 @@
 							<th>categoria</th>
 							<th>valor</th>
 							<th class="th-head-paid">&nbsp;</th>
-							<th class="th-head-actions">&nbsp;</th>
+							<th class="th-head-actions" data-url="<?php echo $this->Html->url(array('controller' => 'movements')) ?>">&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
