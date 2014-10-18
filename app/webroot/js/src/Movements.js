@@ -40,6 +40,16 @@ MW.components.Movements.prototype = {
 		this.settings.previousButton.on('click', function() {
 			self.getPreviousMonth();
 		});
+
+		this.settings.output.on('click', '.delete-movement', function() {
+			if(confirm('Tem certeza que deseja excluir essa movimentação?')) {
+				self.deleteMovement(this);	
+			}
+		});
+
+		this.settings.output.on('click', '.paid-movement', function() {
+			self.switchPaid(this);
+		});	
 	},
 
 	getPreviousMonth: function() {
@@ -60,6 +70,32 @@ MW.components.Movements.prototype = {
 			this.currentYear++;
 		}
 		this.getByMonth();
+	},
+
+	switchPaid: function(target) {
+		var id = $(target).closest('tr').data('movement-id'),
+			url = this.settings.wrapper.find('.th-head-actions').data('url'),
+			self = this;
+
+		$.ajax({
+			url: url + '/pay/' + id + '.json',
+			type: 'GET'
+		}).done(function() {
+			self.getByMonth();
+		});
+	},
+
+	deleteMovement: function(target) {
+		var id = $(target).closest('tr').data('movement-id'),
+			url = this.settings.wrapper.find('.th-head-actions').data('url'),
+			self = this;
+
+		$.ajax({
+			url: url + '/' + id + '.json',
+			type: 'DELETE'
+		}).done(function() {
+			self.getByMonth();
+		});
 	},
 
 	setPaginator: function() {
@@ -144,7 +180,7 @@ MW.components.Movements.prototype = {
 		html.push('		<td>'+ element.Movement.description +'</td>')
 		html.push('		<td><span class="glyphicon glyphicon-stop" style="color: #'+ element.Category.color +';"></span>'+ element.Category.name +'</td>');
 		html.push('		<td>R$ '+ element.Movement.amount +'</td>')
-		html.push('		<td><a href="javascript:;" class="paid-movement" data-toggle="tooltip" title="Clique para alterar se está pago.">'+ paid +'</a></td>');
+		html.push('		<td><a href="javascript:;" class="paid-movement" data-paid="'+ element.Movement.paid +'" data-toggle="tooltip" title="Clique para alterar se está pago.">'+ paid +'</a></td>');
 		html.push('		<td class="td-actions">');
 		html.push('			<a href="javascript:;" class="edit-movement" title="Clique para editar essa movimentação."><span class="glyphicon glyphicon-edit"></span></a>');
 		html.push('			<a href="javascript:;" class="delete-movement" title="Clique para excluir essa movimentação."><span class="glyphicon glyphicon-trash"></span></a>');
