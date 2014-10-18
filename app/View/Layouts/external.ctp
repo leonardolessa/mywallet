@@ -24,7 +24,7 @@
 	</div>
 	
 	<?php
-		echo $this->Html->script('jquery-1.11.1.min'); 
+		echo $this->Html->script('jquery.min'); 
 		echo $this->Html->script('bootstrap.min'); 
 		echo $this->Html->script('script.min')
 	?>
