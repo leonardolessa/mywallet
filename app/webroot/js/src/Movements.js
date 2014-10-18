@@ -18,12 +18,15 @@ MW.components.Movements.prototype = {
 			output: $('.movements').find('tbody'),
 			nextButton: $('.movements').find('.next'),
 			previousButton: $('.movements').find('.previous'),
-			pagination: $('.movements').find('.pagination')
+			pagination: $('.movements').find('.pagination'),
+			actionsUrl: $('.th-head-actions').data('url')
 		}, settings);
 	},
 
 	setup: function() {
-
+		this.settings.output.find('.money').priceFormat({
+			prefix: 'R$ '
+		});
 	},
 
 	getDate: function() {
@@ -74,7 +77,7 @@ MW.components.Movements.prototype = {
 
 	switchPaid: function(target) {
 		var id = $(target).closest('tr').data('movement-id'),
-			url = this.settings.wrapper.find('.th-head-actions').data('url'),
+			url = this.settings.actionsUrl,
 			self = this;
 
 		$.ajax({
@@ -87,7 +90,7 @@ MW.components.Movements.prototype = {
 
 	deleteMovement: function(target) {
 		var id = $(target).closest('tr').data('movement-id'),
-			url = this.settings.wrapper.find('.th-head-actions').data('url'),
+			url = this.settings.actionsUrl,
 			self = this;
 
 		$.ajax({
@@ -165,6 +168,8 @@ MW.components.Movements.prototype = {
 			this.settings.loader.hide();
 			this.settings.wrapper.show();
 		}
+
+		this.setup();
 	},
 
 	renderMovement: function(element, callback) {
@@ -179,10 +184,10 @@ MW.components.Movements.prototype = {
 		html.push('		<td>'+ element.Movement.date +'</td>')
 		html.push('		<td>'+ element.Movement.description +'</td>')
 		html.push('		<td><span class="glyphicon glyphicon-stop" style="color: #'+ element.Category.color +';"></span>'+ element.Category.name +'</td>');
-		html.push('		<td>R$ '+ element.Movement.amount +'</td>')
+		html.push('		<td class="money">'+ element.Movement.amount +'</td>')
 		html.push('		<td><a href="javascript:;" class="paid-movement" data-paid="'+ element.Movement.paid +'" data-toggle="tooltip" title="Clique para alterar se está pago.">'+ paid +'</a></td>');
 		html.push('		<td class="td-actions">');
-		html.push('			<a href="javascript:;" class="edit-movement" title="Clique para editar essa movimentação."><span class="glyphicon glyphicon-edit"></span></a>');
+		html.push('			<a href="'+ this.settings.actionsUrl + '/edit/' + element.Movement.id +'" data-toggle="modal" data-target=".modal-movements" class="edit-movement" title="Clique para editar essa movimentação."><span class="glyphicon glyphicon-edit"></span></a>');
 		html.push('			<a href="javascript:;" class="delete-movement" title="Clique para excluir essa movimentação."><span class="glyphicon glyphicon-trash"></span></a>');
 		html.push('		</td>');
 		html.push('</tr>');

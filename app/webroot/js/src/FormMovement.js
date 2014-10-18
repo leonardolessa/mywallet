@@ -15,12 +15,9 @@ MW.components.FormMovement.prototype = {
 
 		this.settings.form.find('.switch').bootstrapSwitch();
 
-		this.settings.form.find('.money').mask(
-			'#.##0,00',
-			{
-				reverse: true
-			}
-		);
+		this.settings.form.find('.money').priceFormat({
+			prefix: 'R$ '
+		});
 
 		this.settings.form.validate();
 
@@ -31,7 +28,9 @@ MW.components.FormMovement.prototype = {
 		    todayHighlight: true
 		});
 
-		dateElements.datepicker('setDate', MW.i.movements.getDate());
+		if(this.settings.action == 'add') {
+			dateElements.datepicker('setDate', MW.i.movements.getDate());
+		}
 	},
 
 	bind: function() {
@@ -49,8 +48,8 @@ MW.components.FormMovement.prototype = {
 	submitForm: function(form) {
 		var self = this,
 			data = $(form).serialize(),	
-			url = $(form).attr('action');
-
+			url = $(form).attr('action') + '.json';
+			
 		$.ajax({
 			data: data,
 			url: url,
@@ -78,7 +77,7 @@ MW.components.FormMovement.prototype = {
 	showMessage: function(message) {
 		var messageBox = $('.alert-on');
 
-		messageBox.addClass('alert-success').append('<p>'+ message + '</p>').slideDown();
+		messageBox.addClass('alert-success').html('<p>'+ message + '</p>').slideDown();
 		
 		setTimeout(function() {
 			messageBox.slideUp();
