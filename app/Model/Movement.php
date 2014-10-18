@@ -137,13 +137,16 @@ class Movement extends AppModel {
  */
 	public function beforeValidate($options = array()) {
 		$this->fixDataToSave();
+		$this->fixAmountToSave();
 	}
 
 
-	public function changeDateToShow($date) {
-		return date("d/m/Y", strtotime($date));
-	}
-
+/**
+ * afterFind callback
+ * @param  array $results
+ * @param  boolean $primary [if the query is from the origin model]
+ * @return array results
+ */
 	public function afterFind($results, $primary = false) {
 		foreach ($results as $key => $value) {
 			if(isset($value[$this->alias]['date'])) {
@@ -153,10 +156,47 @@ class Movement extends AppModel {
 		return $results;
 	}
 
+
+/**
+ * changeDateToShow method
+ * @param  string $date date that comes from afterFind callback
+ * @return string formated date
+ */
+	public function changeDateToShow($date) {
+		return date("d/m/Y", strtotime($date));
+	}
+
+
+/**
+ * fixAmountToSave method
+ * fix the date that comes from client-side to save in database 
+ * @return void
+ */
+	public function fixAmountToSave() {
+		if(isset($this->data[$this->alias]['amount'])) {
+			$amount = $this->data[$this->alias]['amount'];
+			$amount = str_replace(
+				array(
+					'R$',
+					',',
+					' '
+				), 
+				'', 
+				$amount
+			);
+			// pr($this->data[$this->alias]['amount']);
+			// pr($amount);
+			// die;
+			$this->data[$this->alias]['amount'] = $amount;
+		}
+		return true;
+	}
+
+
 /**
  * fixDataToSave method
  * fix BRL date to insert in the database
- * @return [boolean]
+ * @return void
  */
 	private function fixDataToSave() {
 		if(isset($this->data[$this->alias]['date'])) {
@@ -166,12 +206,16 @@ class Movement extends AppModel {
 			$newDate = sprintf('%4d/%02d/%02d', $y, $m, $d);
 			
 			$this->data[$this->alias]['date'] = $newDate;
-
-			return true;
 		}
+		return true;
 	}
 
-
+/**
+ * getDate method
+ * if receives a date, return the received date, if not, send the current date 
+ * @param  array $request request from date action controller
+ * @return array          return the date that is gonna be used
+ */
 	public function getDate($request) {
 		if(!empty($request)){
 			return array(
@@ -188,8 +232,8 @@ class Movement extends AppModel {
 
 /**
  * isOwnedBy method
- * @param  [integer]  $movement [movement id]
- * @param  [integer]  $user     [user id]
+ * @param  integer  $movement movement id
+ * @param  integer  $user     user id
  * @return boolean
  */
 	public function isOwnedBy($movement, $user) {

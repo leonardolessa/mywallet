@@ -165,8 +165,6 @@ class MovementsController extends AppController {
 			));
 		}
 		
-		$users = $this->Movement->User->find('list');
-
 		$categories = $this->Movement->Category->find(
 			'list',
 			array(
@@ -175,7 +173,7 @@ class MovementsController extends AppController {
 				)
 			)
 		);
-		$this->set(compact('users', 'categories'));
+		$this->set(compact('categories'));
 	}
 
 /**
@@ -186,25 +184,40 @@ class MovementsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		if (!$this->Movement->exists($id)) {
-			throw new NotFoundException(__('Invalid movement'));
-		}
+		
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Movement->save($this->request->data)) {
-				$this->Session->setFlash(__('The movement has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$message = array(
+					'text' => 'A movimentação foi editada com sucesso.',
+					'type' => 'success'
+				);
 			} else {
-				$this->Session->setFlash(__('The movement could not be saved. Please, try again.'));
+				$message = array(
+					'text' => 'Não foi possível editar a movimentação.',
+					'type' => 'error',
+					'errors' => $this->Movement->validationErrors
+				);
 			}
+
+			return $this->set(array(
+				'message' => $message,
+				'_serialize' => array('message')
+			));
+
 		} else {
 			$options = array('conditions' => array('Movement.' . $this->Movement->primaryKey => $id));
 			$this->request->data = $this->Movement->find('first', $options);
 		}
-		$users = $this->Movement->User->find('list');
-		$categories = $this->Movement->Category->find('list');
-		$savings = $this->Movement->Saving->find('list');
-		$goals = $this->Movement->Goal->find('list');
-		$this->set(compact('users', 'categories', 'savings', 'goals'));
+
+		$categories = $this->Movement->Category->find(
+			'list',
+			array(
+				'conditions' => array(
+					'user_id' => $this->Auth->user('id')
+				)
+			)
+		);
+		$this->set(compact('categories'));
 	}
 
 /**
