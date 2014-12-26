@@ -26,6 +26,14 @@ MW.services.Delegator = function() {
 						output: $(this).find('tbody')
 					});
 					break;
+
+				case 'categories':
+					MW.i.categories = new MW.components.Categories({
+						wrapper: $(this),
+						loader: $('.loader-wrapper'),
+						output: $(this).find('tbody')
+					});
+					break;
 			}
 		});
 	}

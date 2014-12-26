@@ -8,7 +8,7 @@
 ?>
 
 <div class="container main-container">
-	<div class="panel panel-default">
+	<div class="categories panel panel-default">
 		<div class="panel-heading clearfix">
 			<h3 class="pull-left panel-title">Categorias</h3>
 
@@ -17,15 +17,13 @@
 			</a>
 		</div>
 
-		<div class="panel-body"></div>
-
 		<div class="table-responsive">
-			<table class="table table-bordered table-striped table-hover">
+			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
-						<td>Cor</td>
-						<td>Nome</td>
-						<td>Ações</td>
+						<th>cor</th>
+						<th>nome</th>
+						<th>ações</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -45,6 +43,18 @@
 					</tr>
 				</tbody>	
 			</table>
+		</div>
+	</div>
+
+	<div class="loader-wrapper">
+		<img src="img/loader.gif" alt="">
+	</div>
+</div>
+
+<div class="modal fade modal-categories">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			
 		</div>
 	</div>
 </div>

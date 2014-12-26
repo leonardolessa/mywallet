@@ -50,6 +50,23 @@
 						);
 					?>
 				</li>
+
+				<li <?php if($active == 4) echo 'class="active"'; ?>>
+					<?php 
+						echo $this->Html->link(
+							'<span class="glyphicon glyphicon-stats"></span>
+							Relatórios',
+							array(
+								'controller' => 'pages',
+								'action' => 'display',
+								'reports'
+							),
+							array(
+								'escape' => false
+							)
+						);
+					?>
+				</li>
 			</ul>
 		</nav>
 	</aside>

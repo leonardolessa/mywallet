@@ -919,3 +919,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .td-type .glyphicon-download {
   color: #ff1919;
 }
+.categories {
+  display: none;
+}
