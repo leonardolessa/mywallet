@@ -1,23 +1,23 @@
-<?php 
+<?php
 App::uses('AppModel', 'Model');
 
 
 /**
  * Category model
- * 
+ *
  */
 class Category extends AppModel {
 
 /**
  * Display field
- * 
+ *
  * @var string
  */
 	public $displayField = 'name';
 
 /**
  * belongsTo association
- * 
+ *
  * @var array
  */
 	public $belongsTo = array(
@@ -29,7 +29,7 @@ class Category extends AppModel {
 
 /**
  * hasMany association
- * 
+ *
  * @var array
  */
 	public $hasMany = array(
@@ -43,7 +43,7 @@ class Category extends AppModel {
 
 /**
  * Validate options
- * 
+ *
  * @var array
  */
 	public $validate = array(
@@ -61,8 +61,8 @@ class Category extends AppModel {
 				'required' => true
 			),
 			'maxLength' => array(
-				'rule' => array('maxLength', 6),
-				'message' => 'This field\'s limit is 6 characters',
+				'rule' => array('maxLength', 7),
+				'message' => 'This field\'s limit is 7 characters',
 				'required' => true
 			),
 		),

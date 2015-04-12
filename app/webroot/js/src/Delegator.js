@@ -4,7 +4,7 @@
  * service responsable to delegate the demand to the components
  */
 MW.services.Delegator = function() {
-	
+
 	/**
 	 * delegate method
 	 * the method that actually do the job

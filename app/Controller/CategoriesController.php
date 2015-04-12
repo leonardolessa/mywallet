@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 App::uses('AppController', 'Controller');
 
@@ -33,12 +33,12 @@ class CategoriesController extends AppController {
 
 /**
  * index method
- * 
+ *
  * @return void
  */
 	public function index() {
 		$categories = $this->Category->find(
-			'all', 
+			'all',
 			array(
 				'recursive' => -1,
 				'conditions' => array(
@@ -46,7 +46,11 @@ class CategoriesController extends AppController {
 				)
 			)
 		);
-		$this->set(compact('categories'));
+
+		$this->set(array(
+			'categories' => $categories,
+			'_serialize' => array('categories')
+		));
 	}
 
 /**
@@ -65,24 +69,26 @@ class CategoriesController extends AppController {
 
 /**
  * add method
- * 
+ *
  * @return void
  */
 	public function add() {
 		if($this->request->is('post')) {
 			$this->Category->create();
-			$this->Category->data['Category']['user_id'] = $this->Auth->user('id');
+			$this->request->data['Category']['user_id'] = $this->Auth->user('id');
+
 			if($this->Category->save($this->request->data)) {
 				$message = array(
-					'text' => __('Category added successfully'),
-					'type' => 'info'
+					'text' => 'Categoria adicionada com sucesso.',
+					'type' => 'success'
 				);
 			} else {
 				$message = array(
-					'text' => __('Category could not be saved, please try again'),
+					'text' => 'A categoria não pode ser adicionada',
 					'type' => 'error'
 				);
 			}
+
 			$this->set(array(
 				'message' => $message,
 				'_serialize' => array('message')
@@ -97,22 +103,33 @@ class CategoriesController extends AppController {
  */
 
 	public function edit($id) {
-		$this->Category->id = $id;
-		if($this->Category->save($this->request->data)) {
-			$message = array(
-				'text' => __('Category edited successfully'),
-				'type' => 'info'
-			);
-		} else {
-			$message = array(
-				'text' => __('Category cannot be edited, please try again later'),
-				'type' => 'error'
-			);
+		if($this->request->is('post')) {
+			$this->Category->id = $id;
+
+			if($this->Category->save($this->request->data)) {
+				$message = array(
+					'text' => 'A categoria foi editada com sucesso.',
+					'type' => 'success'
+				);
+			} else {
+				$message = array(
+					'text' => 'A categoria não pode ser editada, por favor tente novamente.',
+					'type' => 'error'
+				);
+			}
+
+			return $this->set(array(
+				'message' => $message,
+				'_serialize' => array('message')
+			));
 		}
-		$this->set(array(
-			'message' => $message,
-			'_serialize' => array('message')
-		));
+
+		$options = array(
+			'conditions' => array(
+				'Category.' . $this->Category->primaryKey => $id
+			)
+		);
+		$this->request->data = $this->Category->find('first', $options);
 	}
 
 /**
@@ -124,7 +141,7 @@ class CategoriesController extends AppController {
 		if($this->Category->delete($id)) {
 			$message = array(
 				'text' => 'Category deleted successfully',
-				'type' => 'info'
+				'type' => 'success'
 			);
 		} else {
 			$message = array(

@@ -922,3 +922,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .categories {
   display: none;
 }
+.input-group-addon {
+  padding: 0 20px;
+}

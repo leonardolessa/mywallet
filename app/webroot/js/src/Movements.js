@@ -46,13 +46,13 @@ MW.components.Movements.prototype = {
 
 		this.settings.output.on('click', '.delete-movement', function() {
 			if(confirm('Tem certeza que deseja excluir essa movimentação?')) {
-				self.deleteMovement(this);	
+				self.deleteMovement(this);
 			}
 		});
 
 		this.settings.output.on('click', '.paid-movement', function() {
 			self.switchPaid(this);
-		});	
+		});
 	},
 
 	getPreviousMonth: function() {
@@ -150,7 +150,7 @@ MW.components.Movements.prototype = {
 		this.currentMonth = new Date(date).getMonth();
 		this.currentYear = new Date(date).getFullYear();
 		this.setPaginator();
-	},	
+	},
 
 	loadContent: function(movements) {
 		var self = this;
@@ -159,20 +159,17 @@ MW.components.Movements.prototype = {
 
 		if(movements.length > 0) {
 			$.each(movements, function(index, value) {
-				self.renderMovement(value, function() {
-					self.settings.loader.hide();
-					self.settings.wrapper.show();
-				});
+				self.renderMovement(value);
 			});
-		} else {
-			this.settings.loader.hide();
-			this.settings.wrapper.show();
 		}
+
+		self.settings.loader.hide();
+		self.settings.wrapper.show();
 
 		this.setup();
 	},
 
-	renderMovement: function(element, callback) {
+	renderMovement: function(element) {
 		var html = [],
 			icon = this.checkType(element.Movement.type),
 			paid = this.checkPaid(element.Movement.paid);
@@ -183,7 +180,7 @@ MW.components.Movements.prototype = {
 		html.push('		</td>')
 		html.push('		<td>'+ element.Movement.date +'</td>')
 		html.push('		<td>'+ element.Movement.description +'</td>')
-		html.push('		<td><span class="glyphicon glyphicon-stop" style="color: #'+ element.Category.color +';"></span>'+ element.Category.name +'</td>');
+		html.push('		<td><span class="glyphicon glyphicon-stop" style="color: '+ element.Category.color +';"></span>'+ element.Category.name +'</td>');
 		html.push('		<td class="money">'+ element.Movement.amount +'</td>')
 		html.push('		<td><a href="javascript:;" class="paid-movement" data-paid="'+ element.Movement.paid +'" data-toggle="tooltip" title="Clique para alterar se está pago.">'+ paid +'</a></td>');
 		html.push('		<td class="td-actions">');
@@ -193,16 +190,12 @@ MW.components.Movements.prototype = {
 		html.push('</tr>');
 
 		this.settings.output.append(html.join(''));
-
-		if(callback) {
-			callback();
-		}
 	},
 
 	checkPaid: function(paid) {
 		if(paid) {
 			return '<span class="glyphicon glyphicon-thumbs-up"></span>'
-		} 
+		}
 		return '<span class="glyphicon glyphicon-thumbs-down"></span>'
 	},
 
