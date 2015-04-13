@@ -43,13 +43,13 @@ class MovementsController extends AppController {
 				'recursive' => 1,
 				'conditions' => array(
 					'Movement.user_id' => $this->Auth->user('id'),
-					'MONTH(Movement.date)' => date('m'),
-					'YEAR(Movement.date)' => date('Y')
-				)
-				'fields' => array(
-					'Movement.*',
-					'Category.*'
-				)
+					// 'MONTH(Movement.date)' => date('m'),
+					// 'YEAR(Movement.date)' => date('Y')
+				),
+				// 'fields' => array(
+				// 	'Movement.*',
+				// 	'Category.*'
+				// )
 			)
 		);
 
