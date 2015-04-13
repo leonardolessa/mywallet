@@ -23,43 +23,12 @@ class Movement extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'amount' => array(
-			'money' => array(
-				'rule' => array('money'),
-				'message' => 'O valor está no formato errado.',
-				'required' => true
-			),
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				'message' => 'Por favor, preencha o campo de valor.',
-				'required' => true
-			),
-		),
 		'type' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				'message' => 'O tipo deve ser um número.',
 				'required' => true
 			)
-		),
-		'date' => array(
-			'date' => array(
-				'rule' => array('date'),
-				'message' => 'A data está no formato errado.',
-				'required' => true
-			),
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				'message' => 'O campo data é obrigatório.',
-				'required' => true
-			),
-		),
-		'paid' => array(
-			'boolean' => array(
-				'rule' => array('boolean'),
-				'message' => 'O formato do campo pago está errado.',
-				'required' => true
-			),
 		),
 		'user_id' => array(
 			'notEmpty' => array(
@@ -71,7 +40,7 @@ class Movement extends AppModel {
 		'category_id' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
-				'message' => 'Toda movimentação deverá ter uma categoria',
+				'message' => 'A movimentação deve ter uma categoria',
 				'required' => true
 			),
 		),
@@ -109,25 +78,43 @@ class Movement extends AppModel {
 	);
 
 /**
- * hasAndBelongsToMany associations
+ * hasMany associations
  *
  * @var array
  */
-	public $hasAndBelongsToMany = array(
-		'Goal' => array(
-			'className' => 'Goal',
-			'joinTable' => 'goals_movements',
+	public $hasMany = array(
+		'Payment' => array(
+			'className' => 'Payment',
 			'foreignKey' => 'movement_id',
-			'associationForeignKey' => 'goal_id',
-			'unique' => 'keepExisting',
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
+			'order' => ''
 		)
 	);
+
+
+
+// /**
+//  * hasAndBelongsToMany associations
+//  *
+//  * @var array
+//  */
+// 	public $hasAndBelongsToMany = array(
+// 		'Goal' => array(
+// 			'className' => 'Goal',
+// 			'joinTable' => 'goals_movements',
+// 			'foreignKey' => 'movement_id',
+// 			'associationForeignKey' => 'goal_id',
+// 			'unique' => 'keepExisting',
+// 			'conditions' => '',
+// 			'fields' => '',
+// 			'order' => '',
+// 			'limit' => '',
+// 			'offset' => '',
+// 			'finderQuery' => '',
+// 		)
+// 	);
 
 /**
  * beforeSave callback
@@ -169,7 +156,7 @@ class Movement extends AppModel {
 
 /**
  * fixAmountToSave method
- * fix the date that comes from client-side to save in database 
+ * fix the date that comes from client-side to save in database
  * @return void
  */
 	public function fixAmountToSave() {
@@ -180,8 +167,8 @@ class Movement extends AppModel {
 					'R$',
 					',',
 					' '
-				), 
-				'', 
+				),
+				'',
 				$amount
 			);
 			// pr($this->data[$this->alias]['amount']);
@@ -204,7 +191,7 @@ class Movement extends AppModel {
 
 			list($d, $m, $y) = preg_split('/\//', $originalDate);
 			$newDate = sprintf('%4d/%02d/%02d', $y, $m, $d);
-			
+
 			$this->data[$this->alias]['date'] = $newDate;
 		}
 		return true;
@@ -212,7 +199,7 @@ class Movement extends AppModel {
 
 /**
  * getDate method
- * if receives a date, return the received date, if not, send the current date 
+ * if receives a date, return the received date, if not, send the current date
  * @param  array $request request from date action controller
  * @return array          return the date that is gonna be used
  */

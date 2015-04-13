@@ -1,4 +1,4 @@
-<?php 
+<?php
 	echo $this->element(
 		'navigation',
 		array(
@@ -7,22 +7,21 @@
 	)
 ?>
 
-<div class="main-container container">	
-	<div 
-		class="movements" 
-		data-component="movements" 
-		data-url="<?php echo $this->Html->url(array('action' => 'index', 'ext' => 'json')) ?>"
-	>
+<div class="main-container container">
+	<div
+		class="movements"
+		data-component="movements"
+		data-url="<?php echo $this->Html->url(array('action' => 'index', 'ext' => 'json')) ?>">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
 				<h3 class="pull-left panel-title">Movimentações</h3>
 			</div>
-		
+
 			<panel class="panel-body">
 				<div class="row">
 					<div class="col-md-3 col-sm-3">
 						<div class="dropdown">
-							<a href="javascript:;" data-toggle="dropdown" class="well-sm well filter-well">	
+							<a href="javascript:;" data-toggle="dropdown" class="well-sm well filter-well">
 								Filtrar
 							</a>
 
@@ -39,7 +38,7 @@
 							</ul>
 						</div>
 					</div>
-					
+
 					<div class="col-md-6 text-center col-sm-6">
 						<ul class="pagination no-margin-vertical" data-url="<?php echo $this->Html->url(array('controller' => 'movements', 'action' => 'date', 'ext' => 'json')) ?>">
 							<li><a href="javascript:;" class="previous">«</a></li>
@@ -54,8 +53,8 @@
 
 					<div class="col-md-3 col-sm-3">
 						<div class="dropdown pull-right">
-							<a 
-								href="<?php echo $this->Html->url(array('action' => 'add')); ?>" 
+							<a
+								href="<?php echo $this->Html->url(array('action' => 'add')); ?>"
 								class="well-sm well well-add"
 								data-toggle="modal"
 								data-target=".modal-movements">
@@ -81,8 +80,8 @@
 						</tr>
 					</thead>
 					<tbody>
-						
-					</tbody>	
+
+					</tbody>
 				</table>
 			</div>
 		</div>
@@ -96,7 +95,7 @@
 <div class="modal fade modal-movements">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			
+
 		</div>
 	</div>
 </div>

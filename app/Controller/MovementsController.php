@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Movement $Movement
  * @property PaginatorComponent $Paginator
  */
-class MovementsController extends AppController {	
+class MovementsController extends AppController {
 /**
  * isAuthorized callback method
  * @param  object  $user
@@ -40,12 +40,12 @@ class MovementsController extends AppController {
 		$movements = $this->Movement->find(
 			'all',
 			array(
-				'recursive' => 0,
+				'recursive' => 1,
 				'conditions' => array(
 					'Movement.user_id' => $this->Auth->user('id'),
 					'MONTH(Movement.date)' => date('m'),
 					'YEAR(Movement.date)' => date('Y')
-				),
+				)
 				'fields' => array(
 					'Movement.*',
 					'Category.*'
@@ -108,14 +108,14 @@ class MovementsController extends AppController {
 			$message = array(
 				'text' => 'A movimentação foi alterada com sucesso',
 				'type' => 'success'
-			);			
+			);
 		} else {
 			$message = array(
 				'text' => 'A movimentação não pode ser alterada',
 				'type' => 'error'
 			);
 		}
-	
+
 		$this->set(array(
 			'message' => $message,
 			'_serialize' => array('message')
@@ -158,13 +158,13 @@ class MovementsController extends AppController {
 					'errors' => $this->Movement->validationErrors
 				);
 			}
-
+			pr('uhaiush');
 			return $this->set(array(
 				'message' => $message,
 				'_serialize' => array('message')
 			));
 		}
-		
+
 		$categories = $this->Movement->Category->find(
 			'list',
 			array(
@@ -173,6 +173,7 @@ class MovementsController extends AppController {
 				)
 			)
 		);
+
 		$this->set(compact('categories'));
 	}
 
@@ -184,8 +185,8 @@ class MovementsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		
 		if ($this->request->is(array('post', 'put'))) {
+
 			if ($this->Movement->save($this->request->data)) {
 				$message = array(
 					'text' => 'A movimentação foi editada com sucesso.',
@@ -195,7 +196,7 @@ class MovementsController extends AppController {
 				$message = array(
 					'text' => 'Não foi possível editar a movimentação.',
 					'type' => 'error',
-					'errors' => $this->Movement->validationErrors
+						'errors' => $this->Movement->validationErrors
 				);
 			}
 
@@ -204,10 +205,16 @@ class MovementsController extends AppController {
 				'_serialize' => array('message')
 			));
 
-		} else {
-			$options = array('conditions' => array('Movement.' . $this->Movement->primaryKey => $id));
-			$this->request->data = $this->Movement->find('first', $options);
 		}
+
+		$this->request->data = $this->Movement->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Movement.' . $this->Movement->primaryKey => $id
+				)
+			)
+		);
 
 		$categories = $this->Movement->Category->find(
 			'list',
@@ -217,6 +224,7 @@ class MovementsController extends AppController {
 				)
 			)
 		);
+
 		$this->set(compact('categories'));
 	}
 

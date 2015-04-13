@@ -7,6 +7,8 @@ module.exports = function(grunt) {
 		'js/src/Delegator.js',
 		'js/src/Movements.js',
 		'js/src/FormMovement.js',
+		'js/src/Categories.js',
+		'js/src/FormCategory.js',
 		'js/src/Main.js'
 	];
 

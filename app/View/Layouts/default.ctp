@@ -10,6 +10,7 @@
 
 		echo $this->Html->css('bootstrap.min');
 		echo $this->Html->css('bootstrap-switch.min');
+		echo $this->Html->css('bootstrap-colorpicker.min');
 		echo $this->Html->css('styles');
 
 		echo $this->fetch('meta');
@@ -46,7 +47,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
-							<?php 
+							<?php
 								echo $this->Gravatar->getGravatar(
 									$userData['email'],
 									25,
@@ -64,7 +65,7 @@
 
 						<ul class="dropdown-menu">
 							<li>
-								<?php 
+								<?php
 									echo $this->Html->link(
 										'Editar perfil',
 										array(
@@ -77,7 +78,7 @@
 							</li>
 							<li class="divider"></li>
 							<li>
-								<?php 
+								<?php
 									echo $this->Html->link(
 										'Sair',
 										array(
@@ -91,17 +92,18 @@
 					</li>
 				</ul>
 			</nav>
-		</div>		
+		</div>
 	</header>
 
 	<?php echo $this->fetch('content'); ?>
-	
-	<div class="alert alert-on alert-dismissable"></div>	
-	<?php 
+
+	<div class="alert alert-on alert-dismissable"></div>
+	<?php
 		echo $this->Html->script('jquery.min');
 		echo $this->Html->script('jquery.validate.min');
 		echo $this->Html->script('bootstrap.min');
 		echo $this->Html->script('bootstrap-switch.min');
+		echo $this->Html->script('bootstrap-colorpicker.min');
 		echo $this->Html->script('script.min');
 	?>
 	<script src="//localhost:35729/livereload.js"></script>
