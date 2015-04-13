@@ -3,7 +3,7 @@
 	<h4 class="modal-title">Adicionar Movimentação</h4>
 </div>
 <div class="modal-body">
-	<?php 
+	<?php
 		echo $this->Form->create(
 			'Movement',
 			array(
@@ -21,7 +21,7 @@
 			)
 		);
 	?>
-		
+
 		<div class="row">
 			<div class="col-md-6 col-xs-12">
 				<div class="mb-15">
@@ -30,7 +30,7 @@
 							'type',
 							array(
 								'type' => 'checkbox',
-								'div' => false,	
+								'div' => false,
 								'label' => false,
 								'class' => 'switch',
 								'data-size' => 'large',
@@ -43,11 +43,11 @@
 						)
 					?>
 				</div>
-			
-				<?php 
-			
+
+				<?php
+
 					echo $this->Form->input(
-						'amount',
+						'Payment.amount',
 						array(
 							'type' => 'text',
 							'label' => 'Valor',
@@ -55,9 +55,9 @@
 							'required' => true
 						)
 					);
-			
+
 					echo $this->Form->input(
-						'date',
+						'Payment.date',
 						array(
 							'type' => 'text',
 							'label' => 'Data',
@@ -66,14 +66,14 @@
 					);
 				?>
 			</div>
-			
-			
+
+
 			<div class="col-md-6 col-xs-12">
 				<div class="mb-15">
 					<div class="break"></div>
 					<?php
 						echo $this->Form->input(
-							'paid',
+							'Payment.paid',
 							array(
 								'class' => 'switch',
 								'type' => 'checkbox',
@@ -88,7 +88,7 @@
 						)
 					?>
 				</div>
-				
+
 				<?php
 					echo $this->Form->input(
 						'category_id',
@@ -105,7 +105,7 @@
 							'label' => 'Descrição'
 						)
 					);
-				
+
 					echo $this->Form->input(
 						'user_id',
 						array(

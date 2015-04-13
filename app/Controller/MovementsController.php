@@ -158,7 +158,7 @@ class MovementsController extends AppController {
 					'errors' => $this->Movement->validationErrors
 				);
 			}
-			pr('uhaiush');
+
 			return $this->set(array(
 				'message' => $message,
 				'_serialize' => array('message')
