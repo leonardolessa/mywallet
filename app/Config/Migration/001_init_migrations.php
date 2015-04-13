@@ -85,7 +85,7 @@ class InitMigration extends BaseMigration {
 					),
 					'color' => array(
 						'type' => 'string',
-						'length' => 6,
+						'length' => 7,
 						'null' => false
 					),
 					'user_id' => array(
@@ -176,28 +176,11 @@ class InitMigration extends BaseMigration {
 						'null' => true,
 						'default' => null,
 					),
-					'amount' => array(
-						'type' => 'decimal',
-						'length' => '10,2',
-						'null' => true,
-						'default' => null,
-					),
 					'type' => array(
 						'type' => 'integer',
 						'length' => 1,
 						'null' => true,
 						'default' => '0'
-					),
-					'date' => array(
-						'type' => 'datetime',
-						'null' => true,
-						'default' => null,
-					),
-					'paid' => array(
-						'type' => 'integer',
-						'length' => 1,
-						'null' => true,
-						'default' => null
 					),
 					'user_id' => array(
 						'type' => 'integer',
@@ -212,6 +195,36 @@ class InitMigration extends BaseMigration {
 						'null' => true,
 						'default' => null,
 					),
+				),
+				'payments' => array(
+					'id' => array(
+						'type' => 'integer',
+						'null' => false,
+						'default' => null,
+						'key' => 'primary',
+						'collate' => null,
+					),
+					'amount' => array(
+						'type' => e'decimal',
+						'length' => '10,2',
+						'null' => true,
+						'default' => null,
+					),
+					'date' => array(
+						'type' => 'datetime',
+						'null' => true,
+						'default' => null,
+					),
+					'paid' => array(
+						'type' => 'integer',
+						'length' => 1,
+						'null' => true,
+						'default' => null
+					),
+					'movement_id' => array(
+						'type' => 'integer',
+						'null' => false
+					)
 				),
 				'goals_movements' => array(
 					'id' => array(
@@ -238,6 +251,7 @@ class InitMigration extends BaseMigration {
 				'users',
 				'savings',
 				'goals',
+				'payments',
 				'movements',
 				'goals_movements',
 			)
