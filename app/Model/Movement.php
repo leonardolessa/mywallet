@@ -116,16 +116,16 @@ class Movement extends AppModel {
 // 		)
 // 	);
 
-/**
- * beforeSave callback
- * CakePHP callback function
- * @param  array  $options []
- * @return void
- */
-	public function beforeValidate($options = array()) {
-		$this->fixDataToSave();
-		$this->fixAmountToSave();
-	}
+// /**
+//  * beforeSave callback
+//  * CakePHP callback function
+//  * @param  array  $options []
+//  * @return void
+//  */
+// 	public function beforeValidate($options = array()) {
+// 		$this->fixDataToSave();
+// 		$this->fixAmountToSave();
+// 	}
 
 
 /**
@@ -155,46 +155,35 @@ class Movement extends AppModel {
 
 
 /**
- * fixAmountToSave method
- * fix the date that comes from client-side to save in database
- * @return void
+ * fixAmount
+ * remove the amount mask to save in database
+ * @param string $[amount] the masked amount
+ * @return string amount
  */
-	public function fixAmountToSave() {
-		if(isset($this->data[$this->alias]['amount'])) {
-			$amount = $this->data[$this->alias]['amount'];
-			$amount = str_replace(
-				array(
-					'R$',
-					',',
-					' '
-				),
-				'',
-				$amount
-			);
-			// pr($this->data[$this->alias]['amount']);
-			// pr($amount);
-			// die;
-			$this->data[$this->alias]['amount'] = $amount;
-		}
-		return true;
+	private function fixAmount($amount) {
+		return str_replace(
+			array(
+				'R$',
+				',',
+				' '
+			),
+			'',
+			$amount
+		);
 	}
 
 
 /**
- * fixDataToSave method
- * fix BRL date to insert in the database
- * @return void
+ * fixDate
+ * get the BRL date and format to save
+ * @param  string $date date coming from datepicker
+ * @return string date
  */
-	private function fixDataToSave() {
-		if(isset($this->data[$this->alias]['date'])) {
-			$originalDate = $this->data[$this->alias]['date'];
+	private function fixDate($date) {
+		list($d, $m, $y) = preg_split('/\//', $date);
+		$newDate = date(sprintf('%4d/%02d/%02d', $y, $m, $d));
 
-			list($d, $m, $y) = preg_split('/\//', $originalDate);
-			$newDate = sprintf('%4d/%02d/%02d', $y, $m, $d);
-
-			$this->data[$this->alias]['date'] = $newDate;
-		}
-		return true;
+		return $newDate;
 	}
 
 /**
@@ -227,4 +216,33 @@ class Movement extends AppModel {
 		return $this->field('id', array('id' => $movement, 'user_id' => $user)) == $movement;
 	}
 
+	public function filterData($data) {
+		$newData = $data;
+		$newData['Payment'] = $this->mountPaymentsArray($data['Payment']);
+		return $newData;
+	}
+
+	private function addMonths($date, $months) {
+		return date('Y/m/d', strtotime("+". $months . " months", strtotime($this->fixDate($date))));
+
+	}
+
+	private function mountPaymentsArray($paymentData) {
+		$times = $paymentData['times'];
+		unset($paymentData['times'], $paymentData['repeat']);
+
+		$newData = array();
+
+		for ($i = 0; $i <= $times; $i++) {
+			$newPayment = $paymentData;
+			$newPayment['date'] = $this->addMonths($paymentData['date'], $i);
+			$newPayment['amount'] = $this->fixAmount($paymentData['amount']);
+			array_push($newData, $newPayment);
+		}
+
+		return $newData;
+	}
+
 }
+
+

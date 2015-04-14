@@ -117,6 +117,29 @@
 			</div>
 		</div>
 
+		<div class="row">
+			<div class="col-md-12">
+				<?php
+					echo $this->Form->checkbox(
+						'Payment.repeat',
+						array(
+							'class' => 'repeat-movements'
+						)
+					);
+
+					echo $this->Form->input(
+						'Payment.times',
+						array(
+							'options' => array(1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
+							'empty' => array(
+								'0' => 'Número de vezes'
+							)
+						)
+					)
+				?>
+			</div>
+		</div>
+
 		<div class="form-group text-right">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 			<button type="submit" class="btn btn-primary">Adicionar</button>
