@@ -146,8 +146,10 @@ class MovementsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Movement->create();
+
 			$requestData = $this->Movement->filterData($this->request->data);
 			unset($this->Movement->Payment->validate['movement_id']);
+
 			if ($this->Movement->saveAssociated($requestData)) {
 				$message = array(
 					'text' => 'A movimentação foi adicionada com sucesso.',

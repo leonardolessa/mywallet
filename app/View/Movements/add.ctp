@@ -119,24 +119,33 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<?php
-					echo $this->Form->checkbox(
-						'Payment.repeat',
-						array(
-							'class' => 'repeat-movements'
-						)
-					);
-
-					echo $this->Form->input(
-						'Payment.times',
-						array(
-							'options' => array(1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
-							'empty' => array(
-								'0' => 'Número de vezes'
+				<div class="form-group">
+					<label>
+						Repetir movimentação?
+						<span
+							class="glyphicon glyphicon-info-sign"
+							data-toggle="tooltip"
+							data-placement="bottom"
+							data-original-title="Elas serão repetidas mensalmente após a data selecionada.">
+						</span>
+						<br>
+						<input type="checkbox" class="repeat-toggle">
+					</label>
+					<?php
+						echo $this->Form->input(
+							'Payment.times',
+							array(
+								'div' => false,
+								'label' => false,
+								'options' => array(1 => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
+								'empty' => array(
+									'0' => 'Selecione o número de vezes'
+								),
+								'class' => 'repeat-select form-control input-sm'
 							)
 						)
-					)
-				?>
+					?>
+				</div>
 			</div>
 		</div>
 

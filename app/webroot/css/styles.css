@@ -11,10 +11,10 @@
   margin: 10px auto;
   max-width: 500px;
 }
-.form-group {
+.external-body .form-group {
   position: relative;
 }
-.form-group .glyphicon {
+.external-body .form-group .glyphicon {
   position: absolute;
   top: 26px;
   left: 15px;
@@ -918,6 +918,12 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 }
 .td-type .glyphicon-download {
   color: #ff1919;
+}
+.glyphicon-info-sign {
+  font-size: 16px;
+}
+.repeat-select {
+  display: none;
 }
 .categories {
   display: none;

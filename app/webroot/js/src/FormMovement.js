@@ -31,10 +31,14 @@ MW.components.FormMovement.prototype = {
 		if(this.settings.action == 'add') {
 			dateElements.datepicker('setDate', MW.i.movements.getDate());
 		}
+
+		$('[data-toggle="tooltip"]').tooltip();
 	},
 
 	bind: function() {
-		var self = this;
+		var self = this,
+			repeatToggle = this.settings.form.find('.repeat-toggle'),
+			repeatSelect = this.settings.form.find('.repeat-select');
 
 		this.settings.form.on('submit', function(ev) {
 			ev.preventDefault();
@@ -43,13 +47,21 @@ MW.components.FormMovement.prototype = {
 				self.submitForm(ev.target);
 			}
 		});
+
+		repeatToggle.on('change', function() {
+			if(this.checked) {
+				repeatSelect.fadeIn();
+			} else {
+				repeatSelect.fadeOut();
+			}
+		});
 	},
 
 	submitForm: function(form) {
 		var self = this,
-			data = $(form).serialize(),	
+			data = $(form).serialize(),
 			url = $(form).attr('action') + '.json';
-			
+
 		$.ajax({
 			data: data,
 			url: url,
@@ -78,7 +90,7 @@ MW.components.FormMovement.prototype = {
 		var messageBox = $('.alert-on');
 
 		messageBox.addClass('alert-success').html('<p>'+ message + '</p>').slideDown();
-		
+
 		setTimeout(function() {
 			messageBox.slideUp();
 		}, 3000);
