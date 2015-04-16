@@ -125,21 +125,25 @@ class Movement extends AppModel {
 // 		$this->fixDataToSave();
 // 		$this->fixAmountToSave();
 // 	}
+//
 
+/**
+ * getPayments
+ *
+ * generic method to get the payments according to the date or sending the current month and year
+ * @param  array $request the request received in the controller
+ * @return array  return the data retrieving
+ */
 	public function getPayments($request = null) {
-		$date = null;
-
-		if($request) {
-			$date = $this->getDate($request);
-		}
+		$date = $this->getDate($request);
 
 		return $this->Payment->find(
 			'all',
 			array(
 				'conditions' => array(
 					'Movement.user_id' => CakeSession::read("Auth.User.id"),
-					'MONTH(Payment.date)' => $date ? $date['month'] : date('m'),
-					'YEAR(Payment.date)' => $date ? $date['year'] : date('Y')
+					'MONTH(Payment.date)' => $date['month'],
+					'YEAR(Payment.date)' => $date['year']
 				),
 				'order' => array(
 					'Payment.date' => 'asc'
@@ -159,6 +163,7 @@ class Movement extends AppModel {
 
 /**
  * fixAmount
+ *
  * remove the amount mask to save in database
  * @param string $[amount] the masked amount
  * @return string amount
@@ -178,6 +183,7 @@ class Movement extends AppModel {
 
 /**
  * fixDate
+ *
  * get the BRL date and format to save
  * @param  string $date date coming from datepicker
  * @return string date
@@ -191,6 +197,7 @@ class Movement extends AppModel {
 
 /**
  * getDate method
+ *
  * if receives a date, return the received date, if not, send the current date
  * @param  array $request request from date action controller
  * @return array          return the date that is gonna be used
@@ -219,17 +226,36 @@ class Movement extends AppModel {
 		return $this->field('id', array('id' => $movement, 'user_id' => $user)) == $movement;
 	}
 
+
+/**
+ * filterData
+ * @param  array $data data received in the add controller
+ * @return array $newData treated data to add the payments
+ */
 	public function filterData($data) {
 		$newData = $data;
 		$newData['Payment'] = $this->mountPaymentsArray($data['Payment']);
 		return $newData;
 	}
 
+/**
+ * addMonths
+ * add the months according to the received parameters
+ *
+ * @param string $date
+ * @param integer $months number of months to add
+ */
 	private function addMonths($date, $months) {
 		return date('Y/m/d', strtotime("+". $months . " months", strtotime($this->fixDate($date))));
 
 	}
 
+/**
+ * mountPaymentsArray
+ * method responsible for mount the correct array to add multiple payments for a single movement
+ * @param  array $paymentData payment data received in the add request
+ * @return array $newData
+ */
 	private function mountPaymentsArray($paymentData) {
 		$times = $paymentData['times'];
 		unset($paymentData['times'], $paymentData['repeat']);

@@ -49,7 +49,7 @@ class MovementsController extends AppController {
 /**
  * date method
  *
- * get the movements by date (year and month)
+ * get the movements by date (year and month) received in the post request
  * @return void
  */
 	public function date() {
