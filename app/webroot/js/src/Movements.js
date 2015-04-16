@@ -127,7 +127,7 @@ MW.components.Movements.prototype = {
 				}
 			}
 		}).done(function(data) {
-			self.loadContent(data.movements);
+			self.loadContent(data.payments);
 		});
 	},
 
@@ -141,8 +141,9 @@ MW.components.Movements.prototype = {
 			url: this.settings.wrapper.data('url'),
 			type: 'GET',
 		}).done(function(data) {
+			console.log(data);
 			self.getCurrentDate(data.date);
-			self.loadContent(data.movements);
+			self.loadContent(data.payments);
 		});
 	},
 
@@ -172,17 +173,17 @@ MW.components.Movements.prototype = {
 	renderMovement: function(element) {
 		var html = [],
 			icon = this.checkType(element.Movement.type),
-			paid = this.checkPaid(element.Movement.paid);
+			paid = this.checkPaid(element.Payment.paid);
 
 		html.push('	<tr data-movement-id="'+ element.Movement.id +'">');
 		html.push('		<td class="td-type">');
 		html.push(			icon);
 		html.push('		</td>')
-		html.push('		<td>'+ element.Movement.date +'</td>')
+		html.push('		<td>'+ element.Payment.date +'</td>')
 		html.push('		<td>'+ element.Movement.description +'</td>')
-		html.push('		<td><span class="glyphicon glyphicon-stop" style="color: '+ element.Category.color +';"></span>'+ element.Category.name +'</td>');
-		html.push('		<td class="money">'+ element.Movement.amount +'</td>')
-		html.push('		<td><a href="javascript:;" class="paid-movement" data-paid="'+ element.Movement.paid +'" data-toggle="tooltip" title="Clique para alterar se está pago.">'+ paid +'</a></td>');
+		html.push('		<td><span class="glyphicon glyphicon-stop" style="color: '+ element.Movement.Category.color +';"></span>'+ element.Movement.Category.name +'</td>');
+		html.push('		<td class="money">'+ element.Payment.amount +'</td>')
+		html.push('		<td><a href="javascript:;" class="paid-movement" data-paid="'+ element.Payment.paid +'" data-toggle="tooltip" title="Clique para alterar se está pago.">'+ paid +'</a></td>');
 		html.push('		<td class="td-actions">');
 		html.push('			<a href="'+ this.settings.actionsUrl + '/edit/' + element.Movement.id +'" data-toggle="modal" data-target=".modal-movements" class="edit-movement" title="Clique para editar essa movimentação."><span class="glyphicon glyphicon-edit"></span></a>');
 		html.push('			<a href="javascript:;" class="delete-movement" title="Clique para excluir essa movimentação."><span class="glyphicon glyphicon-trash"></span></a>');
@@ -200,9 +201,10 @@ MW.components.Movements.prototype = {
 	},
 
 	checkType: function(type) {
-		if(type) {
+		if(type == 1) {
 			return '<span title="Receita" class="glyphicon glyphicon-upload"></span>';
 		}
+		console.log(type);
 		return '<span title="Despesa" class="glyphicon glyphicon-download"></span>';
 	}
 }

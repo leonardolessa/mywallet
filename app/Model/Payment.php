@@ -79,4 +79,29 @@ class Payment extends AppModel {
 			'order' => ''
 		)
 	);
+
+/**
+ * afterFind callback
+ * @param  array $results
+ * @param  boolean $primary [if the query is from the origin model]
+ * @return array results
+ */
+	public function afterFind($results, $primary = false) {
+		foreach ($results as $key => $value) {
+			if(isset($value[$this->alias]['date'])) {
+				$results[$key][$this->alias]['date'] = $this->changeDateToShow($results[$key][$this->alias]['date']);
+			}
+		}
+		return $results;
+	}
+
+
+/**
+ * changeDateToShow method
+ * @param  string $date date that comes from afterFind callback
+ * @return string formated date
+ */
+	public function changeDateToShow($date) {
+		return date("d/m/Y", strtotime($date));
+	}
 }

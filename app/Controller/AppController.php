@@ -44,9 +44,10 @@ class AppController extends Controller {
 				)
 			),
 			'authorize' => array('Controller')
-		), 
+		),
 		'Session',
-		'RequestHandler'
+		'RequestHandler',
+		'DebugKit.Toolbar'
 	);
 
 /**

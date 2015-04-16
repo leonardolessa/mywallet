@@ -16,7 +16,6 @@ class Movement extends AppModel {
  * @var string
  */
 	public $displayField = 'description';
-
 /**
  * Validation rules
  *
@@ -127,30 +126,34 @@ class Movement extends AppModel {
 // 		$this->fixAmountToSave();
 // 	}
 
+	public function getPayments($request = null) {
+		$date = null;
 
-/**
- * afterFind callback
- * @param  array $results
- * @param  boolean $primary [if the query is from the origin model]
- * @return array results
- */
-	public function afterFind($results, $primary = false) {
-		foreach ($results as $key => $value) {
-			if(isset($value[$this->alias]['date'])) {
-				$results[$key][$this->alias]['date'] = $this->changeDateToShow($results[$key][$this->alias]['date']);
-			}
+		if($request) {
+			$date = $this->getDate($request);
 		}
-		return $results;
-	}
 
-
-/**
- * changeDateToShow method
- * @param  string $date date that comes from afterFind callback
- * @return string formated date
- */
-	public function changeDateToShow($date) {
-		return date("d/m/Y", strtotime($date));
+		return $this->Payment->find(
+			'all',
+			array(
+				'conditions' => array(
+					'Movement.user_id' => CakeSession::read("Auth.User.id"),
+					'MONTH(Payment.date)' => $date ? $date['month'] : date('m'),
+					'YEAR(Payment.date)' => $date ? $date['year'] : date('Y')
+				),
+				'order' => array(
+					'Payment.date' => 'asc'
+				),
+				'contain' => array(
+					'Movement' => array(
+						'fields' => array('description', 'type'),
+						'Category' => array(
+							'fields' => array('name', 'color')
+						)
+					),
+				)
+			)
+		);
 	}
 
 

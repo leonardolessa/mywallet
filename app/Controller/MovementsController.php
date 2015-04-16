@@ -37,26 +37,12 @@ class MovementsController extends AppController {
  * @return void
  */
 	public function index() {
-		$movements = $this->Movement->find(
-			'all',
-			array(
-				'recursive' => 1,
-				'conditions' => array(
-					'Movement.user_id' => $this->Auth->user('id'),
-					// 'MONTH(Movement.date)' => date('m'),
-					// 'YEAR(Movement.date)' => date('Y')
-				),
-				// 'fields' => array(
-				// 	'Movement.*',
-				// 	'Category.*'
-				// )
-			)
-		);
+		$payments = $this->Movement->getPayments();
 
 		$this->set(array(
-			'movements' => $movements,
+			'payments' => $payments,
 			'date' => date('m/d/Y'),
-			'_serialize' => array('movements', 'date')
+			'_serialize' => array('payments', 'date')
 		));
 	}
 
@@ -68,27 +54,11 @@ class MovementsController extends AppController {
  */
 	public function date() {
 		if($this->request->is('post')) {
-			$date = $this->Movement->getDate($this->request->data);
-
-			$movements = $this->Movement->find(
-				'all',
-				array(
-					'recursive' => 0,
-					'conditions' => array(
-						'Movement.user_id' => $this->Auth->user('id'),
-						'MONTH(Movement.date)' => $date['month'],
-						'YEAR(Movement.date)' => $date['year']
-					),
-					'fields' => array(
-						'Movement.*',
-						'Category.*'
-					)
-				)
-			);
+			$payments = $this->Movement->getPayments($this->request->data);
 
 			$this->set(array(
-				'movements' => $movements,
-				'_serialize' => array('movements')
+				'payments' => $payments,
+				'_serialize' => array('payments')
 			));
 		}
 	}
