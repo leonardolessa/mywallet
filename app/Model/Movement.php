@@ -115,18 +115,6 @@ class Movement extends AppModel {
 // 		)
 // 	);
 
-// /**
-//  * beforeSave callback
-//  * CakePHP callback function
-//  * @param  array  $options []
-//  * @return void
-//  */
-// 	public function beforeValidate($options = array()) {
-// 		$this->fixDataToSave();
-// 		$this->fixAmountToSave();
-// 	}
-//
-
 /**
  * getPayments
  *
@@ -287,8 +275,9 @@ class Movement extends AppModel {
  * @param integer $months number of months to add
  */
 	private function addMonths($date, $months) {
-		return date('d/m/Y', strtotime("+". $months . " months", strtotime($date)));
-
+		$t = strptime($date, '%d/%m/%Y');
+		$dt = mktime(0, 0, 0, $t['tm_mon'] + 1, $t['tm_mday'], $t['tm_year'] + 1900);
+		return date('d/m/Y', strtotime("+". $months . " months", $dt));
 	}
 
 /**
