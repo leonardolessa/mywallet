@@ -129,57 +129,6 @@ class MovementsController extends AppController {
 	}
 
 /**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function edit($id = null) {
-		if ($this->request->is(array('post', 'put'))) {
-
-			if ($this->Movement->save($this->request->data)) {
-				$message = array(
-					'text' => 'A movimentação foi editada com sucesso.',
-					'type' => 'success'
-				);
-			} else {
-				$message = array(
-					'text' => 'Não foi possível editar a movimentação.',
-					'type' => 'error',
-						'errors' => $this->Movement->validationErrors
-				);
-			}
-
-			return $this->set(array(
-				'message' => $message,
-				'_serialize' => array('message')
-			));
-
-		}
-
-		$this->request->data = $this->Movement->find(
-			'first',
-			array(
-				'conditions' => array(
-					'Movement.' . $this->Movement->primaryKey => $id
-				)
-			)
-		);
-
-		$categories = $this->Movement->Category->find(
-			'list',
-			array(
-				'conditions' => array(
-					'user_id' => $this->Auth->user('id')
-				)
-			)
-		);
-
-		$this->set(compact('categories'));
-	}
-
-/**
  * delete method
  *
  * @param string $id

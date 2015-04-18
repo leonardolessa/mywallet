@@ -287,7 +287,7 @@ class Movement extends AppModel {
  * @param integer $months number of months to add
  */
 	private function addMonths($date, $months) {
-		return date('Y/m/d', strtotime("+". $months . " months", strtotime($this->fixDate($date))));
+		return date('d/m/Y', strtotime("+". $months . " months", strtotime($date)));
 
 	}
 
@@ -306,7 +306,6 @@ class Movement extends AppModel {
 		for ($i = 0; $i <= $times; $i++) {
 			$newPayment = $paymentData;
 			$newPayment['date'] = $this->addMonths($paymentData['date'], $i);
-			$newPayment['amount'] = $this->fixAmount($paymentData['amount']);
 			array_push($newData, $newPayment);
 		}
 

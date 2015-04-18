@@ -81,6 +81,53 @@ class Payment extends AppModel {
 	);
 
 /**
+ * beforeSave callback
+ * CakePHP callback function
+ * @param  array  $options []
+ * @return void
+ */
+	public function beforeValidate($options = array()) {
+		$this->fixDataToSave();
+		$this->fixAmountToSave();
+	}
+
+/**
+ * fixAmountToSave method
+ * fix the date that comes from client-side to save in database
+ * @return void
+ */
+	public function fixAmountToSave() {
+		if(isset($this->data[$this->alias]['amount'])) {
+			$amount = $this->data[$this->alias]['amount'];
+			$amount = str_replace(
+				array(
+					'R$',
+					',',
+					' '
+				),
+				'',
+				$amount
+			);
+			$this->data[$this->alias]['amount'] = $amount;
+		}
+	}
+
+/**
+ * fixDataToSave method
+ * fix BRL date to insert in the database
+ * @return void
+ */
+	private function fixDataToSave() {
+		if(isset($this->data[$this->alias]['date'])) {
+			$originalDate = $this->data[$this->alias]['date'];
+			list($d, $m, $y) = preg_split('/\//', $originalDate);
+			$newDate = sprintf('%4d/%02d/%02d', $y, $m, $d);
+
+			$this->data[$this->alias]['date'] = $newDate;
+		}
+	}
+
+/**
  * afterFind callback
  * @param  array $results
  * @param  boolean $primary [if the query is from the origin model]
