@@ -137,6 +137,7 @@ class Movement extends AppModel {
 	public function getPayments($request = null) {
 		$date = $this->getDate($request);
 
+
 		return $this->Payment->find(
 			'all',
 			array(
@@ -150,7 +151,7 @@ class Movement extends AppModel {
 				),
 				'contain' => array(
 					'Movement' => array(
-						'fields' => array('description', 'type'),
+						'fields' => array('id', 'description', 'type'),
 						'Category' => array(
 							'fields' => array('name', 'color')
 						)
@@ -158,6 +159,66 @@ class Movement extends AppModel {
 				)
 			)
 		);
+	}
+/**
+ * getDate method
+ *
+ * if receives a date, return the received date, if not, send the current date
+ * @param  array $request request from date action controller
+ * @return array          return the date that is gonna be used
+ */
+	public function getDate($request) {
+		if(!empty($request)){
+			return array(
+				'month' => $request['Movement']['month'],
+				'year' => $request['Movement']['year'],
+			);
+		}
+
+		return array(
+			'month' => date('m'),
+			'year' => date('Y')
+		);
+	}
+/**
+ * deletePayment
+ * delete the payment according to the id received in the parameter
+ * @param  integer $id
+ * @return boolean
+ */
+	public function deletePayment($id = null) {
+		$payment = $this->Payment->findById($id);
+
+		if ($this->Payment->delete($id)) {
+			$this->cleanMovement($payment['Payment']['movement_id']);
+			return true;
+		}
+
+		return false;
+	}
+
+/**
+ * cleanMovement
+ * check if the movement still has other payments, if not, delete it
+ * @param  [type] $movementId [description]
+ * @return [type]             [description]
+ */
+	private function cleanMovement($movementId = null) {
+		$movement = $this->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Movement.id' => $movementId
+				),
+				'contain' => array(
+					'Payment'
+				)
+			)
+		);
+
+		if(empty($movement['Payment'])) {
+			$this->delete($movementId);
+		}
 	}
 
 
@@ -195,26 +256,6 @@ class Movement extends AppModel {
 		return $newDate;
 	}
 
-/**
- * getDate method
- *
- * if receives a date, return the received date, if not, send the current date
- * @param  array $request request from date action controller
- * @return array          return the date that is gonna be used
- */
-	public function getDate($request) {
-		if(!empty($request)){
-			return array(
-				'month' => $request['Movement']['month'],
-				'year' => $request['Movement']['year'],
-			);
-		}
-
-		return array(
-			'month' => date('m'),
-			'year' => date('Y')
-		);
-	}
 
 /**
  * isOwnedBy method

@@ -7,29 +7,6 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class MovementsController extends AppController {
-/**
- * isAuthorized callback method
- * @param  object  $user
- * @return boolean
- */
-	public function isAuthorized($user) {
-		if (in_array($this->action, array('edit', 'delete'))) {
-			$movementId = (int) $this->request->params['pass'][0];
-			if(!$this->Movement->isOwnedBy($movementId, $user['id'])) {
-				$this->Session->setFlash(
-					'Você não está autorizado a realizar esta ação.',
-					'alert/alert_warning'
-				);
-				$this->redirect(array(
-					'controller' => 'pages',
-					'action' => 'display',
-					'home'
-				));
-			}
-		}
-		return parent::isAuthorized($user);
-	}
-
 
 /**
  * index method
@@ -71,10 +48,10 @@ class MovementsController extends AppController {
  * @return void
  */
 	public function pay($id = null) {
-		$this->Movement->id = $id;
-		$current = $this->Movement->field('paid');
+		$this->Movement->Payment->id = $id;
+		$current = $this->Movement->Payment->field('paid');
 
-		if($this->Movement->saveField('paid', ($current ? false : true))) {
+		if($this->Movement->Payment->saveField('paid', ($current ? false : true))) {
 			$message = array(
 				'text' => 'A movimentação foi alterada com sucesso',
 				'type' => 'success'
@@ -209,10 +186,8 @@ class MovementsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
-		$this->Movement->id = $id;
-
 		if($this->request->is('delete')) {
-			if ($this->Movement->delete()) {
+			if ($this->Movement->deletePayment($id)) {
 				$message = array(
 					'text' => 'A movimentação foi excluída com sucesso.',
 					'type' => 'success'
@@ -230,5 +205,21 @@ class MovementsController extends AppController {
 				'_serialize' => array('message')
 			));
 		}
+	}
+
+	public function balance() {
+		// $this->Movement->Payment->virtualFields['total'] = 'SUM(Payment.amount)';
+		// pr(
+		// 	$this->Movement->Payment->find(
+		// 		'all',
+		// 		array(
+		// 			'conditions' => array(
+		// 				'Payment.paid' => 1,
+		// 				'Movement.type' => 0
+		// 			),
+		// 			'fields' => array('total')
+		// 		)
+		// 	)
+		// );
 	}
 }

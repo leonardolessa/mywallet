@@ -76,7 +76,7 @@ MW.components.Movements.prototype = {
 	},
 
 	switchPaid: function(target) {
-		var id = $(target).closest('tr').data('movement-id'),
+		var id = $(target).closest('tr').data('payment-id'),
 			url = this.settings.actionsUrl,
 			self = this;
 
@@ -89,7 +89,7 @@ MW.components.Movements.prototype = {
 	},
 
 	deleteMovement: function(target) {
-		var id = $(target).closest('tr').data('movement-id'),
+		var id = $(target).closest('tr').data('payment-id'),
 			url = this.settings.actionsUrl,
 			self = this;
 
@@ -141,7 +141,6 @@ MW.components.Movements.prototype = {
 			url: this.settings.wrapper.data('url'),
 			type: 'GET',
 		}).done(function(data) {
-			console.log(data);
 			self.getCurrentDate(data.date);
 			self.loadContent(data.payments);
 		});
@@ -175,7 +174,7 @@ MW.components.Movements.prototype = {
 			icon = this.checkType(element.Movement.type),
 			paid = this.checkPaid(element.Payment.paid);
 
-		html.push('	<tr data-movement-id="'+ element.Movement.id +'">');
+		html.push('	<tr data-movement-id="'+ element.Movement.id +'" data-payment-id="'+ element.Payment.id +'">');
 		html.push('		<td class="td-type">');
 		html.push(			icon);
 		html.push('		</td>')
@@ -204,7 +203,6 @@ MW.components.Movements.prototype = {
 		if(type == 1) {
 			return '<span title="Receita" class="glyphicon glyphicon-upload"></span>';
 		}
-		console.log(type);
 		return '<span title="Despesa" class="glyphicon glyphicon-download"></span>';
 	}
 }
