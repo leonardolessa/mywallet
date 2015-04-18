@@ -57,7 +57,7 @@ MW.components.FormCategory.prototype = {
 		} else if (data.type == 'success') {
 			this.showMessage(data.text);
 			this.closeModal();
-			MW.i.categories.getCategories();
+			MW.i.Categories.getCategories();
 		}
 	},
 
