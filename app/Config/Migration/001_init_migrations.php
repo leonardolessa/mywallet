@@ -205,7 +205,7 @@ class InitMigration extends BaseMigration {
 						'collate' => null,
 					),
 					'amount' => array(
-						'type' => e'decimal',
+						'type' => 'decimal',
 						'length' => '10,2',
 						'null' => true,
 						'default' => null,
