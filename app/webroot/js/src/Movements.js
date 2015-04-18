@@ -184,7 +184,7 @@ MW.components.Movements.prototype = {
 		html.push('		<td class="money">'+ element.Payment.amount +'</td>')
 		html.push('		<td><a href="javascript:;" class="paid-movement" data-paid="'+ element.Payment.paid +'" data-toggle="tooltip" title="Clique para alterar se está pago.">'+ paid +'</a></td>');
 		html.push('		<td class="td-actions">');
-		html.push('			<a href="'+ this.settings.actionsUrl + '/edit/' + element.Movement.id +'" data-toggle="modal" data-target=".modal-movements" class="edit-movement" title="Clique para editar essa movimentação."><span class="glyphicon glyphicon-edit"></span></a>');
+		html.push('			<a href="/mywallet/payments/edit/' + element.Payment.id +'" data-toggle="modal" data-target=".modal-movements" class="edit-movement" title="Clique para editar essa movimentação."><span class="glyphicon glyphicon-edit"></span></a>');
 		html.push('			<a href="javascript:;" class="delete-movement" title="Clique para excluir essa movimentação."><span class="glyphicon glyphicon-trash"></span></a>');
 		html.push('		</td>');
 		html.push('</tr>');
@@ -193,7 +193,7 @@ MW.components.Movements.prototype = {
 	},
 
 	checkPaid: function(paid) {
-		if(paid) {
+		if(paid == 1) {
 			return '<span class="glyphicon glyphicon-thumbs-up"></span>'
 		}
 		return '<span class="glyphicon glyphicon-thumbs-down"></span>'

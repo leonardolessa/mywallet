@@ -1,11 +1,11 @@
 <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	<h4 class="modal-title">Adicionar Movimentação</h4>
+	<h4 class="modal-title">Editar Movimentação</h4>
 </div>
 <div class="modal-body">
 	<?php
 		echo $this->Form->create(
-			'Movement',
+			'Payment',
 			array(
 				'inputDefaults' => array(
 					'div' => array(
@@ -20,6 +20,9 @@
 				'class' => 'form-movement-edit'
 			)
 		);
+		echo $this->Form->input('id');
+		echo $this->Form->hidden('Payment.movement_id');
+		echo $this->Form->hidden('Movement.id');
 	?>
 
 		<div class="row">
@@ -27,7 +30,7 @@
 				<div class="mb-15">
 					<?php
 						echo $this->Form->input(
-							'type',
+							'Movement.type',
 							array(
 								'type' => 'checkbox',
 								'div' => false,
@@ -41,7 +44,6 @@
 							)
 						);
 
-						echo $this->Form->input('id');
 					?>
 				</div>
 
@@ -65,6 +67,7 @@
 							'class' => 'datepicker form-control input-sm'
 						)
 					);
+
 				?>
 			</div>
 
@@ -92,7 +95,7 @@
 
 				<?php
 					echo $this->Form->input(
-						'category_id',
+						'Movement.category_id',
 						array(
 							'label' => 'Categoria',
 							'empty' => 'Selecione uma categoria',
@@ -101,14 +104,14 @@
 					);
 
 					echo $this->Form->input(
-						'description',
+						'Movement.description',
 						array(
 							'label' => 'Descrição'
 						)
 					);
 
 					echo $this->Form->input(
-						'user_id',
+						'Movement.user_id',
 						array(
 							'type' => 'hidden',
 							'value' => $userData['id']
