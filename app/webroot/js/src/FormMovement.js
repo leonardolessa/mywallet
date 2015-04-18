@@ -29,7 +29,7 @@ MW.components.FormMovement.prototype = {
 		});
 
 		if(this.settings.action == 'add') {
-			dateElements.datepicker('setDate', MW.i.movements.getDate());
+			dateElements.datepicker('setDate', MW.i.Movements.getDate());
 		}
 
 		$('[data-toggle="tooltip"]').tooltip();
@@ -102,6 +102,6 @@ MW.components.FormMovement.prototype = {
 	},
 
 	refreshMovements: function() {
-		MW.i.movements.getByMonth();
+		MW.i.Movements.getByMonth();
 	}
 }

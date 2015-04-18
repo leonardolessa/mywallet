@@ -10,7 +10,7 @@
 <div class="main-container container">
 	<div
 		class="movements"
-		data-component="movements"
+		data-component="Movements"
 		data-url="<?php echo $this->Html->url(array('action' => 'index', 'ext' => 'json')) ?>">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">

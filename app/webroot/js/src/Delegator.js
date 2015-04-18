@@ -15,26 +15,12 @@ MW.services.Delegator = function() {
 
 		$.each(components, function(index, value) {
 			var component = $(this).data('component');
-			/**
-			 * Define the components inside the case
-			 */
-			switch(component) {
-				case 'movements':
-					MW.i.movements = new MW.components.Movements({
-						wrapper: $(this),
-						loader: $('.loader-wrapper'),
-						output: $(this).find('tbody')
-					});
-					break;
 
-				case 'categories':
-					MW.i.categories = new MW.components.Categories({
-						wrapper: $(this),
-						loader: $('.loader-wrapper'),
-						output: $(this).find('tbody')
-					});
-					break;
-			}
+			MW.i[component] = new MW.components[component]({
+				wrapper: $(this),
+				loader: $('.loader-wrapper'),
+				output: $(this).find('tbody')
+			});
 		});
 	}
 

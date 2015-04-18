@@ -10,7 +10,7 @@
 <div class="container main-container">
 	<div
 		class="categories panel panel-default"
-		data-component="categories"
+		data-component="Categories"
 		data-url="<?php echo $this->Html->url(array('action' => 'index', 'ext' => 'json')) ?>">
 
 		<div class="panel-heading clearfix">
