@@ -221,7 +221,6 @@ MW.components.Movements.prototype = {
 		this.incoming = 0;
 		if (balance) {
 			totalElement.html(balance.total);
-			this.settings.balance.show();
 
 			totalElement.priceFormat({
 				prefix: 'R$ ',
