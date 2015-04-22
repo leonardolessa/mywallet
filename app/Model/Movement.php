@@ -295,6 +295,7 @@ class Movement extends AppModel {
 			$newPayment = $paymentData;
 			$newPayment['date'] = $this->addMonths($paymentData['date'], $i);
 			array_push($newData, $newPayment);
+			$paymentData['paid'] = false;
 		}
 
 		return $newData;
