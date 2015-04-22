@@ -336,7 +336,7 @@ class Movement extends AppModel {
 			array(
 				'conditions' => array(
 						'Payment.paid' => 1,
-						'Movement.type' => 0
+						'Movement.type' => 0,
 						'Movement.user_id' => CakeSession::read("Auth.User.id")
 				),
 				'fields' => array(
