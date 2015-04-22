@@ -1,0 +1,14 @@
+set :deploy_to, '/home/mywallet/mywallet'
+
+server 'lessa.cc', user: 'mywallet', roles: %w{app db web}
+
+server 'lessa.cc',
+  user: 'mywallet',
+  roles: %w{web app},
+  ssh_options: {
+    user: 'mywallet',
+    keys: %w(/YOUR/USER/.ssh/id_rsa), # change for your user id_rsa path
+    forward_agent: false,
+    auth_methods: %w(publickey password)
+    # password: 'please use keys'
+  }
