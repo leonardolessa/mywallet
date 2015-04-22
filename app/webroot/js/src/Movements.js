@@ -6,8 +6,10 @@ MW.components.Movements.prototype = {
 	init: function(settings) {
 		this.settings = this.getSettings(settings);
 
+		this.incoming = 0;
+		this.expenses = 0;
+
 		this.getMovements();
-		this.setup();
 		this.bind();
 	},
 
@@ -19,7 +21,8 @@ MW.components.Movements.prototype = {
 			nextButton: $('.movements').find('.next'),
 			previousButton: $('.movements').find('.previous'),
 			pagination: $('.movements').find('.pagination'),
-			actionsUrl: $('.th-head-actions').data('url')
+			actionsUrl: $('.th-head-actions').data('url'),
+			balance: $('.balance-wrapper')
 		}, settings);
 	},
 
@@ -127,6 +130,7 @@ MW.components.Movements.prototype = {
 				}
 			}
 		}).done(function(data) {
+			self.updateBalance(data.balance);
 			self.loadContent(data.payments);
 		});
 	},
@@ -141,6 +145,7 @@ MW.components.Movements.prototype = {
 			url: this.settings.wrapper.data('url'),
 			type: 'GET',
 		}).done(function(data) {
+			self.updateBalance(data.balance);
 			self.getCurrentDate(data.date);
 			self.loadContent(data.payments);
 		});
@@ -157,11 +162,14 @@ MW.components.Movements.prototype = {
 
 		this.settings.output.html('');
 
-		if(movements.length > 0) {
+		if (movements.length > 0) {
 			$.each(movements, function(index, value) {
 				self.renderMovement(value);
+				self.sumBalance(value);
 			});
 		}
+
+		this.setBalanceValues();
 
 		self.settings.loader.hide();
 		self.settings.wrapper.show();
@@ -204,5 +212,58 @@ MW.components.Movements.prototype = {
 			return '<span title="Receita" class="glyphicon glyphicon-upload"></span>';
 		}
 		return '<span title="Despesa" class="glyphicon glyphicon-download"></span>';
+	},
+
+	updateBalance: function(balance) {
+		var totalElement = this.settings.balance.find('.total-balance');
+
+		this.expenses = 0;
+		this.incoming = 0;
+		if (balance) {
+			totalElement.html(balance.total);
+			this.settings.balance.show();
+
+			totalElement.priceFormat({
+				prefix: 'R$ ',
+				allowNegative: true
+			});
+
+			if (balance.positive) {
+				totalElement.addClass('positive');
+			} else {
+				totalElement.removeClass('positive');
+			}
+		}
+	},
+
+	sumBalance: function(element) {
+		if (element.Payment.paid) {
+			if (element.Movement.type == 0) {
+				this.expenses =+ element.Payment.amount;
+			} else {
+				this.incoming =+ element.Payment.amount;
+			}
+		}
+	},
+
+	setBalanceValues: function() {
+		var monthBalance = this.settings.balance.find('.total'),
+			totalIncoming = this.settings.balance.find('.total-incoming'),
+			totalExpenses = this.settings.balance.find('.total-expenses');
+
+		if (this.incoming >= this.expenses) {
+			monthBalance.addClass('positive');
+		} else {
+			monthBalance.removeClass('positive');
+		}
+
+		monthBalance.html(parseFloat(this.incoming - this.expenses).toFixed(2));
+		totalIncoming.html(parseFloat(this.incoming).toFixed(2));
+		totalExpenses.html(parseFloat(this.expenses).toFixed(2));
+
+		jQuery(monthBalance).add(totalIncoming).add(totalExpenses).priceFormat({
+			prefix: 'R$ ',
+			allowNegative: true
+		});
 	}
 }

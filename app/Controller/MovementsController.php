@@ -15,11 +15,13 @@ class MovementsController extends AppController {
  */
 	public function index() {
 		$payments = $this->Movement->getPayments();
+		$balance = $this->Movement->getBalance();
 
 		$this->set(array(
 			'payments' => $payments,
+			'balance' => $balance,
 			'date' => date('m/d/Y'),
-			'_serialize' => array('payments', 'date')
+			'_serialize' => array('payments', 'date', 'balance')
 		));
 	}
 
@@ -32,10 +34,12 @@ class MovementsController extends AppController {
 	public function date() {
 		if($this->request->is('post')) {
 			$payments = $this->Movement->getPayments($this->request->data);
+			$balance = $this->Movement->getBalance();
 
 			$this->set(array(
+				'balance' => $balance,
 				'payments' => $payments,
-				'_serialize' => array('payments')
+				'_serialize' => array('payments', 'balance')
 			));
 		}
 	}
@@ -154,21 +158,5 @@ class MovementsController extends AppController {
 				'_serialize' => array('message')
 			));
 		}
-	}
-
-	public function balance() {
-		// $this->Movement->Payment->virtualFields['total'] = 'SUM(Payment.amount)';
-		// pr(
-		// 	$this->Movement->Payment->find(
-		// 		'all',
-		// 		array(
-		// 			'conditions' => array(
-		// 				'Payment.paid' => 1,
-		// 				'Movement.type' => 0
-		// 			),
-		// 			'fields' => array('total')
-		// 		)
-		// 	)
-		// );
 	}
 }

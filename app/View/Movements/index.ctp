@@ -84,6 +84,45 @@
 					</tbody>
 				</table>
 			</div>
+
+
+
+
+		</div>
+
+		<div class="row balance-wrapper">
+			<div class="col-md-6">
+				<div class="balance panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Saldo mensal</h3>
+					</div>
+
+					<div class="panel-body">
+						<div class="wrapper-col text-left labels">
+							<p>Receitas</p>
+							<p>Despesas</p>
+						</div>
+						<div class="wrapper-col text-right">
+							<p class="total-incoming"></p>
+							<p class="total-expenses"></p>
+						</div>
+						<div class="wrapper-col pull-right total-balance-month">
+							Total   <span class="total"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Saldo total</h3>
+					</div>
+					<div class="panel-body">
+						<div class="total-balance pull-right"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 

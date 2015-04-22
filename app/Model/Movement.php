@@ -125,7 +125,6 @@ class Movement extends AppModel {
 	public function getPayments($request = null) {
 		$date = $this->getDate($request);
 
-
 		return $this->Payment->find(
 			'all',
 			array(
@@ -299,6 +298,59 @@ class Movement extends AppModel {
 		}
 
 		return $newData;
+	}
+
+	public function getBalance() {
+		$incoming = $this->getTotalIncoming();
+		$expenses = $this->getTotalExpenses();
+
+		if($incoming >= $expenses) {
+			return array(
+				'total' => number_format($incoming - $expenses, 2, '.', ''),
+				'positive' => true
+			);
+		}
+
+		return array(
+			'total' => number_format($incoming - $expenses, 2, '.', ''),
+			'positive' => false
+		);
+	}
+
+	public function getTotalExpenses() {
+		$expenses = $this->Payment->find(
+			'first',
+			array(
+				'conditions' => array(
+						'Payment.paid' => 1,
+						'Movement.type' => 0
+				),
+				'fields' => array(
+					'SUM(Payment.amount) as total'
+				),
+				'recursive' => 1
+			)
+		);
+
+		return $expenses[0]['total'];
+	}
+
+	public function getTotalIncoming() {
+		$incoming = $this->Payment->find(
+			'first',
+			array(
+				'conditions' => array(
+						'Payment.paid' => 1,
+						'Movement.type' => 1
+				),
+				'fields' => array(
+					'SUM(Payment.amount) as total'
+				),
+				'recursive' => 1
+			)
+		);
+
+		return $incoming[0]['total'];
 	}
 
 }

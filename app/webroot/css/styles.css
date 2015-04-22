@@ -925,6 +925,41 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .repeat-select {
   display: none;
 }
+.balance-wrapper {
+  display: none;
+}
+.balance .wrapper-col {
+  float: left;
+  display: inline-block;
+  color: #666;
+  margin-left: 5px;
+}
+.balance .wrapper-col p {
+  margin-bottom: 5px;
+}
+.balance .labels {
+  color: #666;
+}
+.balance .total-incoming {
+  color: #008000;
+}
+.balance .total-expenses {
+  color: #f00;
+}
+.balance .total {
+  font-size: 20px;
+  color: #f00;
+}
+.balance .total.positive {
+  color: #008000;
+}
+.total-balance {
+  font-size: 30px;
+  color: #f00;
+}
+.total-balance.positive {
+  color: #008000;
+}
 .categories {
   display: none;
 }
