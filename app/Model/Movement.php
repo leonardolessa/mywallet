@@ -300,6 +300,13 @@ class Movement extends AppModel {
 		return $newData;
 	}
 
+
+/**
+ * getBalance
+ *
+ * get the incoming and expenses and return the balance
+ * @return array total and if it's positive
+ */
 	public function getBalance() {
 		$incoming = $this->getTotalIncoming();
 		$expenses = $this->getTotalExpenses();
@@ -317,6 +324,12 @@ class Movement extends AppModel {
 		);
 	}
 
+/**
+ * getTotalExpenses
+ *
+ * get all the expenses in the database and return
+ * @return float expenses
+ */
 	public function getTotalExpenses() {
 		$expenses = $this->Payment->find(
 			'first',
@@ -324,6 +337,7 @@ class Movement extends AppModel {
 				'conditions' => array(
 						'Payment.paid' => 1,
 						'Movement.type' => 0
+						'Movement.user_id' => CakeSession::read("Auth.User.id")
 				),
 				'fields' => array(
 					'SUM(Payment.amount) as total'
@@ -335,13 +349,20 @@ class Movement extends AppModel {
 		return $expenses[0]['total'];
 	}
 
+/**
+ * getTotalIncoming
+ *
+ * get all the incoming in the database and return
+ * @return float expenses
+ */
 	public function getTotalIncoming() {
 		$incoming = $this->Payment->find(
 			'first',
 			array(
 				'conditions' => array(
 						'Payment.paid' => 1,
-						'Movement.type' => 1
+						'Movement.type' => 1,
+						'Movement.user_id' => CakeSession::read("Auth.User.id")
 				),
 				'fields' => array(
 					'SUM(Payment.amount) as total'
