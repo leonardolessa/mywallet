@@ -24,14 +24,21 @@
 			<div class="navbar-header">
 				<?php
 					echo $this->Html->link(
-						'mywallet',
+						$this->Html->image(
+							"logo.png",
+							array(
+								'alt' => 'logo',
+								'class' => 'logo'
+							)
+						). ' mywallet',
 						array(
 							'controller' => 'pages',
 							'action' => 'display',
 							'home'
 						),
 						array(
-							'class' => 'navbar-brand'
+							'class' => 'navbar-brand',
+							'escape' => false
 						)
 					);
 				?>
