@@ -18,7 +18,7 @@ MW.services.Delegator = function() {
 
 			MW.i[component] = new MW.components[component]({
 				wrapper: $(this),
-				loader: $('.loader-wrapper'),
+				loader: $(this).find('.loader-wrapper'),
 				output: $(this).find('tbody')
 			});
 		});

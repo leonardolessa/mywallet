@@ -855,7 +855,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 }
 .loader-wrapper {
   text-align: center;
-  height: 300px;
+  height: 175px;
 }
 .loader-wrapper img {
   margin-top: 50px;
@@ -898,7 +898,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .navbar-header .logo {
   width: 30px;
 }
-.movements {
+.movements .panel {
   display: none;
 }
 .table-movements thead tr th {
@@ -972,9 +972,35 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .total-balance.positive {
   color: #008000;
 }
-.categories {
+.categories .panel {
   display: none;
 }
 .input-group-addon {
   padding: 0 20px;
+}
+.morris-hover {
+  position: absolute;
+  z-index: 1000;
+}
+.morris-hover.morris-default-style {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 6px;
+  color: #666;
+  background: rgba(255,255,255,0.8);
+  border: solid 2px rgba(230,230,230,0.8);
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+.morris-hover.morris-default-style .morris-hover-row-label {
+  font-weight: bold;
+  margin: 0.25em 0;
+}
+.morris-hover.morris-default-style .morris-hover-point {
+  white-space: nowrap;
+  margin: 0.1em 0;
+}
+.widget .panel-body {
+  height: 200px;
 }
