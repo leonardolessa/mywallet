@@ -17,7 +17,7 @@
 				<h3 class="pull-left panel-title">Movimentações</h3>
 			</div>
 
-			<panel class="panel-body">
+			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-3 col-sm-3">
 						<div class="dropdown">
@@ -65,7 +65,7 @@
 						</div>
 					</div>
 				</div>
-			</panel>
+			</div>
 			<div class="table-responsive">
 				<table class="table table-striped table-hover table-movements">
 					<thead>
@@ -84,10 +84,6 @@
 					</tbody>
 				</table>
 			</div>
-
-
-
-
 		</div>
 
 		<div class="row balance-wrapper">
@@ -124,11 +120,11 @@
 				</div>
 			</div>
 		</div>
+		<div class="loader-wrapper">
+			<img src="img/loader.gif" alt="">
+		</div>
 	</div>
 
-	<div class="loader-wrapper">
-		<img src="img/loader.gif" alt="">
-	</div>
 </div>
 
 <div class="modal fade modal-movements">
