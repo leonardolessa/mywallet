@@ -36,7 +36,7 @@ MW.components.Categories.prototype = {
 		}).done(function(data) {
 			self.loadContent(data.categories, function() {
 				self.settings.loader.hide();
-				self.settings.wrapper.fadeIn();
+				self.settings.wrapper.find('.panel').fadeIn();
 			});
 		})
 	},

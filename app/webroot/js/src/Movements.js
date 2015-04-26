@@ -116,8 +116,6 @@ MW.components.Movements.prototype = {
 		var self = this,
 			url = this.settings.pagination.data('url');
 
-		this.settings.wrapper.hide();
-		this.settings.loader.show();
 		this.setPaginator();
 
 		$.ajax({
@@ -137,9 +135,6 @@ MW.components.Movements.prototype = {
 
 	getMovements: function() {
 		var self = this;
-
-		this.settings.wrapper.hide();
-		this.settings.loader.show();
 
 		$.ajax({
 			url: this.settings.wrapper.data('url'),
@@ -171,8 +166,8 @@ MW.components.Movements.prototype = {
 
 		this.setBalanceValues();
 
-		self.settings.loader.hide();
-		self.settings.wrapper.show();
+		this.settings.loader.hide();
+		this.settings.wrapper.find('.panel').show();
 
 		this.setup();
 	},
