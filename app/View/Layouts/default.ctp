@@ -105,6 +105,8 @@
 	<?php echo $this->fetch('content'); ?>
 
 	<div class="alert alert-on alert-dismissable"></div>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
 	<?php
 		echo $this->Html->script('jquery.min');
 		echo $this->Html->script('jquery.validate.min');
