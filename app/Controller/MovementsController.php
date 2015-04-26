@@ -159,4 +159,19 @@ class MovementsController extends AppController {
 			));
 		}
 	}
+
+/**
+ * overview
+ *
+ * return the balance and the total information
+ * @return void
+ */
+	public function overview() {
+		$overview = $this->Movement->getBalance();
+
+		return $this->set(array(
+			'overview' => $overview,
+			'_serialize' => array('overview')
+		));
+	}
 }
