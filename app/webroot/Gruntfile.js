@@ -2,13 +2,15 @@ module.exports = function(grunt) {
 
 	var jsFiles = [
 		'js/src/namespace.js',
+		'js/src/Morris.js',
 		'js/src/Datepicker.js',
 		'js/src/PriceFormat.js',
-		'js/src/Delegator.js',
-		'js/src/Movements.js',
+		'js/src/Delegator.js'
+,		'js/src/Movements.js',
 		'js/src/FormMovement.js',
 		'js/src/Categories.js',
 		'js/src/FormCategory.js',
+		'js/src/WidgetOverview.js',
 		'js/src/Main.js'
 	];
 
