@@ -312,16 +312,11 @@ class Movement extends AppModel {
 		$incoming = $this->getTotalIncoming();
 		$expenses = $this->getTotalExpenses();
 
-		if($incoming >= $expenses) {
-			return array(
-				'total' => number_format($incoming - $expenses, 2, '.', ''),
-				'positive' => true
-			);
-		}
-
 		return array(
 			'total' => number_format($incoming - $expenses, 2, '.', ''),
-			'positive' => false
+			'expenses' =>  $expenses,
+			'incoming' => $incoming,
+			'positive' => ($incoming >= $expenses ? true : false)
 		);
 	}
 
