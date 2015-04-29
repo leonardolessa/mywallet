@@ -45,16 +45,7 @@ class PaymentsController extends AppController {
 			)
 		);
 
-		$categories = $this->Payment->Movement->find(
-			'list',
-			array(
-				'fields' => array(
-					'Category.id',
-					'Category.name'
-				),
-				'recursive' => 1
-			)
-		);
+		$categories = $this->Payment->Movement->Category->find('list');
 
 		$this->set(compact('categories'));
 	}
