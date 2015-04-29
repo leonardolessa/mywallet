@@ -118,6 +118,9 @@ MW.components.Movements.prototype = {
 
 		this.setPaginator();
 
+		this.settings.loader.show();
+		this.settings.wrapper.find('.panel').hide();
+
 		$.ajax({
 			url: url,
 			type: 'POST',
