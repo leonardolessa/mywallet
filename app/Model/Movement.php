@@ -134,7 +134,7 @@ class Movement extends AppModel {
 					'YEAR(Payment.date)' => $date['year']
 				),
 				'order' => array(
-					'Payment.date' => 'asc'
+					'Payment.date' => 'desc'
 				),
 				'contain' => array(
 					'Movement' => array(
