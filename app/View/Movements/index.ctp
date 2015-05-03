@@ -27,13 +27,13 @@
 
 							<ul class="dropdown-menu">
 								<li role="presentation" class="active">
-									<a role="menuitem" tabindex="-1" href="#">Todos</a>
+									<a role="menuitem" href="#">Todos</a>
 								</li>
 								<li role="presentation">
-									<a role="menuitem" tabindex="-1" href="#">Despesas</a>
+									<a role="menuitem" href="#">Despesas</a>
 								</li>
 								<li role="presentation">
-									<a role="menuitem" tabindex="-1" href="#">Receitas</a>
+									<a role="menuitem" href="#">Receitas</a>
 								</li>
 							</ul>
 						</div>

@@ -860,6 +860,9 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .loader-wrapper img {
   margin-top: 50px;
 }
+.widget-table {
+  display: none;
+}
 .navbar-wrapper {
   background-color: #f6f6f6;
   border-bottom: 1px solid #e9e9e9;

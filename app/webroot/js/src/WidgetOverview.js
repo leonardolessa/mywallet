@@ -25,6 +25,7 @@ MW.components.WidgetOverview.prototype = {
 				'red',
 				'green'
 			],
+			resize: true,
 			formatter: function (x) { return "R$ " + x}
 		});
 	},

@@ -73,6 +73,7 @@ MW.components.Categories.prototype = {
 		html.push('			<a href="javascript:;" class="delete-category">');
 		html.push('				<span class="glyphicon glyphicon-trash"></span>');
 		html.push('			</a>');
+		html.push('		</td>');
 		html.push('	</tr>');
 
 		this.settings.output.append(html.join(''));
