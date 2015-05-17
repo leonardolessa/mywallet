@@ -33,6 +33,14 @@ MW.components.WidgetMovements.prototype = {
 
 		this.settings.loader.hide();
 		this.table.show();
+
+		this.setup();
+	},
+
+	setup: function() {
+		this.settings.output.find('.money').priceFormat({
+			prefix: 'R$ '
+		});
 	},
 
 	renderMovement: function(element) {
@@ -63,8 +71,8 @@ MW.components.WidgetMovements.prototype = {
 
 	checkType: function(type) {
 		if(type == 1) {
-			return '<span title="Receita" class="glyphicon glyphicon-upload"></span>';
+			return '<span title="Receita" class="glyphicon glyphicon-upload">' + type + '</span>';
 		}
-		return '<span title="Despesa" class="glyphicon glyphicon-download"></span>';
+		return '<span title="Despesa" class="glyphicon glyphicon-download">' + type + '</span>';
 	},
 };

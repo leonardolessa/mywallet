@@ -174,4 +174,20 @@ class MovementsController extends AppController {
 			'_serialize' => array('overview')
 		));
 	}
+
+/**
+ * Reports action
+ *
+ * @return void
+ */
+	public function reports() {
+		$payments = $this->Movement->getPayments();
+		$balance = $this->Movement->getBalance();
+
+		$this->set(array(
+			'payments' => $payments,
+			'balance' => $balance,
+			'_serialize' => array('payments', 'balance')
+		));
+	}
 }

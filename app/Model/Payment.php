@@ -81,6 +81,12 @@ class Payment extends AppModel {
 	);
 
 /**
+ * Normalize date flag, to use on afterFind callback
+ * @var boolean
+ */
+	public $normalizeDate = true;
+
+/**
  * beforeSave callback
  * CakePHP callback function
  * @param  array  $options []
@@ -134,12 +140,14 @@ class Payment extends AppModel {
  * @return array results
  */
 	public function afterFind($results, $primary = false) {
-		foreach ($results as $key => $value) {
-			if(isset($value[$this->alias]['date'])) {
-				$results[$key][$this->alias]['date'] = $this->changeDateToShow($results[$key][$this->alias]['date']);
+		if ($this->normalizeDate) {
+			foreach ($results as $key => $value) {
+				if(isset($value[$this->alias]['date'])) {
+					$results[$key][$this->alias]['date'] = $this->changeDateToShow($results[$key][$this->alias]['date']);
+				}
 			}
+			return $results;
 		}
-		return $results;
 	}
 
 
@@ -150,5 +158,88 @@ class Payment extends AppModel {
  */
 	public function changeDateToShow($date) {
 		return date("d/m/Y", strtotime($date));
+	}
+
+
+
+	/**
+	 * method ugly as my face
+	 * IGNORE IT
+	 */
+	public function getReport($id = null) {
+		$date = new DateTime('now');
+		$data = array();
+
+		$c = 0;
+
+		for ($months = 0; $months < 12; $months++) {
+			if ($id != null) {
+				$expensesConditions = array(
+					'MONTH(Payment.date)' => $date->format('m'),
+					'YEAR(Payment.date)' => $date->format('Y'),
+					'Payment.paid' => true,
+					'Movement.type' => 0,
+					'Movement.category_id' => $id,
+				);
+
+				$incomingConditions = array(
+					'MONTH(Payment.date)' => $date->format('m'),
+					'YEAR(Payment.date)' => $date->format('Y'),
+					'Payment.paid' => true,
+					'Movement.type' => 1,
+					'Movement.category_id' => $id,
+				);
+			} else {
+				$expensesConditions = array(
+					'MONTH(Payment.date)' => $date->format('m'),
+					'YEAR(Payment.date)' => $date->format('Y'),
+					'Payment.paid' => true,
+					'Movement.type' => 0
+				);
+
+				$incomingConditions = array(
+					'MONTH(Payment.date)' => $date->format('m'),
+					'YEAR(Payment.date)' => $date->format('Y'),
+					'Payment.paid' => true,
+					'Movement.type' => 1
+				);
+			}
+
+			$expenses = $this->find(
+				'first',
+				array(
+					'conditions' =>$expensesConditions,
+					'fields' => array(
+						'SUM(Payment.amount) as expenses'
+					),
+					'recursive' => 1
+				)
+			);
+
+			$incoming = $this->find(
+				'first',
+				array(
+					'conditions' => $incomingConditions,
+					'fields' => array(
+						'SUM(Payment.amount) as incoming'
+					),
+					'recursive' => 1
+				)
+			);
+
+			if ($expenses[0]['expenses'] != null || $incoming[0]['incoming'] != null) {
+				$data[$c] = array(
+					'expenses' => $expenses[0]['expenses'] ? $expenses[0]['expenses'] : 0,
+					'incoming' => $incoming[0]['incoming'] ? $incoming[0]['incoming'] : 0,
+					'balance' => number_format($incoming[0]['incoming'] - $expenses[0]['expenses'], 2),
+ 					'date' => $date->format('Y-m')
+				);
+				$c++;
+			}
+
+			$date->modify('-1 month');
+		}
+
+		return $data;
 	}
 }

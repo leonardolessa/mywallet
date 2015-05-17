@@ -2,6 +2,9 @@
 	.panel
 		display none
 
+	.panel-body
+		position relative
+
 .table-movements
 	thead
 		tr th
@@ -77,3 +80,20 @@
 	color red
 	&.positive
 		color green
+
+.dataTables_filter
+	position absolute
+	top 20px
+	left 20px
+	&:before
+		content '\e003'
+		font-family: 'Glyphicons Halflings'
+		position absolute
+		right 8px
+		top 8px
+		color #dce4ec
+
+.fake-element
+	width 100%
+	height 50px
+

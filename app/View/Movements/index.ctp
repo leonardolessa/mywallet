@@ -20,23 +20,7 @@
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-3 col-sm-3">
-						<div class="dropdown">
-							<a href="javascript:;" data-toggle="dropdown" class="well-sm well filter-well">
-								Filtrar
-							</a>
-
-							<ul class="dropdown-menu">
-								<li role="presentation" class="active">
-									<a role="menuitem" href="#">Todos</a>
-								</li>
-								<li role="presentation">
-									<a role="menuitem" href="#">Despesas</a>
-								</li>
-								<li role="presentation">
-									<a role="menuitem" href="#">Receitas</a>
-								</li>
-							</ul>
-						</div>
+						<div class="fake-element"></div>
 					</div>
 
 					<div class="col-md-6 text-center col-sm-6">
@@ -65,24 +49,24 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="table-responsive">
-				<table class="table table-striped table-hover table-movements">
-					<thead>
-						<tr>
-							<th class="th-head-type">tipo</th>
-							<th class="th-head-date">data</th>
-							<th>descrição</th>
-							<th>categoria</th>
-							<th>valor</th>
-							<th class="th-head-paid">&nbsp;</th>
-							<th class="th-head-actions" data-url="<?php echo $this->Html->url(array('controller' => 'movements')) ?>">&nbsp;</th>
-						</tr>
-					</thead>
-					<tbody>
+				<div class="table-responsive">
+					<table class="table table-striped table-hover table-movements" data-order='[[ 1, "desc" ]]'>
+						<thead>
+							<tr>
+								<th class="th-head-type">tipo</th>
+								<th class="th-head-date">data</th>
+								<th>descrição</th>
+								<th>categoria</th>
+								<th>valor</th>
+								<th class="th-head-paid no-sort">&nbsp;</th>
+								<th class="th-head-actions no-sort" data-url="<?php echo $this->Html->url(array('controller' => 'movements')) ?>">&nbsp;</th>
+							</tr>
+						</thead>
+						<tbody>
 
-					</tbody>
-				</table>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 

@@ -13,6 +13,8 @@ module.exports = function(grunt) {
 		'js/src/WidgetOverview.js',
 		'js/src/WidgetMovements.js',
 		'js/src/WidgetCategories.js',
+		'js/src/ReportTabs.js',
+		'js/src/Datatables.js',
 		'js/src/Main.js'
 	];
 

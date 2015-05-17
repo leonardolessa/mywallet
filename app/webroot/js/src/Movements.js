@@ -27,6 +27,22 @@ MW.components.Movements.prototype = {
 	},
 
 	setup: function() {
+		this.datatable = this.settings.wrapper.find('.table-movements').DataTable({
+			aoColumnDefs: [{
+				bSortable: false,
+				aTargets: ['no-sort']
+			}],
+			language: {
+			  "sSearch": " ",
+			  "sZeroRecords": "Nenhum registro encontrado",
+			},
+			paging: false,
+			info: false,
+			classes: {
+				sFilterInput: 'input-sm form-control search-movements'
+			}
+		});
+
 		this.settings.output.find('.money').priceFormat({
 			prefix: 'R$ '
 		});
@@ -158,6 +174,10 @@ MW.components.Movements.prototype = {
 	loadContent: function(movements) {
 		var self = this;
 
+		if (this.datatable) {
+			this.datatable.destroy();
+		}
+
 		this.settings.output.html('');
 
 		if (movements.length > 0) {
@@ -169,10 +189,10 @@ MW.components.Movements.prototype = {
 
 		this.setBalanceValues();
 
+		this.setup();
+
 		this.settings.loader.hide();
 		this.settings.wrapper.find('.panel').show();
-
-		this.setup();
 	},
 
 	renderMovement: function(element) {
@@ -207,9 +227,9 @@ MW.components.Movements.prototype = {
 
 	checkType: function(type) {
 		if(type == 1) {
-			return '<span title="Receita" class="glyphicon glyphicon-upload"></span>';
+			return '<span title="Receita" class="glyphicon glyphicon-upload">' + type + '</span>';
 		}
-		return '<span title="Despesa" class="glyphicon glyphicon-download"></span>';
+		return '<span title="Despesa" class="glyphicon glyphicon-download">' + type + '</span>';
 	},
 
 	updateBalance: function(balance) {

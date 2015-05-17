@@ -49,4 +49,13 @@ class PaymentsController extends AppController {
 
 		$this->set(compact('categories'));
 	}
+
+	public function generalReport($id = null) {
+		$report = $this->Payment->getReport($id);
+
+		$this->set(array(
+			'report' => $report,
+			'_serialize' => array('report')
+		));
+	}
 }

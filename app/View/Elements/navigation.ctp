@@ -3,7 +3,7 @@
 		<nav class="navbar-collapse collapse" id="navbar-menu">
 			<ul class="nav navbar-nav">
 				<li <?php if($active == 1) echo 'class="active"'; ?>>
-					<?php 
+					<?php
 						echo $this->Html->link(
 							'<span class="glyphicon glyphicon-home"></span>
 							Dashboard',
@@ -20,7 +20,7 @@
 				</li>
 
 				<li <?php if($active == 2) echo 'class="active"'; ?>>
-					<?php 
+					<?php
 						echo $this->Html->link(
 							'<span class="glyphicon glyphicon-list-alt"></span>
 							Movimentações',
@@ -36,7 +36,7 @@
 				</li>
 
 				<li <?php if($active == 3) echo 'class="active"'; ?>>
-					<?php 
+					<?php
 						echo $this->Html->link(
 							'<span class="glyphicon glyphicon-tags"></span>
 							Categorias',
@@ -52,14 +52,13 @@
 				</li>
 
 				<li <?php if($active == 4) echo 'class="active"'; ?>>
-					<?php 
+					<?php
 						echo $this->Html->link(
 							'<span class="glyphicon glyphicon-stats"></span>
 							Relatórios',
 							array(
-								'controller' => 'pages',
-								'action' => 'display',
-								'reports'
+								'controller' => 'movements',
+								'action' => 'reports'
 							),
 							array(
 								'escape' => false
