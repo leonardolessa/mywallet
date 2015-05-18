@@ -254,7 +254,7 @@ MW.components.Movements.prototype = {
 	},
 
 	sumBalance: function(element) {
-		if (element.Payment.paid) {
+		if (parseInt(element.Payment.paid)) {
 			if (element.Movement.type == 0) {
 				this.expenses =+ element.Payment.amount;
 			} else {
