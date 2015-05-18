@@ -46,7 +46,6 @@ MW.components.FormCategory.prototype = {
 			url: url,
 			type: 'POST'
 		}).done(function(data) {
-			console.log(data);
 			self.setMessage(data.message);
 		});
 	},

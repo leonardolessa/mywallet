@@ -34,11 +34,21 @@ MW.components.Categories.prototype = {
 			url: this.settings.wrapper.data('url'),
 			type: 'GET'
 		}).done(function(data) {
-			self.loadContent(data.categories, function() {
-				self.settings.loader.hide();
-				self.settings.wrapper.find('.panel').fadeIn();
-			});
+			if (data.categories.length > 0) {
+				return self.loadContent(data.categories, function() {
+					self.settings.loader.hide();
+					self.settings.wrapper.find('.panel').fadeIn();
+				});
+			}
+
+			return self.setEmptyMessage();
 		})
+	},
+
+	setEmptyMessage: function() {
+		this.settings.output.html('<tr class="odd"><td valign="top" colspan="3" class="empty-line">Nenhum registro encontrado.</td></tr>');
+		this.settings.wrapper.find('.panel').fadeIn();
+		this.settings.wrapper.find('.loader-wrapper').fadeOut();
 	},
 
 	loadContent: function(categories, callback) {
@@ -84,7 +94,6 @@ MW.components.Categories.prototype = {
 			url = this.settings.actionsUrl,
 			self = this;
 
-		console.log(url + '/' + id + '.json');
 
 		$.ajax({
 			url: url + '/' + id + '.json',

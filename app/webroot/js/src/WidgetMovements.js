@@ -18,8 +18,18 @@ MW.components.WidgetMovements.prototype = {
 			url: url,
 			type: 'GET',
 		}).done(function(data) {
-			self.populate(data.payments);
+			console.log(data);
+			if (data.payments > 0) {
+				return self.populate(data.payments);
+			}
+			return self.setEmptyMessage();
 		})
+	},
+
+	setEmptyMessage: function() {
+		this.settings.output.html('<tr class="odd"><td valign="top" colspan="6" class="empty-line">Nenhum registro encontrado, <a href="/mywallet/movements/">clique aqui</a> para adicionar movimentações.</td></tr>');
+		this.table.fadeIn();
+		this.settings.wrapper.find('.loader-wrapper').hide();
 	},
 
 	populate: function(data) {

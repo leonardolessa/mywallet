@@ -878,6 +878,10 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   position: absolute;
   text-indent: 0;
 }
+.empty-line,
+.dataTables_empty {
+  padding: 20px 8px !important;
+}
 .navbar-wrapper {
   background-color: #f6f6f6;
   border-bottom: 1px solid #e9e9e9;
@@ -927,12 +931,6 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 }
 .table-movements .glyphicon-stop {
   margin-right: 5px;
-}
-.table-movements tbody td a {
-  color: #2c3e50;
-}
-.table-movements tbody td a:hover {
-  color: #18bc9c;
 }
 .th-head-date {
   width: 150px;

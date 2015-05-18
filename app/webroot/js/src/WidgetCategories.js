@@ -18,8 +18,17 @@ MW.components.WidgetCategories.prototype = {
 			url: url,
 			type: 'GET',
 		}).done(function(data) {
-			self.populate(data.categories);
+			if (data.categories.length > 0) {
+				return self.populate(data.categories);
+			}
+			return self.setEmptyMessage();
 		})
+	},
+
+	setEmptyMessage: function() {
+		this.settings.output.html('<tr class="odd"><td valign="top" colspan="6" class="empty-line">Nenhum registro encontrado, <a href="/mywallet/movements/">clique aqui</a> para adicionar suas categorias.</td></tr>');
+		this.table.fadeIn();
+		this.settings.wrapper.find('.loader-wrapper').hide();
 	},
 
 	populate: function(data) {
