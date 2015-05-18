@@ -196,14 +196,16 @@ class Payment extends AppModel {
 					'MONTH(Payment.date)' => $date->format('m'),
 					'YEAR(Payment.date)' => $date->format('Y'),
 					'Payment.paid' => true,
-					'Movement.type' => 0
+					'Movement.type' => 0,
+					'Movement.user_id' => CakeSession::read("Auth.User.id")
 				);
 
 				$incomingConditions = array(
 					'MONTH(Payment.date)' => $date->format('m'),
 					'YEAR(Payment.date)' => $date->format('Y'),
 					'Payment.paid' => true,
-					'Movement.type' => 1
+					'Movement.type' => 1,
+					'Movement.user_id' => CakeSession::read("Auth.User.id")
 				);
 			}
 
