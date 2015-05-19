@@ -234,7 +234,7 @@ class Payment extends AppModel {
 			if ($expenses[0]['expenses'] != null || $incoming[0]['incoming'] != null) {
 				$data[$c] = array(
 					'expenses' => $expenses[0]['expenses'] ? $expenses[0]['expenses'] : 0,
-					'incoming' => $incoming[0]['incoming'] ? $incomin[0]['incoming'] : 0,
+					'incoming' => $incoming[0]['incoming'] ? $incoming[0]['incoming'] : 0,
 					'balance' => number_format($incoming[0]['incoming'] - $expenses[0]['expenses'], 2),
  					'date' => $date->format('Y-m')
 				);
