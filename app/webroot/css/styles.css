@@ -882,6 +882,15 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .dataTables_empty {
   padding: 20px 8px !important;
 }
+.empty-message {
+  text-align: center;
+  padding: 50px 10px;
+  background-color: #f6f6f6;
+  vertical-align: middle;
+}
+.empty-message p {
+  margin: 0;
+}
 .navbar-wrapper {
   background-color: #f6f6f6;
   border-bottom: 1px solid #e9e9e9;
@@ -1002,7 +1011,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   position: absolute;
   right: 8px;
   top: 8px;
-  color: #dce4ec;
+  color: #555;
 }
 .fake-element {
   width: 100%;

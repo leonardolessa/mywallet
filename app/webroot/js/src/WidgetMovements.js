@@ -18,7 +18,6 @@ MW.components.WidgetMovements.prototype = {
 			url: url,
 			type: 'GET',
 		}).done(function(data) {
-			console.log(data);
 			if (data.payments > 0) {
 				return self.populate(data.payments);
 			}
@@ -27,7 +26,7 @@ MW.components.WidgetMovements.prototype = {
 	},
 
 	setEmptyMessage: function() {
-		this.settings.output.html('<tr class="odd"><td valign="top" colspan="6" class="empty-line">Nenhum registro encontrado, <a href="/mywallet/movements/">clique aqui</a> para adicionar movimentações.</td></tr>');
+		this.settings.output.html('<tr class="odd"><td valign="top" colspan="6" class="empty-line">Nenhum registro encontrado, <a href="'+ ROOTURL +'movements">clique aqui</a> para adicionar movimentações.</td></tr>');
 		this.table.fadeIn();
 		this.settings.wrapper.find('.loader-wrapper').hide();
 	},

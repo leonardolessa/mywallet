@@ -38,7 +38,16 @@ MW.components.WidgetOverview.prototype = {
 			url: url,
 			type: 'GET'
 		}).done(function(data) {
-			self.setup(data.overview);
+			if (data.overview.expenses || data.overview.incoming) {
+				return self.setup(data.overview);
+			}
+
+			return self.setEmptyMessage();
 		})
+	},
+
+	setEmptyMessage: function() {
+		this.settings.loader.hide();
+		this.settings.wrapper.append('<div class="empty-message"><p>Não há dados para gerar o gráfico.</p></div>')
 	}
 }

@@ -19,9 +19,14 @@ MW.components.ReportTabs.prototype = {
 			url: url,
 			type: 'GET'
 		}).done(function(data) {
-			self.renderList(data.categories, function() {
+			if (data.categories.length > 0) {
+				self.renderList(data.categories, function() {
+					self.bind();
+				});
+			} else {
+				self.settings.wrapper.find('.sec-level').hide();
 				self.bind();
-			});
+			}
 		})
 	},
 
@@ -42,6 +47,7 @@ MW.components.ReportTabs.prototype = {
 			var _this = $(this);
 
 			if (!_this.parent().hasClass('active')) {
+				self.settings.wrapper.find('.sec-level .active').removeClass('active');
 				self.getReportData(_this);
 			}
 		})
@@ -55,7 +61,6 @@ MW.components.ReportTabs.prototype = {
 
 		if (el.data('category-id')) {
 			url = this.settings.wrapper.data('url') + '/' + el.data('category-id') + '.json';
-			console.log(url);
 		} else {
 			url = this.settings.wrapper.data('url') + '.json';
 		}
@@ -65,9 +70,15 @@ MW.components.ReportTabs.prototype = {
 			type: 'GET'
 		}).done(function(data) {
 			el.tab('show');
-			self.setupGraphic(data, el, function() {
+			if (data.report.length > 0) {
+				self.setupGraphic(data, el, function() {
+					self.settings.loader.fadeOut();
+				});
+			} else {
+				self.setEmptyMessage(el);
 				self.settings.loader.fadeOut();
-			});
+
+			}
 		});
 	},
 
@@ -99,6 +110,15 @@ MW.components.ReportTabs.prototype = {
 		if (callback) {
 			callback();
 		}
+	},
+
+	setEmptyMessage: function(el) {
+		var	self = this,
+			context = jQuery(el.attr('href')),
+			graphic = context.find('.graphic');
+
+		graphic.html('<div class="empty-message graphic"><p>Não há dados suficientes para gerar o gráfico.</p></div>');
+		this.settings.loader.hide();
 	},
 
 	formatDate: function(date) {
