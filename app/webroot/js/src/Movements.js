@@ -188,7 +188,6 @@ MW.components.Movements.prototype = {
 		}
 
 		this.setBalanceValues();
-
 		this.setup();
 
 		this.settings.loader.hide();
@@ -254,11 +253,11 @@ MW.components.Movements.prototype = {
 	},
 
 	sumBalance: function(element) {
-		if (parseInt(element.Payment.paid)) {
-			if (element.Movement.type == 0) {
-				this.expenses =+ element.Payment.amount;
-			} else {
+		if (element.Payment.paid) {
+			if (element.Movement.type) {
 				this.incoming =+ element.Payment.amount;
+			} else {
+				this.expenses =+ element.Payment.amount;
 			}
 		}
 	},
