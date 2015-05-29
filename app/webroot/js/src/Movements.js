@@ -255,9 +255,9 @@ MW.components.Movements.prototype = {
 	sumBalance: function(element) {
 		if (element.Payment.paid) {
 			if (element.Movement.type) {
-				this.incoming =+ element.Payment.amount;
+				this.incoming += parseFloat(element.Payment.amount);
 			} else {
-				this.expenses =+ element.Payment.amount;
+				this.expenses += parseFloat(element.Payment.amount);
 			}
 		}
 	},
