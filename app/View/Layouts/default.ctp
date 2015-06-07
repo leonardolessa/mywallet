@@ -17,9 +17,11 @@
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 </head>
 <body class="app">
-	<header class="navbar navbar-default navbar-fixed-top">
+	<header class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
 				<?php
@@ -50,7 +52,7 @@
 				</button>
 			</div>
 
-			<nav class="collapse navbar-collapse">
+			<nav class="navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">

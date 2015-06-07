@@ -190,4 +190,16 @@ class MovementsController extends AppController {
 			'_serialize' => array('payments', 'balance')
 		));
 	}
+
+
+	public function custom() {
+		if ($this->request->is('post')) {
+			$movements = $this->Movement->getCustom($this->request->data);
+
+			$this->set(array(
+				'movements' => $movements,
+				'_serialize' => array('movements')
+			));
+		}
+	}
 }

@@ -36,7 +36,7 @@
 					</div>
 
 					<div class="col-md-3 col-sm-3">
-						<div class="dropdown pull-right">
+						<div class="dropdown add-wrapper">
 							<a
 								href="<?php echo $this->Html->url(array('action' => 'add')); ?>"
 								class="well-sm well well-add"

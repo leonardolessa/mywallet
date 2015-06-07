@@ -370,6 +370,42 @@ class Movement extends AppModel {
 		return $incoming[0]['total'];
 	}
 
+	public function getCustom($request = null) {
+		$late = filter_var($request['Movement']['late'], FILTER_VALIDATE_BOOLEAN);
+		$type = filter_var($request['Movement']['type'], FILTER_VALIDATE_BOOLEAN);
+		$date = new DateTime('now');
+
+		$conditions = array(
+			'Payment.paid' => false
+		);
+
+		$conditions['Movement.type'] = $type;
+
+		if ($late) {
+			$conditions['Payment.date <'] = $date->format('Y-m-d');
+		} else {
+			$conditions['Payment.date >='] = $date->format('Y-m-d');
+		}
+
+		return $this->Payment->find(
+			'all',
+			array(
+				'conditions' => $conditions,
+				'order' => array(
+					'Payment.date' => 'asc'
+				),
+				'contain' => array(
+					'Movement' => array(
+						'fields' => array('id', 'description', 'type'),
+						'Category' => array(
+							'fields' => array('name', 'color')
+						)
+					)
+				)
+			)
+		);
+	}
+
 }
 
 
