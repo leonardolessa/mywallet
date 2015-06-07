@@ -376,7 +376,8 @@ class Movement extends AppModel {
 		$date = new DateTime('now');
 
 		$conditions = array(
-			'Payment.paid' => false
+			'Payment.paid' => false,
+			'Movement.user_id' => CakeSession::read("Auth.User.id")
 		);
 
 		$conditions['Movement.type'] = $type;
