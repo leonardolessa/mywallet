@@ -110,7 +110,7 @@ MW.components.WidgetMovements.prototype = {
 			  	next: 'Próximo'
 			  }
 			},
-			paging: this.results > 2 ? true : false,
+			paging: this.results > 3 ? true : false,
 			info: false,
 			searching: false,
 			lengthChange: false,
