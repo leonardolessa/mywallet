@@ -36,8 +36,6 @@ MW.components.WidgetCategories.prototype = {
 
 		$.each(data, function(index) {
 			self.renderCategory(this);
-
-			return index < 2;
 		});
 
 		this.settings.loader.hide();

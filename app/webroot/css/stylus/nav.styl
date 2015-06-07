@@ -8,6 +8,9 @@
 	display table!important
 	table-layout fixed
 
+	@media tw
+		display block !important
+
 	.navbar-nav
 		a
 			text-align center
@@ -24,6 +27,11 @@
 			margin-bottom 2px
 			transition 1s
 
+			@media tw
+				position absolute
+				left 20px
+				top 10px
+
 		li
 			&.active
 				background-color secundary
@@ -35,3 +43,4 @@
 .navbar-header
 	.logo
 		width 30px
+
