@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$.ajaxSetup({ cache: false });
 	MW.i.delegator = new MW.services.Delegator();
 
 	$('body').on('hidden.bs.modal', '.modal', function () {
