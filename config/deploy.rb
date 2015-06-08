@@ -45,7 +45,7 @@ namespace :deploy do
     end
   end
 
+  after :updated, :folders_permissions
   after :updated, :cake_migrations
-  after :finished, :folders_permissions
 
 end

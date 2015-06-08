@@ -4,9 +4,11 @@ namespace :deploy do
     on roles(:app) do
       within release_path do
         execute :mkdir, "#{release_path}/app/tmp"
+        # execute :mkdir, "-p #{release_path}/app/tmp/cache/models"
+        # execute :mkdir, "-p #{release_path}/app/tmp/cache/persistent"
+        # execute :mkdir, "-p #{release_path}/app/tmp/logs"
         execute :chown, "-R mywallet.www-data #{release_path}/app/tmp"
-        # if wellington see this he'll be shame
-        execute :chmod, "-R 777 #{release_path}/app/tmp"
+        execute :chmod, "-R 2775 #{release_path}/app/tmp"
       end
     end
   end
