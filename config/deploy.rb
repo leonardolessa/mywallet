@@ -23,7 +23,7 @@ set :repo_url, 'git@github.com:leonardolessa/mywallet.git'
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{app/Config/database.php app/Config/core.php app/Config/email.php}
+set :linked_files, %w{app/Config/database.php app/Config/email.php}
 
 # Default value for linked_dirs is []
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
