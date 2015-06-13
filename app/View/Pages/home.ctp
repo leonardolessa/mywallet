@@ -115,4 +115,64 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-md-8 widget">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Próximas receitas</h3>
+				</div>
+				<div class="panel-body next-incoming" data-url="<?php echo $this->Html->url(array('controller' => 'movements', 'action' => 'custom', 'ext' => 'json')) ?>">
+					<div class="table-responsive">
+						<table class="table table-striped table-hover table-movements widget-table">
+							<thead>
+								<tr>
+									<th class="th-head-date">data</th>
+									<th>descrição</th>
+									<th>categoria</th>
+									<th>valor</th>
+									<th class="th-head-paid no-sort" data-url="<?php echo $this->Html->url(array('controller' => 'movements')) ?>">&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+
+							</tbody>
+						</table>
+					</div>
+					<div class="loader-wrapper table-loader">
+						<img src="img/loader.gif" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 widget">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Receitas pendentes</h3>
+				</div>
+				<div class="panel-body late-incoming" data-url="<?php echo $this->Html->url(array('controller' => 'movements', 'action' => 'custom', 'ext' => 'json')) ?>">
+					<div class="table-responsive">
+						<table class="table table-striped table-hover table-movements widget-table">
+							<thead>
+								<tr>
+									<th class="th-head-date">data</th>
+									<th>descrição</th>
+									<th>categoria</th>
+									<th>valor</th>
+									<th class="th-head-paid no-sort" data-url="<?php echo $this->Html->url(array('controller' => 'movements')) ?>">&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+
+							</tbody>
+						</table>
+					</div>
+					<div class="loader-wrapper table-loader">
+						<img src="img/loader.gif" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
