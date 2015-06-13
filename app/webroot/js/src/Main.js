@@ -21,4 +21,20 @@ $(document).ready(function() {
 			late: false
 		});
 	}
+
+	if ($('.next-incoming').length > 0) {
+		new MW.components.WidgetMovements({
+			wrapper: $('.next-incoming'),
+			type: 1,
+			late: false
+		});
+	}
+
+	if ($('.late-incoming').length > 0) {
+		new MW.components.WidgetMovements({
+			wrapper: $('.late-incoming'),
+			type: 1,
+			late: true
+		});
+	}
 });
